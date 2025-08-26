@@ -2,10 +2,12 @@
 
 namespace App\Filament\Resources\Settings\Schemas;
 
-use Filament\Forms\Components\TextInput;
-use Filament\Forms\Components\Textarea;
-use Filament\Forms\Components\Toggle;
 use Filament\Schemas\Schema;
+use Filament\Forms\Components\Select;
+use Filament\Forms\Components\Toggle;
+use Filament\Forms\Components\Textarea;
+use Filament\Forms\Components\TextInput;
+use Filament\Forms\Components\RichEditor;
 
 class SettingForm
 {
@@ -14,20 +16,34 @@ class SettingForm
         return $schema
             ->components([
                 TextInput::make('key')
-                    ->required(),
-                Textarea::make('value')
                     ->required()
+                    ->maxLength(128)
                     ->columnSpanFull(),
+                Select::make('type')
+                    ->label('Tipe Input')
+                    ->options([
+                        'Textarea' => "Text Area",
+                        'RichEditor' => 'Editor Teks',
+                    ])
+                    ->default('RichEditor')
+                    ->afterStateUpdated(function (callable $set) {
+                        // $set('value', null);
+                    })
+                    ->reactive()
+                    ->columnSpanFull(),
+                RichEditor::make('value.RichEditor')
+                    ->label('Value (Rich Editor)')
+                    ->columnSpanFull()
+                    ->hidden(fn ($get) => $get('type') !== 'RichEditor'),
+
+                Textarea::make('value.Textarea')
+                    ->label('Value (Text Area)')
+                    ->autosize()
+                    ->columnSpanFull()
+                    ->hidden(fn ($get) => $get('type') !== 'Textarea'),
+
                 Toggle::make('active')
                     ->required(),
-                TextInput::make('created_by')
-                    ->required()
-                    ->numeric()
-                    ->default(1),
-                TextInput::make('updated_by')
-                    ->numeric(),
-                TextInput::make('deleted_by')
-                    ->numeric(),
             ]);
     }
 }
