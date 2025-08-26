@@ -10,7 +10,8 @@
         content="Tailwind CSS, business, corporate, creative, gulp, marketing, minimal, modern, multipurpose, one page, responsive, saas, sass, seo, startup, html5 template, site template">
     <meta name="author" content="elemis">
     @vite('resources/css/app.css')
-    <title>{{ $title ?? 'JASANYATECH' }}</title>
+    <title>{{ $title ?? 'HIMSI' }}</title>
+    <link rel="icon" type="image/png" href="{{ asset('assets/img/himsi.png') }}">
     {{-- <link rel="icon" href="images/2.png" type="image/png" sizes="16x16"> --}}
     <link rel="shortcut icon" href="{{ asset('assets/img/icon_web.ico') }}">
     <link rel="stylesheet" type="text/css" href="{{ asset('assets') }}/fonts/unicons/unicons.css">
