@@ -11,13 +11,13 @@ class HeroSection extends Component
     /**
      * Create a new component instance.
      */
-    public function __construct(
-        public string $heroTitle,
-        public string $heroService,
-        public string $heroText
-    ) {
-        //
-    }
+    // public function __construct(
+    //     public string $heroTitle,
+    //     public string $heroService,
+    //     public string $heroText
+    // ) {
+    //     //
+    // }
 
     /**
      * Get the view / contents that represent the component.

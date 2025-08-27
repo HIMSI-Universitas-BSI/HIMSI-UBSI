@@ -3,6 +3,8 @@
         <!-- Header -->
         <x-layout.navbar />
 
+        <x-home.hero-section />
+
         <x-home.about-section />
 
         <x-home.count-section />
