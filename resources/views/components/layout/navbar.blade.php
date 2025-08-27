@@ -8,8 +8,8 @@
             </div>
             <div class="navbar-collapse offcanvas offcanvas-nav offcanvas-start">
                 <div class="offcanvas-header xl:!hidden lg:!hidden">
-                <h3 class="text-white xl:!text-[1.5rem] !text-[calc(1.275rem_+_0.3vw)]  !mb-0">Sandbox</h3>
-                <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                    <h3 class="text-white xl:!text-[1.5rem] !text-[calc(1.275rem_+_0.3vw)]  !mb-0">Sandbox</h3>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>
                 </div>
                 <div class="offcanvas-body xl:!ml-auto lg:!ml-auto flex  flex-col !h-full">
                 <ul class="navbar-nav">
