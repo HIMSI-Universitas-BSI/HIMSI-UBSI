@@ -11,6 +11,8 @@
 
         <x-home.division-section />
 
+        <x-home.galery-section />
+
         <x-home.faq-section />
 
         <x-layout.footer/>
