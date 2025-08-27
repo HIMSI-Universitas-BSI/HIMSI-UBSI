@@ -1,5 +1,5 @@
 <!-- /section -->
-<section id="snippet-3" class="wrapper !bg-[#ffffff]  border-b-[rgba(164,174,198,0.2)] border-b border-solid">
+<section id="snippet-3" class="wrapper !bg-[#ffffff]  border-b-[rgba(164,174,198,0.2)] border-b border-solid py-6">
     <div class="container py-6 lg:py-8">
         <div class="flex flex-wrap mx-[-15px]">
             <div class="xl:w-10/12 w-full flex-[0_0_auto] !px-[15px] max-w-full !mx-auto">
