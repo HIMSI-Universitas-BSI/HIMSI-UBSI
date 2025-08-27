@@ -4,7 +4,9 @@
         <x-layout.navbar />
 
         <x-home.about-section />
-        
+
+        <x-home.count-section />
+
         <x-layout.footer/>
     </div>
 
