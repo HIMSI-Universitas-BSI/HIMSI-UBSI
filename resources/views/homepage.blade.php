@@ -9,6 +9,8 @@
 
         <x-home.count-section />
 
+        <x-home.division-section />
+
         <x-home.faq-section />
 
         <x-layout.footer/>
