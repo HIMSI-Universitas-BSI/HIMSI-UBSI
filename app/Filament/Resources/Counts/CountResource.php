@@ -20,7 +20,11 @@ class CountResource extends Resource
 {
     protected static ?string $model = Count::class;
 
-    protected static string|BackedEnum|null $navigationIcon = Heroicon::OutlinedRectangleStack;
+    protected static string|BackedEnum|null $navigationIcon = Heroicon::Plus;
+
+    protected static ?string $navigationLabel = 'Count';
+
+    protected static ?string $pluralModelLabel = 'Count';
 
     public static function form(Schema $schema): Schema
     {
