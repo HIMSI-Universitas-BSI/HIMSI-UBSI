@@ -20,7 +20,11 @@ class DivisionResource extends Resource
 {
     protected static ?string $model = Division::class;
 
-    protected static string|BackedEnum|null $navigationIcon = Heroicon::OutlinedRectangleStack;
+    protected static string|BackedEnum|null $navigationIcon = Heroicon::UserGroup;
+
+    protected static ?string $navigationLabel = 'Division';
+
+    protected static ?string $pluralModelLabel = 'Division';
 
     public static function form(Schema $schema): Schema
     {
