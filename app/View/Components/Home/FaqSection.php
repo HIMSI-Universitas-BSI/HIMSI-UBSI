@@ -6,18 +6,14 @@ use Closure;
 use Illuminate\Contracts\View\View;
 use Illuminate\View\Component;
 
-class ContactSection extends Component
+class FaqSection extends Component
 {
     /**
      * Create a new component instance.
      */
-    public function __construct
-    (
-        public string $adress,
-        public string $email,
-        public string $waMarketing
-    )
+    public function __construct()
     {
+        //
     }
 
     /**
@@ -25,6 +21,6 @@ class ContactSection extends Component
      */
     public function render(): View|Closure|string
     {
-        return view('components.home.contact-section');
+        return view('components.home.faq-section');
     }
 }
