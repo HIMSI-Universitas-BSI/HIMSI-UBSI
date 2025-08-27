@@ -3,6 +3,7 @@
 namespace App\Filament\Resources\Divisions\Schemas;
 
 use Filament\Forms\Components\FileUpload;
+use Filament\Forms\Components\Repeater;
 use Filament\Forms\Components\TextInput;
 use Filament\Forms\Components\Textarea;
 use Filament\Forms\Components\Toggle;
@@ -15,27 +16,31 @@ class DivisionForm
         return $schema
             ->components([
                 TextInput::make('name')
-                    ->required(),
-                TextInput::make('logo')
-                    ->required(),
+                    ->required()
+                    ->columnSpanFull(),
+                FileUpload::make('logo')
+                    ->required()
+                    ->image()
+                    ->disk('public')
+                    ->directory('division_logo')
+                    ->columnSpanFull(),
                 FileUpload::make('image')
                     ->image()
+                    ->disk('public')
+                    ->directory('division_image')
+                    ->columnSpanFull()
                     ->required(),
                 Textarea::make('description')
                     ->required()
                     ->columnSpanFull(),
-                TextInput::make('job_description')
-                    ->required(),
+                Repeater::make('job_description')
+                    ->schema([
+                        TextInput::make('job')->required(),
+                    ])
+                    ->required()
+                    ->columnSpanFull(),
                 Toggle::make('active')
                     ->required(),
-                TextInput::make('created_by')
-                    ->required()
-                    ->numeric()
-                    ->default(1),
-                TextInput::make('updated_by')
-                    ->numeric(),
-                TextInput::make('deleted_by')
-                    ->numeric(),
             ]);
     }
 }
