@@ -20,7 +20,11 @@ class AboutResource extends Resource
 {
     protected static ?string $model = About::class;
 
-    protected static string|BackedEnum|null $navigationIcon = Heroicon::OutlinedRectangleStack;
+    protected static string|BackedEnum|null $navigationIcon = Heroicon::Sparkles;
+
+    protected static ?string $navigationLabel = 'About';
+
+    protected static ?string $pluralModelLabel = 'About';
 
     public static function form(Schema $schema): Schema
     {
