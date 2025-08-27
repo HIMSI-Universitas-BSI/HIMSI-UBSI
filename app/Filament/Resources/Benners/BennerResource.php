@@ -20,7 +20,11 @@ class BennerResource extends Resource
 {
     protected static ?string $model = Benner::class;
 
-    protected static string|BackedEnum|null $navigationIcon = Heroicon::OutlinedRectangleStack;
+    protected static string|BackedEnum|null $navigationIcon = Heroicon::Photo;
+
+    protected static ?string $navigationLabel = 'Benner';
+
+    protected static ?string $pluralModelLabel = 'Benner';
 
     public static function form(Schema $schema): Schema
     {
