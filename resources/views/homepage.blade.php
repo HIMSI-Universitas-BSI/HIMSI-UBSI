@@ -3,10 +3,8 @@
         <!-- Header -->
         <x-layout.navbar />
 
-        <div class="h-30">
-
-        </div>
-
+        <x-home.about-section />
+        
         <x-layout.footer/>
     </div>
 

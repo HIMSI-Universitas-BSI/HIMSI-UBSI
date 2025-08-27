@@ -11,15 +11,15 @@ class AboutSection extends Component
     /**
      * Create a new component instance.
      */
-    public function __construct(
-        public string $aboutTitle,
-        public string $aboutParagraf,
-        public string $value,
-        public string $mision,
-        public string $aboutBenner,
-    ) {
-        //
-    }
+    // public function __construct(
+    //     public string $aboutTitle,
+    //     public string $aboutParagraf,
+    //     public string $value,
+    //     public string $mision,
+    //     public string $aboutBenner,
+    // ) {
+    //     //
+    // }
 
     /**
      * Get the view / contents that represent the component.

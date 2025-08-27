@@ -6,17 +6,17 @@
                     class="md:w-8/12 lg:w-6/12 xl:w-5/12 w-full flex-[0_0_auto] xl:!px-[35px] lg:!px-[20px] !px-[15px] max-w-full !mt-[50px] xl:!order-2 lg:!order-2 !relative">
                     <div class="shape !bg-[#edf2fc] !rounded-[50%] rellax !w-[10rem] !h-[10rem] absolute z-[1]"
                         data-rellax-speed="1" style="top: -2rem; right: -1.9rem;"></div>
-                    <figure class="!rounded-[.4rem] z-[2] relative"><img class="!rounded-[.4rem] " src={{ $aboutBenner }}
-                            srcset={{ $aboutBenner }} alt="image"></figure>
+                    <figure class="!rounded-[.4rem] z-[2] relative"><img class="!rounded-[.4rem] " src=#
+                            srcset=# alt="image"></figure>
                 </div>
                 <!--/column -->
                 <div
                     class="xl:w-6/12 lg:w-6/12 w-full flex-[0_0_auto] xl:!px-[35px] lg:!px-[20px] !px-[15px] max-w-full !mt-[50px]">
                     <h2 class="!text-[calc(1.305rem_+_0.66vw)] font-bold xl:!text-[1.8rem] !leading-[1.3] !mb-3">
-                        {{ $aboutTitle }}
+                        Title
                     </h2>
                     <p class="lead !text-[1.05rem] !leading-[1.6] font-medium">
-                        {{ $aboutParagraf }}
+                        Paragraf
                     </p>
                     <p class="!mb-6">Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus
                         mus. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Praesent commodo cursus magna,
@@ -49,7 +49,7 @@
                                 <div>
                                     <h4 class="!mb-1">Our Mission</h4>
                                     <p class="!mb-0">
-                                        {{ $mision }}
+                                        Mision
                                     </p>
                                 </div>
                             </div>
@@ -78,7 +78,7 @@
                                 </div>
                                 <div>
                                     <h4 class="!mb-1">Our Values</h4>
-                                    <p class="!mb-0">{{ $value }}</p>
+                                    <p class="!mb-0">Vision</p>
                                 </div>
                             </div>
                         </div>
