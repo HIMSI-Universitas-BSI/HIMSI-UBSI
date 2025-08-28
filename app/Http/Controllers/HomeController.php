@@ -5,12 +5,18 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Helpers\BennerHelper;
 use App\Helpers\SettingHelper;
+use App\Models\Count;
+use App\Models\Division;
 
 class HomeController extends Controller
 {
     public function index()
     {
         $data = [];
+
+        //Get Data
+        $data['count'] = Count::where('active', true)->limit(4)->get();
+        $data['divisi'] = Division::where('active', true)->limit(4)->get();
 
         // Get Setting Helpers Hero Section
         $data['heroTitle'] = SettingHelper::getSetting('title_hero');
