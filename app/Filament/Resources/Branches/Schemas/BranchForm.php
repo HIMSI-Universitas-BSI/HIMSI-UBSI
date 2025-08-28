@@ -15,25 +15,25 @@ class BranchForm
         return $schema
             ->components([
                 TextInput::make('name')
-                    ->required(),
-                TextInput::make('poster')
-                    ->required(),
+                    ->required()
+                    ->columnSpanFull(),
+                FileUpload::make('poster')
+                    ->image()
+                    ->disk('public')
+                    ->directory('branch_poster')
+                    ->required()
+                    ->columnSpanFull(),
                 FileUpload::make('image')
                     ->image()
-                    ->required(),
-                Textarea::make('description')
+                    ->multiple()
+                    ->disk('public')
+                    ->directory('branch_image')
                     ->required()
+                    ->columnSpanFull(),
+                Textarea::make('description')
                     ->columnSpanFull(),
                 Toggle::make('active')
                     ->required(),
-                TextInput::make('created_by')
-                    ->required()
-                    ->numeric()
-                    ->default(1),
-                TextInput::make('updated_by')
-                    ->numeric(),
-                TextInput::make('deleted_by')
-                    ->numeric(),
             ]);
     }
 }
