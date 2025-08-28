@@ -14,7 +14,9 @@ class BennerHelper
      */
     public static function getBennerImageUrl(string $name): string
     {
-        $Benner = Benner::where('name', $name)->first();
+        $Benner = Benner::where('name', $name)
+            ->where('active', true)
+            ->first();
 
         if ($Benner && $Benner->image) {
             return asset('storage/' . $Benner->image);

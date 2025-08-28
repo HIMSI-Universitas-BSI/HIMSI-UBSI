@@ -5,7 +5,7 @@
 
         <x-home.hero-section :heroTitle="$heroTitle" :heroAnimate="$heroAnimate" :heroText="$heroText" :gabungSekarang="$gabungSekarang" :bukuPedoman="$bukuPedoman" :large="$large" :kiri="$kiri" :kanan="$kanan" :kecil="$kecil" />
 
-        <x-home.about-section />
+        <x-home.about-section :aboutTextA="$aboutTextA" :aboutTextB="$aboutTextB" :vision="$vision" :mission="$mission" :aboutImage="$aboutImage" />
 
         <x-home.count-section />
 
