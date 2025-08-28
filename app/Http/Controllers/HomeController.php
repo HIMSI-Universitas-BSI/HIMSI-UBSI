@@ -7,6 +7,7 @@ use App\Helpers\BennerHelper;
 use App\Helpers\SettingHelper;
 use App\Models\Count;
 use App\Models\Division;
+use App\Models\Faq;
 
 class HomeController extends Controller
 {
@@ -17,6 +18,7 @@ class HomeController extends Controller
         //Get Data
         $data['counts'] = Count::where('active', true)->limit(4)->get();
         $data['divisi'] = Division::where('active', true)->limit(4)->get();
+        $data['faqs'] = Faq::where('active', true)->limit(5)->get();
 
         // Get Setting Helpers Hero Section
         $data['heroTitle'] = SettingHelper::getSetting('title_hero');

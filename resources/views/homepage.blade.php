@@ -13,7 +13,7 @@
 
         <x-home.galery-section />
 
-        <x-home.faq-section />
+        <x-home.faq-section :faqs="$faqs" />
 
         <x-layout.footer/>
     </div>
