@@ -2,8 +2,8 @@
     <div class="container py-[4.5rem] xl:!py-28 lg:!py-28 md:!py-28">
     <div class="flex flex-wrap mx-[-15px]">
         <div class="lg:w-11/12 xl:w-11/12 xxl:w-10/12 w-full flex-[0_0_auto] !px-[15px] max-w-full !mx-auto !text-center">
-        <h2 class="!text-[.75rem] uppercase !text-[#aab0bc] !tracking-[0.02rem] !leading-[1.35] !mb-3">FAQ</h2>
-        <h3 class="xl:!text-[2rem] !text-[calc(1.325rem_+_0.9vw)] !leading-[1.2] !font-DMSerif !font-normal !tracking-normal [word-spacing:normal!important] !mb-10 lg:!px-14 xl:!px-10 xxl:!px-20">If you don't see an answer to your question, you can send us an email from our contact form.</h3>
+            <h2 class="!text-[.75rem] uppercase !text-[#aab0bc] !tracking-[0.02rem] !leading-[1.35] !mb-3">FAQ</h2>
+            <h3 class="xl:!text-[2rem] !text-[calc(1.325rem_+_0.9vw)] !leading-[1.2] !font-DMSerif !font-normal !tracking-normal [word-spacing:normal!important] !mb-10 lg:!px-14 xl:!px-10 xxl:!px-20">If you don't see an answer to your question, you can send us an email from our contact form.</h3>
         </div>
         <!--/column -->
     </div>

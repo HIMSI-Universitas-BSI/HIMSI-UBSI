@@ -13,7 +13,10 @@ class FaqSection extends Component
      */
     public $faqs;
 
-    public function __construct($faqs)
+    public function __construct(
+        $faqs,
+        public string $faqTitle
+    )
     {
         $this->faqs = $faqs;
     }

@@ -39,6 +39,9 @@ class HomeController extends Controller
         $data['mission'] = SettingHelper::getSetting('mission');
         $data['aboutImage'] = BennerHelper::getBennerImageUrl('about_image');
 
+        //Get Setting Helpers Faq Section
+        $data['faqTitle'] = SettingHelper::getSetting('faq_title');
+
         return view('homepage', $data);
     }
 }
