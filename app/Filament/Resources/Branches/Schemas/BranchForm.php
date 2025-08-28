@@ -15,8 +15,9 @@ class BranchForm
         return $schema
             ->components([
                 TextInput::make('name')
-                    ->required()
-                    ->columnSpanFull(),
+                    ->required(),
+                TextInput::make('location')
+                    ->required(),
                 FileUpload::make('poster')
                     ->image()
                     ->disk('public')
