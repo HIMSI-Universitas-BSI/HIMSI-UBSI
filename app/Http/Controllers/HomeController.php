@@ -15,7 +15,7 @@ class HomeController extends Controller
         $data = [];
 
         //Get Data
-        $data['count'] = Count::where('active', true)->limit(4)->get();
+        $data['counts'] = Count::where('active', true)->limit(4)->get();
         $data['divisi'] = Division::where('active', true)->limit(4)->get();
 
         // Get Setting Helpers Hero Section
