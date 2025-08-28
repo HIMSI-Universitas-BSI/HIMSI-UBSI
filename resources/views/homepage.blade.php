@@ -11,6 +11,8 @@
 
         <x-home.division-section />
 
+        <x-home.branch-section />
+
         <x-home.galery-section />
 
         <x-home.faq-section :faqs="$faqs" :faqTitle="$faqTitle" />
