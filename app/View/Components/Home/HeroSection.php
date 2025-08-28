@@ -16,7 +16,10 @@ class HeroSection extends Component
         public string $heroAnimate,
         public string $heroText,
         public string $gabungSekarang,
-        public string $bukuPedoman
+        public string $bukuPedoman,
+        public string $large,
+        public string $kanan,
+        public string $kiri
     ) {
         //
     }

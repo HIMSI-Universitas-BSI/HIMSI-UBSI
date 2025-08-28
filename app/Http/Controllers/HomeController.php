@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Helpers\BennerHelper;
 use App\Helpers\SettingHelper;
 
 class HomeController extends Controller
@@ -17,6 +18,10 @@ class HomeController extends Controller
         $data['heroText'] = SettingHelper::getSetting('text_hero');
         $data['gabungSekarang'] = SettingHelper::getSetting('gabung_sekarang');
         $data['bukuPedoman'] = SettingHelper::getSetting('buku_pedoman');
+
+        $data['large'] = BennerHelper::getBennerImageUrl('hero_large');
+        $data['kanan'] = BennerHelper::getBennerImageUrl('hero_1');
+        $data['kiri'] = BennerHelper::getBennerImageUrl('hero_2');
 
         return view('homepage', $data);
     }
