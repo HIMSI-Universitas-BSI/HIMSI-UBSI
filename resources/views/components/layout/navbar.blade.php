@@ -1,9 +1,9 @@
 <nav class="navbar navbar-expand-lg fancy navbar-light !bg-[#ffffff]  caret-none xl:[background:0_0!important] lg:[background:0_0!important]">
     <div class="container">
         <div class="navbar-collapse-wrapper bg-[rgba(255,255,255)] opacity-100 flex flex-row !flex-nowrap w-full justify-between items-center">
-            <div class="navbar-brand w-full">
-                <a href="../../index.html">
-                    <img src="../../assets/img/logo.png" srcset="../../assets/img/logo@2x.png 2x" alt="image">
+            <div class="navbar-brand w-full flex items-center">
+                <a href="/home" class="block">
+                    <img src="{{ asset('images/himsi.png') }}" alt="HIMSI Logo" class="h-10 w-auto max-h-12" style="max-width:150px;">
                 </a>
             </div>
             <div class="navbar-collapse offcanvas offcanvas-nav offcanvas-start">
