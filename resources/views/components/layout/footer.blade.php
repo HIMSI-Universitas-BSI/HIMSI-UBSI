@@ -1,6 +1,6 @@
-<footer class=" bg-[#21262c] opacity-100  !text-[#cacaca]">
-        <div class="container-fluid pt-20 xl:pt-28 lg:pt-28 md:pt-28 pb-16 xl:pb-20 lg:pb-20 md:pb-20 xxl:!px-10">
-        <footer class=" bg-[#21262c] opacity-100  !text-[#cacaca]">
+<footer class=" bg-[#1B3C53] opacity-100  !text-[#cacaca]">
+        <div class="container-fluid">
+        <footer class=" bg-[#1B3C53] opacity-100  !text-[#cacaca]">
             <div class="container pt-[4.5rem] xl:pt-[7rem] lg:pt-[7rem] md:pt-[7rem] pb-[1.75rem]">
             <div class="flex flex-wrap mx-[-15px] !mt-[-30px] xl:!mt-0 lg:!mt-0">
                 <div class="xl:w-4/12 lg:w-4/12 w-full flex-[0_0_auto] !px-[15px] max-w-full xl:!mt-0 lg:!mt-0 !mt-[30px]">
@@ -52,15 +52,8 @@
             <!--/.row -->
             <hr class="!mt-13 xl:!mt-20 lg:!mt-20 md:!mt-20 !mb-7">
             <div class="xl:!flex lg:!flex md:!flex items-center justify-between">
-                <p class="!mb-2 xl:!mb-0 lg:!mb-0">© 2024 Sandbox. All rights reserved.</p>
-                <nav class="nav social social-white  xl:!text-right lg:!text-right md:!text-right">
-                <a class="m-[0_.7rem_0_0] text-[1rem] transition-all duration-[0.2s] ease-in-out translate-y-0 hover:translate-y-[-0.15rem]" href="#"><i class="uil uil-twitter before:content-['\ed59'] text-[1rem] !text-[#5daed5]"></i></a>
-                <a class="m-[0_.7rem_0_0] text-[1rem] transition-all duration-[0.2s] ease-in-out translate-y-0 hover:translate-y-[-0.15rem]" href="#"><i class="uil uil-facebook-f before:content-['\eae2'] text-[1rem] !text-[#4470cf]"></i></a>
-                <a class="m-[0_.7rem_0_0] text-[1rem] transition-all duration-[0.2s] ease-in-out translate-y-0 hover:translate-y-[-0.15rem]" href="#"><i class="uil uil-dribbble before:content-['\eaa2'] text-[1rem] !text-[#e94d88]"></i></a>
-                <a class="m-[0_.7rem_0_0] text-[1rem] transition-all duration-[0.2s] ease-in-out translate-y-0 hover:translate-y-[-0.15rem]" href="#"><i class="uil uil-instagram before:content-['\eb9c'] text-[1rem] !text-[#d53581]"></i></a>
-                <a class="m-[0_.7rem_0_0] text-[1rem] transition-all duration-[0.2s] ease-in-out translate-y-0 hover:translate-y-[-0.15rem]" href="#"><i class="uil uil-youtube before:content-['\edb5'] text-[1rem] !text-[#c8312b]"></i></a>
-                </nav>
-                <!-- /.social -->
+                <p class="!mb-2 xl:!mb-0 lg:!mb-0">© 2025 Himsi UBSI. All rights reserved.</p>
+                <p class="!mb-2 xl:!mb-0 lg:!mb-0">Divisi Pendidikan | Kabinet Trivolte</p>
             </div>
             <!-- /div -->
             </div>
