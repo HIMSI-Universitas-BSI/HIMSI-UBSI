@@ -11,9 +11,9 @@
     <meta name="author" content="elemis">
     @vite('resources/css/app.css')
     <title>{{ $title ?? 'HIMSI' }}</title>
-    <link rel="icon" type="image/png" href="{{ asset('assets/img/himsi.png') }}">
+    <link rel="icon" type="image/png" href="{{ asset('images/himsi.png') }}">
     {{-- <link rel="icon" href="images/2.png" type="image/png" sizes="16x16"> --}}
-    <link rel="shortcut icon" href="{{ asset('assets/img/icon_web.ico') }}">
+    {{-- <link rel="shortcut icon" href="{{ asset('assets/img/icon_web.ico') }}"> --}}
     <link rel="stylesheet" type="text/css" href="{{ asset('assets') }}/fonts/unicons/unicons.css">
     <link rel="stylesheet" href="{{ asset('assets') }}/css/plugins.css">
     <link rel="stylesheet" href="{{ asset('assets') }}/style.css">
