@@ -12,9 +12,9 @@ class HomeController extends Controller
         $data = [];
 
         // Get Setting Helpers Hero Section
-        $data['heroTitle'] = SettingHelper::getSetting('hero_title');
+        $data['heroTitle'] = SettingHelper::getSetting('title_hero');
         $data['heroAnimate'] = SettingHelper::getSetting('animate_hero');
-        $data['heroText'] = SettingHelper::getSetting('hero_text');
+        $data['heroText'] = SettingHelper::getSetting('text_hero');
         $data['gabungSekarang'] = SettingHelper::getSetting('gabung_sekarang');
         $data['bukuPedoman'] = SettingHelper::getSetting('buku_pedoman');
 

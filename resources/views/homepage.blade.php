@@ -3,7 +3,7 @@
         <!-- Header -->
         <x-layout.navbar />
 
-        <x-home.hero-section />
+        <x-home.hero-section :heroTitle="$heroTitle" :heroAnimate="$heroAnimate" :heroText="$heroText" :gabungSekarang="$gabungSekarang" :bukuPedoman="$bukuPedoman" />
 
         <x-home.about-section />
 

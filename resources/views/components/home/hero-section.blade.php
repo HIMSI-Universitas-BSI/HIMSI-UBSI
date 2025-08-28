@@ -51,21 +51,21 @@
                         Selamat Datang di
                     </h1>
                     <h1 class="xl:!text-[3.2rem] !text-[calc(1.445rem_+_2.34vw)] font-semibold !leading-[1.15] !mb-5 md:mx-10 lg:mx-0 xl:mx-0">
-                        Himpunan Mahasiswa Sistem Informasi
+                        {{ $heroTitle }}
                         <br><span class="rotator-fade !text-[#605dba] ">
-                            Teknologi,Kolaborasi,Inovasi
+                            {{ $heroAnimate }}
                         </span>
                     </h1>
                     <p class="lead !text-[1.2rem] !leading-[1.6] !mb-8">
-                        Ayo berikan hidupmu pengalaman yang menarik, bermanfaat, dan berdampak kepada masyarakat.
+                        {{ $heroText }}
                     </p>
                 </div>
                 <div class="flex justify-center" data-cues="slideInDown" data-delay="600">
-                    <span><a
+                    <span><a href="{{ $gabungSekarang }}" target="_blank"
                             class="btn btn-lg btn-grape !text-white !bg-[#605dba] border-[#605dba] hover:text-white hover:bg-[#605dba] hover:!border-[#605dba]   active:text-white active:bg-[#605dba] active:border-[#605dba] disabled:text-white disabled:bg-[#605dba] disabled:border-[#605dba] !rounded-[0.8rem] mx-1">
                             Gabung Sekarang</a>
                     </span>
-                    <span><a
+                    <span><a href="{{ $bukuPedoman }}"target="_blank"
                             class="btn btn-lg btn-fuchsia !text-white !bg-[#e668b3] border-[#e668b3] hover:text-white hover:bg-[#e668b3] hover:!border-[#e668b3]   active:text-white active:bg-[#e668b3] active:border-[#e668b3] disabled:text-white disabled:bg-[#e668b3] disabled:border-[#e668b3] !rounded-[0.8rem] mx-1">
                             Lihat Profil Kami
                         </a></span>
@@ -78,7 +78,7 @@
     </div>
     <!-- /.container -->
 
-    <div class="wrapper lg:py-10 pt-10">
+    <div class="wrapper lg:py-10 pt-14">
         <div class="container py-10">
             <div class="flex flex-wrap mx-0 mb-4">
                 <div class="w-9/12 sm:w-10/12 lg:w-9/12 xl:w-9/12 flex-[0_0_auto] max-w-full !mx-auto !mt-[-5rem] xl:!mt-[-10rem] lg:!mt-[-10rem] md:!mt-[-10rem]" data-cues data-group="images" data-delay="1500">
