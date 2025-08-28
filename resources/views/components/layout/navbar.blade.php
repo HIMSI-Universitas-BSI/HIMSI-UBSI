@@ -1,11 +1,14 @@
 <nav class="navbar navbar-expand-lg fancy navbar-light !bg-[#ffffff]  caret-none xl:[background:0_0!important] lg:[background:0_0!important]">
     <div class="container">
         <div class="navbar-collapse-wrapper bg-[rgba(255,255,255)] opacity-100 flex flex-row !flex-nowrap w-full justify-between items-center">
-            <div class="navbar-brand w-full flex items-center">
+            
+            <div class="navbar-brand w-full flex items-center space-x-3">
                 <a href="/home" class="block">
                     <img src="{{ asset('images/himsi.png') }}" alt="HIMSI Logo" class="h-10 w-auto max-h-12" style="max-width:150px;">
                 </a>
             </div>
+
+
             <div class="navbar-collapse offcanvas offcanvas-nav offcanvas-start">
                 <div class="offcanvas-header xl:!hidden lg:!hidden">
                     <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>
@@ -13,7 +16,7 @@
                 <div class="offcanvas-body xl:!ml-auto lg:!ml-auto flex  flex-col !h-full">
                     <ul class="navbar-nav">
                         <li class="nav-item"><a class="nav-link" href="#">Home</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#">About</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#">Tentang Kami</a></li>
                         
                         <li class="nav-item dropdown"><a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">Divisi</a>
                             <ul class="dropdown-menu">
@@ -26,7 +29,7 @@
                             </ul>
                         </li>
 
-                        <li class="nav-item"><a class="nav-link" href="#">Galery</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#">Galeri</a></li>
                         
                         <div class="offcanvas-footer xl:!hidden lg:!hidden">
                         </div>
