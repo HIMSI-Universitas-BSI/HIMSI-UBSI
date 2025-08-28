@@ -6,9 +6,9 @@
                 
                 <div class="xl:w-4/12 lg:w-4/12 w-full flex-[0_0_auto] !px-[15px] max-w-full xl:!mt-0 lg:!mt-0 !mt-[30px]">
                     <div class="widget">
-                        <h3 class="h2 !mb-3 !text-white !leading-[1.35]">Join the Community</h3>
-                        <p class="lead !leading-[1.65] text-[0.9rem] font-medium !mb-5">Let's make something great together. We are trusted by over 5000+ clients. Join them by using our services and grow your business.</p>
-                        <a href="#" class="btn btn-white  !rounded-[50rem]">Join Us</a>
+                        <h3 class="h2 !mb-3 !text-white !leading-[1.35]">Bergabung Dengan Kami</h3>
+                        <p class="lead !leading-[1.65] text-[0.9rem] font-medium !mb-5">Ayo berikan hidupmu pengalaman yang menarik, bermanfaat, dan berdampak kepada masyarakat.</p>
+                        <a href="#" class="btn btn-white  !rounded-[50rem]">Gabung Sekarang</a>
                     </div>
                 <!-- /.widget -->
                 </div>
