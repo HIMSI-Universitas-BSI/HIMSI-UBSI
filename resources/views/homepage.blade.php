@@ -1,7 +1,7 @@
 <x-layout.base title="Home">
-    <div class="grow shrink-0">
+    <div class="bg-white grow shrink-0">
         <!-- Header -->
-        <x-layout.navbar />
+        <x-layout.navbar1 />
 
         <x-home.hero-section :heroTitle="$heroTitle" :heroAnimate="$heroAnimate" :heroText="$heroText" :gabungSekarang="$gabungSekarang" :bukuPedoman="$bukuPedoman" :large="$large" :kiri="$kiri" :kanan="$kanan" :kecil="$kecil" />
 

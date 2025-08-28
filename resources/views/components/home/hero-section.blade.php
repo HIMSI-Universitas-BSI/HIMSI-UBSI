@@ -1,11 +1,12 @@
 <!-- /header -->
-<section class="wrapper overflow-hidden h-auto">
+<section class="bg-white wrapper overflow-hidden h-auto">
     <div class="container py-16 lg:py-28 !text-center !relative">
         <div class="absolute" style="top: -15%; left: 50%; transform: translateX(-50%);" data-cue="fadeIn">
             <img class="!rounded-[0.8rem]" src="./assets/img/photos/blurry.png" alt="image">
         </div>
         <div class="flex flex-wrap mx-[-15px] !relative">
             <div class="lg:w-8/12 xl:w-8/12 xxl:w-7/12 w-full flex-[0_0_auto] !px-[15px] max-w-full !mx-auto !relative">
+                
                 <div class="absolute shape grape w-5 hidden xl:block lg:block" style="top: -5%; left: -15%;"
                     data-cue="fadeIn" data-delay="1500"><svg xmlns="http://www.w3.org/2000/svg"
                         viewBox="0 0 219.5 219.5"
@@ -36,6 +37,7 @@
                         </g>
                     </svg>
                 </div>
+                
                 <div class="absolute shape yellow w-6 hidden xl:block lg:block" style="bottom: 25%; right: -17%;"
                     data-cue="fadeIn" data-delay="1500"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 500"
                         data-inject-url="https://sandbox-tailwind-template.netlify.app/assets/img/svg/circle.svg"
@@ -45,7 +47,9 @@
                                 d="M250 0C111.93 0 0 111.93 0 250s111.93 250 250 250 250-111.93 250-250S388.07 0 250 0zm0 425a175 175 0 11175-175 175 175 0 01-175 175z"
                                 data-name="Layer 1"></path>
                         </g>
-                    </svg></div>
+                    </svg>
+                </div>
+                
                 <div data-cues="slideInDown" data-group="page-title">
                     <h1 class="text-2xl text-white">
                         Selamat Datang di
@@ -62,11 +66,11 @@
                 </div>
                 <div class="flex justify-center" data-cues="slideInDown" data-delay="600">
                     <span><a href="{{ $gabungSekarang }}" target="_blank"
-                            class="btn btn-lg btn-grape !text-white !bg-[#605dba] border-[#605dba] hover:text-white hover:bg-[#605dba] hover:!border-[#605dba]   active:text-white active:bg-[#605dba] active:border-[#605dba] disabled:text-white disabled:bg-[#605dba] disabled:border-[#605dba] !rounded-[0.8rem] mx-1">
+                            class="btn btn-lg btn-grape !text-white !bg-[#456882] border-[#456882] hover:text-white hover:bg-[#456882] hover:!border-[#456882]   active:text-white active:bg-[#456882] active:border-[#456882] disabled:text-white disabled:bg-[#456882] disabled:border-[#456882] !rounded-[0.8rem] mx-1">
                             Gabung Sekarang</a>
                     </span>
                     <span><a href="{{ $bukuPedoman }}"target="_blank"
-                            class="btn btn-lg btn-fuchsia !text-white !bg-[#e668b3] border-[#e668b3] hover:text-white hover:bg-[#e668b3] hover:!border-[#e668b3]   active:text-white active:bg-[#e668b3] active:border-[#e668b3] disabled:text-white disabled:bg-[#e668b3] disabled:border-[#e668b3] !rounded-[0.8rem] mx-1">
+                            class="btn btn-lg btn-fuchsia !text-white !bg-[#D2C1B6] border-[#D2C1B6] hover:text-white hover:bg-[#D2C1B6] hover:!border-[#D2C1B6]   active:text-white active:bg-[#D2C1B6] active:border-[#D2C1B6] disabled:text-white disabled:bg-[#D2C1B6] disabled:border-[#D2C1B6] !rounded-[0.8rem] mx-1">
                             Lihat Profil Kami
                         </a></span>
                 </div>
