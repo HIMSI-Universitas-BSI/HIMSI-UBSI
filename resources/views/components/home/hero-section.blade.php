@@ -82,10 +82,10 @@
         <div class="container py-10">
             <div class="flex flex-wrap mx-0 mb-4">
                 <div class="w-9/12 sm:w-10/12 lg:w-9/12 xl:w-9/12 flex-[0_0_auto] max-w-full !mx-auto !mt-[-5rem] xl:!mt-[-10rem] lg:!mt-[-10rem] md:!mt-[-10rem]" data-cues data-group="images" data-delay="1500">
-                    <img class="max-w-full h-auto !mx-auto !rounded-[.4rem] !shadow-[0_0.25rem_1.75rem_rgba(30,34,40,0.07)]" data-cue="slideInUp" src="./assets/img/photos/sa1.jpg" srcset="./assets/img/photos/sa1@2x.jpg 2x" alt="image">
-                    <img class="absolute !rounded-[.4rem] !shadow-[0_0.25rem_1.75rem_rgba(30,34,40,0.07)]" data-cue="slideInRight" src="./assets/img/photos/sa2.jpg" srcset="./assets/img/photos/sa2@2x.jpg 2x" style="top: 20%; right:-10%; max-width:30%; height: auto;" alt="image">
-                    <img class="absolute !rounded-[.4rem] !shadow-[0_0.25rem_1.75rem_rgba(30,34,40,0.07)]" data-cue="slideInLeft" src="./assets/img/photos/sa3.jpg" srcset="./assets/img/photos/sa3@2x.jpg 2x" style="top: 10%; left:-10%; max-width:30%; height: auto;" alt="image">
-                    <img class="absolute !rounded-[.4rem] !shadow-[0_0.25rem_1.75rem_rgba(30,34,40,0.07)]" data-cue="slideInLeft" src="./assets/img/photos/sa4.jpg" srcset="./assets/img/photos/sa4@2x.jpg 2x" style="bottom: 10%; left:-13%; max-width:30%; height: auto;" alt="image">
+                    <img class="max-w-full h-auto !mx-auto !rounded-[.4rem] !shadow-[0_0.25rem_1.75rem_rgba(30,34,40,0.07)]" data-cue="slideInUp" src="{{ $large }}" srcset="" alt="image">
+                    <img class="absolute !rounded-[.4rem] !shadow-[0_0.25rem_1.75rem_rgba(30,34,40,0.07)]" data-cue="slideInRight" src="{{ $kiri }}" srcset="" style="top: 20%; right:-10%; max-width:30%; height: auto;" alt="image">
+                    <img class="absolute !rounded-[.4rem] !shadow-[0_0.25rem_1.75rem_rgba(30,34,40,0.07)]" data-cue="slideInLeft" src="{{ $kecil }}" srcset="" style="top: 10%; left:-10%; max-width:30%; height: auto;" alt="image">
+                    <img class="absolute !rounded-[.4rem] !shadow-[0_0.25rem_1.75rem_rgba(30,34,40,0.07)]" data-cue="slideInLeft" src="{{ $kanan }}" srcset="" style="bottom: 10%; left:-13%; max-width:30%; height: auto;" alt="image">
                 </div>
                 <!-- /column -->
             </div>

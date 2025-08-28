@@ -22,6 +22,7 @@ class HomeController extends Controller
         $data['large'] = BennerHelper::getBennerImageUrl('hero_large');
         $data['kanan'] = BennerHelper::getBennerImageUrl('hero_1');
         $data['kiri'] = BennerHelper::getBennerImageUrl('hero_2');
+        $data['kecil'] = BennerHelper::getBennerImageUrl('hero_kecil');
 
         return view('homepage', $data);
     }
