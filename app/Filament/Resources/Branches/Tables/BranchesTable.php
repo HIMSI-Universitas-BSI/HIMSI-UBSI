@@ -8,6 +8,7 @@ use Filament\Actions\EditAction;
 use Filament\Actions\ForceDeleteBulkAction;
 use Filament\Actions\RestoreBulkAction;
 use Filament\Tables\Columns\IconColumn;
+use Filament\Tables\Columns\ImageColumn;
 use Filament\Tables\Columns\TextColumn;
 use Filament\Tables\Filters\TrashedFilter;
 use Filament\Tables\Table;
@@ -20,19 +21,22 @@ class BranchesTable
             ->columns([
                 TextColumn::make('name')
                     ->searchable(),
-                TextColumn::make('poster')
+                TextColumn::make('location')
+                    ->searchable(),
+                ImageColumn::make('poster')
+                    ->disk('public'),
+                ImageColumn::make('image')
+                    ->disk('public'),
+                TextColumn::make('description')
                     ->searchable(),
                 IconColumn::make('active')
                     ->boolean(),
-                TextColumn::make('created_by')
-                    ->numeric()
-                    ->sortable(),
-                TextColumn::make('updated_by')
-                    ->numeric()
-                    ->sortable(),
-                TextColumn::make('deleted_by')
-                    ->numeric()
-                    ->sortable(),
+                TextColumn::make('createdBy.name')
+                    ->label('Created By'),
+                TextColumn::make('updatedBy.name')
+                    ->label("Updated by"),
+                TextColumn::make('deletedBy.name')
+                    ->label("Deleted by"),
                 TextColumn::make('created_at')
                     ->dateTime()
                     ->sortable()

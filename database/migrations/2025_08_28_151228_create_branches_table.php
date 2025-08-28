@@ -16,6 +16,7 @@ return new class extends Migration
         Schema::create('branch', function (Blueprint $table) {
             $table->id();
             $table->string('name', 128);
+            $table->string('location', 128);
             $table->string('poster', 128);
             $table->json('image');
             $table->text('description')->nullable();
