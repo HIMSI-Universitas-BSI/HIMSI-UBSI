@@ -10,10 +10,10 @@
 
 
             <div class="navbar-collapse offcanvas offcanvas-nav offcanvas-start">
-                <div class="offcanvas-header xl:!hidden lg:!hidden bg-[#1B3C53]">
+                <div class="offcanvas-header xl:!hidden lg:!hidden">
                     <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>
                 </div>
-                <div class="offcanvas-body xl:!ml-auto lg:!ml-auto flex  flex-col !h-full bg-[#1B3C53]">
+                <div class="offcanvas-body xl:!ml-auto lg:!ml-auto flex  flex-col !h-full">
                     <ul class="navbar-nav">
                         <li class="nav-item"><a class="nav-link" href="#">Home</a></li>
                         <li class="nav-item"><a class="nav-link" href="#">Tentang Kami</a></li>
