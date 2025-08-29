@@ -13,7 +13,7 @@
 
         <x-home.branch-section :branches="$branches" />
 
-        <x-home.galery-section />
+        <x-home.galery-section :branches="$branches" />
 
         <x-home.faq-section :faqs="$faqs" :faqTitle="$faqTitle" />
 
