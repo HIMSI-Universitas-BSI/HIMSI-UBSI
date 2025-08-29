@@ -11,60 +11,54 @@
     <!-- /.row -->
     </div>
     <!-- /.container -->
-    <div class="swiper-container swiper-auto swiper-auto-xs !mb-8 relative !z-10" data-margin="40" data-nav="false" data-dots="false" data-centered="true" data-loop="true" data-items-auto="true" data-autoplay="true" data-autoplaytime="1" data-drag="false" data-resizeupdate="false" data-speed="7000">
+    <div class="swiper-container swiper-auto swiper-auto-xs !mb-8 relative !z-10" 
+        data-margin="40" data-nav="false" data-dots="false" data-centered="true" 
+        data-loop="true" data-items-auto="true" data-autoplay="true" 
+        data-autoplaytime="1" data-drag="false" data-resizeupdate="false" 
+        data-speed="7000">
+
         <div class="swiper overflow-visible pointer-events-none">
             <div class="swiper-wrapper ticker">
-                <div class="swiper-slide">
-                    <figure class="rounded-[0.8rem] shadow-[rgba(30,34,40,0.02)_0_2px_1px,rgba(30,34,40,0.02)_0_4px_2px,rgba(30,34,40,0.02)_0_8px_4px,rgba(30,34,40,0.02)_0_16px_8px,rgba(30,34,40,0.03)_0_32px_16px]"><img class="!rounded-[.8rem]" src="./assets/img/photos/ma8.jpg" srcset="./assets/img/photos/ma8@2x.jpg 2x" alt="" /></figure>
-                </div>
-                <div class="swiper-slide">
-                    <figure class="rounded-[0.8rem] shadow-[rgba(30,34,40,0.02)_0_2px_1px,rgba(30,34,40,0.02)_0_4px_2px,rgba(30,34,40,0.02)_0_8px_4px,rgba(30,34,40,0.02)_0_16px_8px,rgba(30,34,40,0.03)_0_32px_16px]"><img class="!rounded-[.8rem]" src="./assets/img/photos/ma9.jpg" srcset="./assets/img/photos/ma9@2x.jpg 2x" alt="" /></figure>
-                </div>
-                <div class="swiper-slide">
-                    <figure class="rounded-[0.8rem] shadow-[rgba(30,34,40,0.02)_0_2px_1px,rgba(30,34,40,0.02)_0_4px_2px,rgba(30,34,40,0.02)_0_8px_4px,rgba(30,34,40,0.02)_0_16px_8px,rgba(30,34,40,0.03)_0_32px_16px]"><img class="!rounded-[.8rem]" src="./assets/img/photos/ma10.jpg" srcset="./assets/img/photos/ma10@2x.jpg 2x" alt="" /></figure>
-                </div>
-                <div class="swiper-slide">
-                    <figure class="rounded-[0.8rem] shadow-[rgba(30,34,40,0.02)_0_2px_1px,rgba(30,34,40,0.02)_0_4px_2px,rgba(30,34,40,0.02)_0_8px_4px,rgba(30,34,40,0.02)_0_16px_8px,rgba(30,34,40,0.03)_0_32px_16px]"><img class="!rounded-[.8rem]" src="./assets/img/photos/ma11.jpg" srcset="./assets/img/photos/ma11@2x.jpg 2x" alt="" /></figure>
-                </div>
-                <div class="swiper-slide">
-                    <figure class="rounded-[0.8rem] shadow-[rgba(30,34,40,0.02)_0_2px_1px,rgba(30,34,40,0.02)_0_4px_2px,rgba(30,34,40,0.02)_0_8px_4px,rgba(30,34,40,0.02)_0_16px_8px,rgba(30,34,40,0.03)_0_32px_16px]"><img class="!rounded-[.8rem]" src="./assets/img/photos/ma12.jpg" srcset="./assets/img/photos/ma12@2x.jpg 2x" alt="" /></figure>
-                </div>
-                <div class="swiper-slide">
-                    <figure class="rounded-[0.8rem] shadow-[rgba(30,34,40,0.02)_0_2px_1px,rgba(30,34,40,0.02)_0_4px_2px,rgba(30,34,40,0.02)_0_8px_4px,rgba(30,34,40,0.02)_0_16px_8px,rgba(30,34,40,0.03)_0_32px_16px]"><img class="!rounded-[.8rem]" src="./assets/img/photos/ma13.jpg" srcset="./assets/img/photos/ma13@2x.jpg 2x" alt="" /></figure>
-                </div>
-                <div class="swiper-slide">
-                    <figure class="rounded-[0.8rem] shadow-[rgba(30,34,40,0.02)_0_2px_1px,rgba(30,34,40,0.02)_0_4px_2px,rgba(30,34,40,0.02)_0_8px_4px,rgba(30,34,40,0.02)_0_16px_8px,rgba(30,34,40,0.03)_0_32px_16px]"><img class="!rounded-[.8rem]" src="./assets/img/photos/ma14.jpg" srcset="./assets/img/photos/ma14@2x.jpg 2x" alt="" /></figure>
-                </div>
+
+                @foreach ($branches as $branch)
+                    @foreach ($branch->image as $img)
+                        @if (!empty($img))
+                            <div class="swiper-slide">
+                                <figure class="h-[320px] w-[600px] overflow-hidden rounded-[0.8rem]">
+                                    <img class="h-full w-full object-contain" 
+                                        src="{{ asset('storage/' . $img) }}" 
+                                        alt="{{ $branch->name }}">
+                                </figure>
+                            </div>
+                        @endif
+                    @endforeach
+                @endforeach
+
             </div>
             <!--/.swiper-wrapper -->
         </div>
     <!-- /.swiper -->
     </div>
+
     <!-- /.swiper-container -->
     <div class="swiper-container swiper-auto swiper-auto-xs relative !z-10" data-margin="40" data-nav="false" data-dots="false" data-centered="true" data-loop="true" data-items-auto="true" data-autoplay="true" data-autoplaytime="1" data-drag="false" data-resizeupdate="false" data-speed="7000">
         <div class="swiper overflow-visible pointer-events-none" dir="rtl">
             <div class="swiper-wrapper ticker">
-                <div class="swiper-slide">
-                    <figure class="rounded-[0.8rem] shadow-[rgba(30,34,40,0.02)_0_2px_1px,rgba(30,34,40,0.02)_0_4px_2px,rgba(30,34,40,0.02)_0_8px_4px,rgba(30,34,40,0.02)_0_16px_8px,rgba(30,34,40,0.03)_0_32px_16px]"><img class="!rounded-[.8rem]" src="./assets/img/photos/ma1.jpg" srcset="./assets/img/photos/ma1@2x.jpg 2x" alt="" /></figure>
-                </div>
-                <div class="swiper-slide">
-                    <figure class="rounded-[0.8rem] shadow-[rgba(30,34,40,0.02)_0_2px_1px,rgba(30,34,40,0.02)_0_4px_2px,rgba(30,34,40,0.02)_0_8px_4px,rgba(30,34,40,0.02)_0_16px_8px,rgba(30,34,40,0.03)_0_32px_16px]"><img class="!rounded-[.8rem]" src="./assets/img/photos/ma2.jpg" srcset="./assets/img/photos/ma2@2x.jpg 2x" alt="" /></figure>
-                </div>
-                <div class="swiper-slide">
-                    <figure class="rounded-[0.8rem] shadow-[rgba(30,34,40,0.02)_0_2px_1px,rgba(30,34,40,0.02)_0_4px_2px,rgba(30,34,40,0.02)_0_8px_4px,rgba(30,34,40,0.02)_0_16px_8px,rgba(30,34,40,0.03)_0_32px_16px]"><img class="!rounded-[.8rem]" src="./assets/img/photos/ma3.jpg" srcset="./assets/img/photos/ma3@2x.jpg 2x" alt="" /></figure>
-                </div>
-                <div class="swiper-slide">
-                    <figure class="rounded-[0.8rem] shadow-[rgba(30,34,40,0.02)_0_2px_1px,rgba(30,34,40,0.02)_0_4px_2px,rgba(30,34,40,0.02)_0_8px_4px,rgba(30,34,40,0.02)_0_16px_8px,rgba(30,34,40,0.03)_0_32px_16px]"><img class="!rounded-[.8rem]" src="./assets/img/photos/ma4.jpg" srcset="./assets/img/photos/ma4@2x.jpg 2x" alt="" /></figure>
-                </div>
-                <div class="swiper-slide">
-                    <figure class="rounded-[0.8rem] shadow-[rgba(30,34,40,0.02)_0_2px_1px,rgba(30,34,40,0.02)_0_4px_2px,rgba(30,34,40,0.02)_0_8px_4px,rgba(30,34,40,0.02)_0_16px_8px,rgba(30,34,40,0.03)_0_32px_16px]"><img class="!rounded-[.8rem]" src="./assets/img/photos/ma5.jpg" srcset="./assets/img/photos/ma5@2x.jpg 2x" alt="" /></figure>
-                </div>
-                <div class="swiper-slide">
-                    <figure class="rounded-[0.8rem] shadow-[rgba(30,34,40,0.02)_0_2px_1px,rgba(30,34,40,0.02)_0_4px_2px,rgba(30,34,40,0.02)_0_8px_4px,rgba(30,34,40,0.02)_0_16px_8px,rgba(30,34,40,0.03)_0_32px_16px]"><img class="!rounded-[.8rem]" src="./assets/img/photos/ma6.jpg" srcset="./assets/img/photos/ma6@2x.jpg 2x" alt="" /></figure>
-                </div>
-                <div class="swiper-slide">
-                    <figure class="rounded-[0.8rem] shadow-[rgba(30,34,40,0.02)_0_2px_1px,rgba(30,34,40,0.02)_0_4px_2px,rgba(30,34,40,0.02)_0_8px_4px,rgba(30,34,40,0.02)_0_16px_8px,rgba(30,34,40,0.03)_0_32px_16px]"><img class="!rounded-[.8rem]" src="./assets/img/photos/ma7.jpg" srcset="./assets/img/photos/ma7@2x.jpg 2x" alt="" /></figure>
-                </div>
+                
+                @foreach ($branches as $branch)
+                    @foreach ($branch->image as $img)
+                        @if (!empty($img))
+                            <div class="swiper-slide">
+                                <figure class="h-[320px] w-[600px] overflow-hidden rounded-[0.8rem]">
+                                    <img class="h-full w-full object-contain" 
+                                        src="{{ asset('storage/' . $img) }}" 
+                                        alt="{{ $branch->name }}">
+                                </figure>
+                            </div>
+                        @endif
+                    @endforeach
+                @endforeach
+                
             </div>
             <!--/.swiper-wrapper -->
         </div>
