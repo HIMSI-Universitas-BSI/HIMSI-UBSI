@@ -1,4 +1,4 @@
-<nav class="navbar navbar-expand-lg fancy navbar-light !bg-gray-200  caret-none xl:[background:0_0!important] lg:[background:0_0!important]">
+<nav class="navbar navbar-expand-lg fancy navbar-light bg-white caret-none xl:[background:0_0!important] lg:[background:0_0!important]">
     <div class="container">
         <div class="navbar-collapse-wrapper bg-[rgba(255,255,255)] opacity-100 flex flex-row !flex-nowrap w-full justify-between items-center shadow-2xl border-gray-900">
             
@@ -10,10 +10,10 @@
 
 
             <div class="navbar-collapse offcanvas offcanvas-nav offcanvas-start">
-                <div class="offcanvas-header xl:!hidden lg:!hidden">
+                <div class="offcanvas-header xl:!hidden lg:!hidden bg-[#1B3C53]">
                     <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>
                 </div>
-                <div class="offcanvas-body xl:!ml-auto lg:!ml-auto flex  flex-col !h-full">
+                <div class="offcanvas-body xl:!ml-auto lg:!ml-auto flex  flex-col !h-full bg-[#1B3C53]">
                     <ul class="navbar-nav">
                         <li class="nav-item"><a class="nav-link" href="#">Home</a></li>
                         <li class="nav-item"><a class="nav-link" href="#">Tentang Kami</a></li>
