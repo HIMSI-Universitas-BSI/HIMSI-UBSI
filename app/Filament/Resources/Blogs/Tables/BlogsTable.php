@@ -8,6 +8,7 @@ use Filament\Actions\EditAction;
 use Filament\Actions\ForceDeleteBulkAction;
 use Filament\Actions\RestoreBulkAction;
 use Filament\Tables\Columns\IconColumn;
+use Filament\Tables\Columns\ImageColumn;
 use Filament\Tables\Columns\TextColumn;
 use Filament\Tables\Filters\TrashedFilter;
 use Filament\Tables\Table;
@@ -18,28 +19,28 @@ class BlogsTable
     {
         return $table
             ->columns([
-                TextColumn::make('branch_id')
-                    ->numeric()
-                    ->sortable(),
                 TextColumn::make('title')
                     ->searchable(),
-                TextColumn::make('slug')
-                    ->searchable(),
-                TextColumn::make('banner')
+                TextColumn::make('branch.name')
+                    ->label('Cabang'),
+                ImageColumn::make('banner')
+                    ->disk('public'),
+                TextColumn::make('content')
+                    ->html()
+                    ->limit(100)
                     ->searchable(),
                 TextColumn::make('quotes')
                     ->searchable(),
+                ImageColumn::make('image')
+                    ->disk('public'),
                 IconColumn::make('active')
                     ->boolean(),
-                TextColumn::make('created_by')
-                    ->numeric()
-                    ->sortable(),
-                TextColumn::make('updated_by')
-                    ->numeric()
-                    ->sortable(),
-                TextColumn::make('deleted_by')
-                    ->numeric()
-                    ->sortable(),
+                TextColumn::make('createdBy.name')
+                    ->label('Created By'),
+                TextColumn::make('updatedBy.name')
+                    ->label("Updated by"),
+                TextColumn::make('deletedBy.name')
+                    ->label("Deleted by"),
                 TextColumn::make('created_at')
                     ->dateTime()
                     ->sortable()
