@@ -2,11 +2,14 @@
 
 namespace App\Filament\Resources\Blogs\Schemas;
 
-use Filament\Forms\Components\FileUpload;
-use Filament\Forms\Components\TextInput;
-use Filament\Forms\Components\Textarea;
-use Filament\Forms\Components\Toggle;
+use App\Models\Branch;
 use Filament\Schemas\Schema;
+use Filament\Forms\Components\Select;
+use Filament\Forms\Components\Toggle;
+use Filament\Forms\Components\Textarea;
+use Filament\Forms\Components\TextInput;
+use Filament\Forms\Components\FileUpload;
+use Filament\Forms\Components\RichEditor;
 
 class BlogForm
 {
@@ -14,33 +17,36 @@ class BlogForm
     {
         return $schema
             ->components([
-                TextInput::make('branch_id')
+                Select::make('branch_id')
                     ->required()
-                    ->numeric(),
+                    ->label('Cabang')
+                    ->options(Branch::all()->pluck('name', 'id'))
+                    ->columnSpanFull(),
                 TextInput::make('title')
-                    ->required(),
-                TextInput::make('slug')
-                    ->required(),
-                TextInput::make('banner')
-                    ->required(),
-                Textarea::make('content')
                     ->required()
                     ->columnSpanFull(),
-                TextInput::make('quotes')
-                    ->required(),
+                FileUpload::make('banner')
+                    ->required()
+                    ->disk('public')
+                    ->image()
+                    ->directory('blog_banner')
+                    ->columnSpanFull(),
+                RichEditor::make('content')
+                    ->required()
+                    ->columnSpanFull(),
+                Textarea::make('quotes')
+                    ->required()
+                    ->columnSpanFull(),
                 FileUpload::make('image')
                     ->image()
-                    ->required(),
+                    ->disk('public')
+                    ->image()
+                    ->multiple()
+                    ->directory('blog_image')
+                    ->required()
+                    ->columnSpanFull(),
                 Toggle::make('active')
                     ->required(),
-                TextInput::make('created_by')
-                    ->required()
-                    ->numeric()
-                    ->default(1),
-                TextInput::make('updated_by')
-                    ->numeric(),
-                TextInput::make('deleted_by')
-                    ->numeric(),
             ]);
     }
 }
