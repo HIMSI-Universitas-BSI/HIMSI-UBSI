@@ -20,7 +20,7 @@ class HomeController extends Controller
         $data['counts'] = Count::where('active', true)->limit(4)->get();
         $data['divisi'] = Division::where('active', true)->limit(4)->get();
         $data['faqs'] = Faq::where('active', true)->limit(5)->get();
-        $data['branches'] = Branch::where('active', true)->get();
+        $data['branches'] = Branch::where('active', true)->with('blogs')->get();
 
         // Get Setting Helpers Hero Section
         $data['heroTitle'] = SettingHelper::getSetting('title_hero');

@@ -19,9 +19,9 @@
                             class="!rounded-[.4rem] h-[400px] w-[200px] object-cover" 
                             src="{{ asset('storage/' . $b->poster) }}" 
                             alt="image">
-                            @foreach ($b->image as $img)
+                            @foreach ($b->image ?? [] as $img)
                                 @if (!empty($img))
-                                    <a class="item-link absolute w-[2.2rem] h-[2.2rem] !leading-[2.2rem] z-[1] transition-all duration-[0.3s] ease-in-out opacity-0 !text-[#343f52] shadow-[0_0.25rem_0.75rem_rgba(30,34,40,0.02)] text-[1rem] flex items-center justify-center rounded-[100%] right-0 bottom-4 bg-[rgba(255,255,255,.7)] hover:bg-[rgba(255,255,255,.9)] hover:!text-[#343f52] group-hover:opacity-100 group-hover:right-[1rem]" 
+                                    <a class="item-link ..." 
                                     href="{{ asset('storage/' . $img) }}" 
                                     data-glightbox 
                                     data-gallery="projects-group-{{ $b->id }}">
@@ -29,6 +29,7 @@
                                     </a>
                                 @endif
                             @endforeach
+
                     </figure>
                     <div class="project-details flex justify-center flex-col">
                         <div class="post-header">

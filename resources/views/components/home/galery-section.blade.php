@@ -11,6 +11,8 @@
     <!-- /.row -->
     </div>
     <!-- /.container -->
+    
+    <!-- /.swiper-container -->
     <div class="swiper-container swiper-auto swiper-auto-xs !mb-8 relative !z-10" 
         data-margin="40" data-nav="false" data-dots="false" data-centered="true" 
         data-loop="true" data-items-auto="true" data-autoplay="true" 
@@ -21,15 +23,21 @@
             <div class="swiper-wrapper ticker">
 
                 @foreach ($branches as $branch)
-                    @foreach ($branch->image as $img)
-                        @if (!empty($img))
-                            <div class="swiper-slide">
-                                <figure class="h-[320px] w-[600px] overflow-hidden rounded-[0.8rem]">
-                                    <img class="h-full w-full object-contain" 
-                                        src="{{ asset('storage/' . $img) }}" 
-                                        alt="{{ $branch->name }}">
-                                </figure>
-                            </div>
+                    @foreach ($branch->blogs as $blog)
+                        @php
+                            $images = is_array($blog->image) ? $blog->image : json_decode($blog->image, true);
+                        @endphp
+
+                        @if (!empty($images))
+                            @foreach ($images as $img)
+                                <div class="swiper-slide">
+                                    <figure class="h-[320px] w-[600px] overflow-hidden rounded-[0.8rem]">
+                                        <img class="h-full w-full object-contain" 
+                                            src="{{ asset('storage/' . $img) }}" 
+                                            alt="{{ $branch->name }}">
+                                    </figure>
+                                </div>
+                            @endforeach
                         @endif
                     @endforeach
                 @endforeach
@@ -40,25 +48,37 @@
     <!-- /.swiper -->
     </div>
 
-    <!-- /.swiper-container -->
-    <div class="swiper-container swiper-auto swiper-auto-xs relative !z-10" data-margin="40" data-nav="false" data-dots="false" data-centered="true" data-loop="true" data-items-auto="true" data-autoplay="true" data-autoplaytime="1" data-drag="false" data-resizeupdate="false" data-speed="7000">
+
+    <!-- swiper kedua (rtl) -->
+    <div class="swiper-container swiper-auto swiper-auto-xs relative !z-10" 
+        data-margin="40" data-nav="false" data-dots="false" data-centered="true" 
+        data-loop="true" data-items-auto="true" data-autoplay="true" 
+        data-autoplaytime="1" data-drag="false" data-resizeupdate="false" 
+        data-speed="7000">
+
         <div class="swiper overflow-visible pointer-events-none" dir="rtl">
             <div class="swiper-wrapper ticker">
                 
                 @foreach ($branches as $branch)
-                    @foreach ($branch->image as $img)
-                        @if (!empty($img))
-                            <div class="swiper-slide">
-                                <figure class="h-[320px] w-[600px] overflow-hidden rounded-[0.8rem]">
-                                    <img class="h-full w-full object-contain" 
-                                        src="{{ asset('storage/' . $img) }}" 
-                                        alt="{{ $branch->name }}">
-                                </figure>
-                            </div>
+                    @foreach ($branch->blogs as $blog)
+                        @php
+                            $images = is_array($blog->image) ? $blog->image : json_decode($blog->image, true);
+                        @endphp
+
+                        @if (!empty($images))
+                            @foreach ($images as $img)
+                                <div class="swiper-slide">
+                                    <figure class="h-[320px] w-[600px] overflow-hidden rounded-[0.8rem]">
+                                        <img class="h-full w-full object-contain" 
+                                            src="{{ asset('storage/' . $img) }}" 
+                                            alt="{{ $branch->name }}">
+                                    </figure>
+                                </div>
+                            @endforeach
                         @endif
                     @endforeach
                 @endforeach
-                
+
             </div>
             <!--/.swiper-wrapper -->
         </div>
