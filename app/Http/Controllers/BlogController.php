@@ -10,6 +10,7 @@ class BlogController extends Controller
     public function showBlog($id)
     {
         $blog = Blog::findOrFail($id);
-        return view('pages.blog.blogshow', compact('blog', 'blogs'));
+        
+        return view('blogshow', compact('blog'));
     }
 }
