@@ -23,6 +23,10 @@ class BlogsTable
                     ->searchable(),
                 TextColumn::make('branch.name')
                     ->label('Cabang'),
+                TextColumn::make('created_at')
+                    ->label('Date')
+                    ->date()
+                    ->sortable(),
                 ImageColumn::make('banner')
                     ->disk('public'),
                 TextColumn::make('content')
@@ -41,10 +45,6 @@ class BlogsTable
                     ->label("Updated by"),
                 TextColumn::make('deletedBy.name')
                     ->label("Deleted by"),
-                TextColumn::make('created_at')
-                    ->dateTime()
-                    ->sortable()
-                    ->toggleable(isToggledHiddenByDefault: true),
                 TextColumn::make('updated_at')
                     ->dateTime()
                     ->sortable()

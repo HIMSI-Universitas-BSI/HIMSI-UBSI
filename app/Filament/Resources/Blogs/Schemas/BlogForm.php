@@ -8,8 +8,10 @@ use Filament\Forms\Components\Select;
 use Filament\Forms\Components\Toggle;
 use Filament\Forms\Components\Textarea;
 use Filament\Forms\Components\TextInput;
+use Filament\Forms\Components\DatePicker;
 use Filament\Forms\Components\FileUpload;
 use Filament\Forms\Components\RichEditor;
+use Filament\Forms\Components\DateTimePicker;
 
 class BlogForm
 {
@@ -45,6 +47,9 @@ class BlogForm
                     ->directory('blog_image')
                     ->required()
                     ->columnSpanFull(),
+                DatePicker::make('created_at')
+                    ->label('Date')
+                    ->required(),
                 Toggle::make('active')
                     ->required(),
             ]);
