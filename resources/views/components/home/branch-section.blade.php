@@ -13,35 +13,37 @@
         <div class="swiper-wrapper">
             
             @foreach ( $branches as $b )
-                <div class="swiper-slide group">
-                    <figure class="!rounded-[.4rem] !mb-6">
-                        <img 
-                            class="!rounded-[.4rem] h-[400px] w-[200px] object-cover" 
-                            src="{{ asset('storage/' . $b->poster) }}" 
-                            alt="image">
-                            @foreach ($b->blogs as $blog)
-                                @foreach ($blog->image as $img)
-                                    @if (!empty($img))
-                                        <a class="item-link absolute w-[2.2rem] h-[2.2rem] !leading-[2.2rem] z-[1] transition-all duration-[0.3s] ease-in-out opacity-0 !text-[#343f52] shadow-[0_0.25rem_0.75rem_rgba(30,34,40,0.02)] text-[1rem] flex items-center justify-center rounded-[100%] right-0 bottom-4 bg-[rgba(255,255,255,.7)] hover:bg-[rgba(255,255,255,.9)] hover:!text-[#343f52] group-hover:opacity-100 group-hover:right-[1rem]" 
-                                        href="{{ asset('storage/' . $img) }}" 
-                                        data-glightbox 
-                                        data-gallery="projects-group-{{ $b->id }}">
-                                            <i class="uil uil-focus-add before:content-['\eb22']"></i>
-                                        </a>
-                                    @endif
+                <a href="{{ $b->grup_wa }}" target="_blank">
+                    <div class="swiper-slide group">
+                        <figure class="!rounded-[.4rem] !mb-6">
+                            <img 
+                                class="!rounded-[.4rem] h-[400px] w-[200px] object-cover" 
+                                src="{{ asset('storage/' . $b->poster) }}" 
+                                alt="image">
+                                @foreach ($b->blogs as $blog)
+                                    @foreach ($blog->image as $img)
+                                        @if (!empty($img))
+                                            <a class="item-link absolute w-[2.2rem] h-[2.2rem] !leading-[2.2rem] z-[1] transition-all duration-[0.3s] ease-in-out opacity-0 !text-[#343f52] shadow-[0_0.25rem_0.75rem_rgba(30,34,40,0.02)] text-[1rem] flex items-center justify-center rounded-[100%] right-0 bottom-4 bg-[rgba(255,255,255,.7)] hover:bg-[rgba(255,255,255,.9)] hover:!text-[#343f52] group-hover:opacity-100 group-hover:right-[1rem]" 
+                                            href="{{ asset('storage/' . $img) }}" 
+                                            data-glightbox 
+                                            data-gallery="projects-group-{{ $b->id }}">
+                                                <i class="uil uil-focus-add before:content-['\eb22']"></i>
+                                            </a>
+                                        @endif
+                                    @endforeach
                                 @endforeach
-                            @endforeach
-                    </figure>
-                    <div class="project-details flex justify-center flex-col">
-                        <div class="post-header">
-                        <h2 class="post-title h3"><a href="../../single-project.html" class="!text-[#343f52] hover:!text-[#3f78e0]">{{ $b->name }}</a></h2>
-                        <div class="uppercase !tracking-[0.02rem] text-[0.7rem] font-bold !mb-[0.4rem] !text-[#9499a3]">{{ $b->location }}</div>
+                        </figure>
+                        <div class="project-details flex justify-center flex-col">
+                            <div class="post-header">
+                            <h2 class="post-title h3"><a href="../../single-project.html" class="!text-[#343f52] hover:!text-[#3f78e0]">{{ $b->name }}</a></h2>
+                            <div class="uppercase !tracking-[0.02rem] text-[0.7rem] font-bold !mb-[0.4rem] !text-[#9499a3]">{{ $b->location }}</div>
+                            </div>
+                            <!-- /.post-header -->
                         </div>
-                        <!-- /.post-header -->
+                    <!-- /.project-details -->
                     </div>
-                <!-- /.project-details -->
-                </div>
-                <!--/.swiper-slide -->
+                    <!--/.swiper-slide -->
+                </a>
             @endforeach
 
             <!--/.swiper-slide -->
