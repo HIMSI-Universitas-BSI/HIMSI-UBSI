@@ -41,6 +41,10 @@ class HomeController extends Controller
         $data['mission'] = SettingHelper::getSetting('mission');
         $data['aboutImage'] = BennerHelper::getBennerImageUrl('about_image');
 
+        //Get Setting Helpers Galery Section
+        $data['galeryTitle'] = SettingHelper::getSetting('galery_title');
+        $data['galeryText'] = SettingHelper::getSetting('galery_text');
+
         //Get Setting Helpers Faq Section
         $data['faqTitle'] = SettingHelper::getSetting('faq_title');
 
