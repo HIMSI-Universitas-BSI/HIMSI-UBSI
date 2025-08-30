@@ -25,8 +25,6 @@ class BranchesTable
                     ->searchable(),
                 ImageColumn::make('poster')
                     ->disk('public'),
-                ImageColumn::make('image')
-                    ->disk('public'),
                 TextColumn::make('description')
                     ->searchable(),
                 IconColumn::make('active')

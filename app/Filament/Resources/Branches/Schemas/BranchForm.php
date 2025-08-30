@@ -24,13 +24,6 @@ class BranchForm
                     ->directory('branch_poster')
                     ->required()
                     ->columnSpanFull(),
-                FileUpload::make('image')
-                    ->image()
-                    ->multiple()
-                    ->disk('public')
-                    ->directory('branch_image')
-                    ->required()
-                    ->columnSpanFull(),
                 Textarea::make('description')
                     ->columnSpanFull(),
                 Toggle::make('active')
