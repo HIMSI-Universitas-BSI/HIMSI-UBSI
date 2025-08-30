@@ -17,7 +17,6 @@ return new class extends Migration
             $table->id();
             $table->foreignId('branch_id')->constrained('branch');
             $table->string('title', 128);
-            $table->string('slug', 128);
             $table->string('banner', 128);
             $table->text('content');
             $table->string('quotes', 128);
