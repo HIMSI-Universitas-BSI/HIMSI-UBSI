@@ -3,8 +3,8 @@
     <div class="container">
         <div class="flex flex-wrap mx-[-15px]">
             <div class="md:w-11/12 lg:w-8/12 xl:w-7/12 xxl:w-6/12 w-full flex-[0_0_auto] !px-[15px] max-w-full !mx-auto !text-center">
-            <h2 class="!text-[calc(1.345rem_+_1.14vw)] font-bold !leading-[1.2] xl:!text-[2.2rem] !mb-4">Creative. Smart. Awesome.</h2>
-            <p class="lead !text-[1.05rem] !leading-[1.55] !font-normal !mb-12">Curabitur blandit tempus porttitor. Cras mattis consectetur purus sit amet fermentum. Nullam quis risus eget urna.</p>
+            <h2 class="!text-[calc(1.345rem_+_1.14vw)] font-bold !leading-[1.2] xl:!text-[2.2rem] !mb-4">{{ $galeryTitle }}</h2>
+            <p class="lead !text-[1.05rem] !leading-[1.55] !font-normal !mb-12">{{ $galeryText }}</p>
             </div>
             <!-- /column -->
         </div>
