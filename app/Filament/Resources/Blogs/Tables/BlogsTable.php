@@ -20,7 +20,8 @@ class BlogsTable
         return $table
             ->columns([
                 TextColumn::make('title')
-                    ->searchable(),
+                    ->searchable()
+                    ->limit(50),
                 TextColumn::make('branch.name')
                     ->label('Cabang'),
                 TextColumn::make('created_at')
@@ -30,11 +31,11 @@ class BlogsTable
                 ImageColumn::make('banner')
                     ->disk('public'),
                 TextColumn::make('content')
-                    ->html()
-                    ->limit(100)
-                    ->searchable(),
+                    ->formatStateUsing(fn ($state) => \Illuminate\Support\Str::limit(strip_tags($state), 100))
+                    ->html(),
                 TextColumn::make('quotes')
-                    ->searchable(),
+                    ->searchable()
+                    ->limit(50),
                 ImageColumn::make('image')
                     ->disk('public'),
                 IconColumn::make('active')
