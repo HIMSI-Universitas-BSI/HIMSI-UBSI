@@ -3,7 +3,7 @@
         <div class="navbar-collapse-wrapper bg-[rgba(255,255,255)] opacity-100 flex flex-row !flex-nowrap w-full justify-between items-center shadow-2xl border-gray-900">
             
             <div class="navbar-brand w-full flex items-center space-x-3">
-                <a href="/home" class="block">
+                <a href="/" class="block">
                     <img src="{{ asset('images/himsi.png') }}" alt="HIMSI Logo" class="h-10 w-auto max-h-12" style="max-width:150px;">
                 </a>
             </div>
@@ -15,7 +15,7 @@
                 </div>
                 <div class="offcanvas-body xl:!ml-auto lg:!ml-auto flex  flex-col !h-full">
                     <ul class="navbar-nav">
-                        <li class="nav-item"><a class="nav-link" href="#">Home</a></li>
+                        <li class="nav-item"><a class="nav-link" href="/">Home</a></li>
                         <li class="nav-item"><a class="nav-link" href="#">Tentang Kami</a></li>
                         
                         <li class="nav-item dropdown"><a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">Divisi</a>
