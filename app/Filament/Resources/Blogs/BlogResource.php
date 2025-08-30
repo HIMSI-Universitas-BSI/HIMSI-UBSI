@@ -20,7 +20,11 @@ class BlogResource extends Resource
 {
     protected static ?string $model = Blog::class;
 
-    protected static string|BackedEnum|null $navigationIcon = Heroicon::OutlinedRectangleStack;
+    protected static string|BackedEnum|null $navigationIcon = Heroicon::PencilSquare;
+
+    protected static ?string $navigationLabel = 'Blog';
+
+    protected static ?string $pluralModelLabel = 'Blog';
 
     public static function form(Schema $schema): Schema
     {
