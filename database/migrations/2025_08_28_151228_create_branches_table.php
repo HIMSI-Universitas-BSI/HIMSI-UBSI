@@ -18,7 +18,7 @@ return new class extends Migration
             $table->string('name', 128);
             $table->string('location', 128);
             $table->string('poster', 128);
-            $table->json('image');
+            $table->string('grup_wa', 128)->nullable();
             $table->text('description')->nullable();
             $this->base($table);
         });

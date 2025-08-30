@@ -14,24 +14,22 @@ class BranchSeeder extends Seeder
     public function run(): void
     {
         $defaultPoster = 'default-poster.jpg';
-        $defaultImage = json_encode(['default-image1.jpg', 'default-image2.jpg']);
 
         $data = [
-            ['name' => 'DPC BSD', 'location' => 'BSD, Tangerang Selatan'],
-            ['name' => 'DPC Cengkareng', 'location' => 'Cengkareng, Jakarta Barat'],
-            ['name' => 'DPC Slipi', 'location' => 'Slipi, Jakarta Barat'],
-            ['name' => 'DPC Cimone', 'location' => 'Cimone, Tangerang Kota'],
-            ['name' => 'DPC Samudra', 'location' => 'Kramat, Jakarta Pusat'],
-            ['name' => 'DPC Marwati', 'location' => 'Depok, Jawa Barat'],
-            ['name' => 'DPC Kaliabang', 'location' => 'Bekasi, Jawa Barat'],
-            ['name' => 'DPC Cikarang', 'location' => 'Cikarang, Jawa Barat'],
-            ['name' => 'DPC Kalimalang', 'location' => 'Kalimalang, Jakarta Timur'],
-            ['name' => 'DPC Jatiwaringin', 'location' => 'Pondok Gede, Jakarta Timur'],
+            ['name' => 'DPC BSD', 'location' => 'BSD, Tangerang Selatan', 'grup_wa' => 'https://chat.whatsapp.com/DD7fue3sDAf6Zv6bRoQQs5?mode=ems_wa_t'],
+            ['name' => 'DPC Cengkareng', 'location' => 'Cengkareng, Jakarta Barat', 'grup_wa' => 'https://chat.whatsapp.com/KFGx00FPeZF89qk8scg6Od?mode=ems_copy_t'],
+            ['name' => 'DPC Slipi', 'location' => 'Slipi, Jakarta Barat', 'grup_wa' => 'https://chat.whatsapp.com/JpLiyhPGMrDD90JX7eAPa7?mode=ems_copy_c'],
+            ['name' => 'DPC Cimone', 'location' => 'Cimone, Tangerang Kota', 'grup_wa' => 'https://chat.whatsapp.com/HKDof7DhZbd2wDzrygxGlV?mode=ems_copy_c'],
+            ['name' => 'DPC Samudra', 'location' => 'Kramat, Jakarta Pusat', 'grup_wa' => 'https://chat.whatsapp.com/KXyGLKPd4Jv8sWdaXXOf1L?mode=ems_copy_c'],
+            ['name' => 'DPC Marwati', 'location' => 'Depok, Jawa Barat', 'grup_wa' => 'https://chat.whatsapp.com/GvJEDOXX9m3HyguKWaL4A7?mode=ems_copy_t'],
+            ['name' => 'DPC Kaliabang', 'location' => 'Bekasi, Jawa Barat', 'grup_wa' => 'https://chat.whatsapp.com/FtAs6PDUPsTFZ7zRar6VjB?mode=ems_copy_c'],
+            ['name' => 'DPC Cikarang', 'location' => 'Cikarang, Jawa Barat', 'grup_wa' => ''],
+            ['name' => 'DPC Kalimalang', 'location' => 'Kalimalang, Jakarta Timur', 'grup_wa' => ''],
+            ['name' => 'DPC Jatiwaringin', 'location' => 'Pondok Gede, Jakarta Timur', 'grup_wa' => 'https://chat.whatsapp.com/FHQ0SDXBGXj1qS30AeXh43?mode=ems_copy_c'],
         ];
 
         foreach ($data as &$row) {
             $row['poster'] = $defaultPoster;
-            $row['image'] = $defaultImage;
             $row['description'] = null;
         }
 
