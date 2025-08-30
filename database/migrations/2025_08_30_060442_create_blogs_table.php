@@ -19,7 +19,7 @@ return new class extends Migration
             $table->string('title', 128);
             $table->string('banner', 128);
             $table->text('content');
-            $table->string('quotes', 128);
+            $table->text('quotes');
             $table->json('image');
             $this->base($table);
         });
