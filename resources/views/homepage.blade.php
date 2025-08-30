@@ -15,6 +15,8 @@
 
         <x-home.galery-section :branches="$branches" :galeryTitle="$galeryTitle" :galeryText="$galeryText" />
 
+        <x-home.blog-section :blogs="$blogs" />
+
         <x-home.faq-section :faqs="$faqs" :faqTitle="$faqTitle" />
 
         <x-layout.footer/>

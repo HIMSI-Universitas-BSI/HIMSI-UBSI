@@ -7,12 +7,9 @@ use Illuminate\Http\Request;
 
 class BlogController extends Controller
 {
-    public function index()
+    public function showBlog($id)
     {
-        $blogs = Blog::where('active', true)->get();
-        
-        return view('homepage', [
-            'blogs' => $blogs
-        ]);
+        $blog = Blog::findOrFail($id);
+        return view('pages.blog.blogshow', compact('blog', 'blogs'));
     }
 }

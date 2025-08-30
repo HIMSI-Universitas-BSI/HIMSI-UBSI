@@ -2,13 +2,14 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Faq;
+use App\Models\Blog;
+use App\Models\Count;
+use App\Models\Branch;
+use App\Models\Division;
 use Illuminate\Http\Request;
 use App\Helpers\BennerHelper;
 use App\Helpers\SettingHelper;
-use App\Models\Branch;
-use App\Models\Count;
-use App\Models\Division;
-use App\Models\Faq;
 
 class HomeController extends Controller
 {
@@ -21,6 +22,7 @@ class HomeController extends Controller
         $data['divisi'] = Division::where('active', true)->limit(4)->get();
         $data['faqs'] = Faq::where('active', true)->limit(5)->get();
         $data['branches'] = Branch::where('active', true)->with('blogs')->get();
+        $data['blogs'] = Blog::where('active', true)->get();
 
         // Get Setting Helpers Hero Section
         $data['heroTitle'] = SettingHelper::getSetting('title_hero');

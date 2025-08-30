@@ -10,4 +10,4 @@ Route::get('/', function () {
 
 Route::get('/', [HomeController::class, 'index']);
 
-Route::get('/', [BlogController::class, 'index']);
+Route::get('/blogs/{id}', [BlogController::class, 'showBlog'])->name('blog.show');
