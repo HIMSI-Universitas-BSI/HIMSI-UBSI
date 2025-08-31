@@ -18,10 +18,10 @@
                     <div class="widget">
                         <h4 class="widget-title !text-white !mb-3">Sosial Media</h4>
                         <ul class="pl-0 list-none text-inherit  !mb-0">
-                            <li><a class="!text-[#cacaca] hover:!text-[#3f78e0]" href="#">Instagram</a></li>
-                            <li class="!mt-[0.35rem]"><a class="!text-[#cacaca] hover:!text-[#3f78e0]" href="#">Tiktok</a></li>
-                            <li class="!mt-[0.35rem]"><a class="!text-[#cacaca] hover:!text-[#3f78e0]" href="#">Linkedin</a></li>
-                            <li class="!mt-[0.35rem]"><a class="!text-[#cacaca] hover:!text-[#3f78e0]" href="#">Youtube</a></li>
+                            <li><a class="!text-[#cacaca] hover:!text-[#3f78e0]" href="{{ $instagram }}" target="_blank">Instagram</a></li>
+                            <li class="!mt-[0.35rem]"><a class="!text-[#cacaca] hover:!text-[#3f78e0]" href="{{ $tiktok }}" target="_blank">Tiktok</a></li>
+                            <li class="!mt-[0.35rem]"><a class="!text-[#cacaca] hover:!text-[#3f78e0]" href="{{ $linkedin }}" target="_blank">Linkedin</a></li>
+                            <li class="!mt-[0.35rem]"><a class="!text-[#cacaca] hover:!text-[#3f78e0]" href="{{ $youtube }}" target="_blank">Youtube</a></li>
                         </ul>
                     </div>
                 <!-- /.widget -->
