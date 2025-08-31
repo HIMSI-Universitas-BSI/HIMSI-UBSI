@@ -8,16 +8,17 @@ use Illuminate\View\Component;
 
 class Footer extends Component
 {
-    // public string $adress;
-    // public string $email;
-    // public string $waMarketing;
 
-    // public function __construct($adress, $email, $waMarketing)
-    // {
-    //     $this->adress = $adress;
-    //     $this->email = $email;
-    //     $this->waMarketing = $waMarketing;
-    // }
+
+    public function __construct(
+        public string $instagram,
+        public string $youtube,
+        public string $tiktok,
+        public string $linkedin
+    )
+    {
+        //
+    }
 
     /**
      * Get the view / contents that represent the component.

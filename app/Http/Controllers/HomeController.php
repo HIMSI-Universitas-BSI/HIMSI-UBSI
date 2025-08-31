@@ -50,6 +50,12 @@ class HomeController extends Controller
         //Get Setting Helpers Faq Section
         $data['faqTitle'] = SettingHelper::getSetting('faq_title');
 
+        //Get Setting Helpers Footer Section
+        $data['instagram'] = SettingHelper::getSetting('instagram');
+        $data['youtube'] = SettingHelper::getSetting('youtube');
+        $data['tiktok'] = SettingHelper::getSetting('tiktok');
+        $data['linkedin'] = SettingHelper::getSetting('linkedin');
+
         return view('homepage', $data);
     }
 }
