@@ -8,7 +8,7 @@
                     <div class="widget">
                         <h3 class="h2 !mb-3 !text-white !leading-[1.35]">Bergabung Dengan Kami</h3>
                         <p class="lead !leading-[1.65] text-[0.9rem] font-medium !mb-5">Ayo berikan hidupmu pengalaman yang menarik, bermanfaat, dan berdampak kepada masyarakat.</p>
-                        <a href="#" class="btn btn-white  !rounded-[50rem]">Gabung Sekarang</a>
+                        <a href="/admin/login" target="_blank" class="btn btn-white  !rounded-[50rem]">Gabung Sekarang</a>
                     </div>
                 <!-- /.widget -->
                 </div>

@@ -65,7 +65,7 @@
                     </p>
                 </div>
                 <div class="flex justify-center" data-cues="slideInDown" data-delay="600">
-                    <span><a href="{{ $gabungSekarang }}" target="_blank"
+                    <span><a href="/admin/login" target="_blank"
                             class="btn btn-lg btn-grape !text-white !bg-[#456882] border-[#456882] hover:text-white hover:bg-[#456882] hover:!border-[#456882]   active:text-white active:bg-[#456882] active:border-[#456882] disabled:text-white disabled:bg-[#456882] disabled:border-[#456882] !rounded-[0.8rem] mx-1">
                             Gabung Sekarang</a>
                     </span>

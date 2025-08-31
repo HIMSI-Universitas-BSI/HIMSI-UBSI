@@ -43,7 +43,7 @@
             <div class="navbar-other w-full !flex !ml-auto">
                 <ul class="navbar-nav !flex-row !items-center !ml-auto">
                     <li class="nav-item hidden xl:block lg:block md:block">
-                        <a href="../../contact.html" class="btn btn-sm btn-primary !text-white !bg-[#456882] border-[#456882] hover:text-white hover:bg-[#456882] hover:!border-[#456882]   active:text-white active:bg-[#456882] active:border-[#456882] disabled:text-white disabled:bg-[#456882] disabled:border-[#456882] !rounded-[50rem]">Join HIMSI</a>
+                        <a href="/admin/login" class="btn btn-sm btn-primary !text-white !bg-[#456882] border-[#456882] hover:text-white hover:bg-[#456882] hover:!border-[#456882]   active:text-white active:bg-[#456882] active:border-[#456882] disabled:text-white disabled:bg-[#456882] disabled:border-[#456882] !rounded-[50rem]">Join HIMSI</a>
                     </li>
                     <li class="nav-item xl:!hidden lg:!hidden">
                         <button class="hamburger offcanvas-nav-btn"><span></span></button>
