@@ -10,7 +10,7 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 
 class BranchDetail extends Model
 {
-    use HasFactory, Notifiable, SoftDeletes;
+    use HasFactory, Notifiable, SoftDeletes, AuditedBySoftDelete;
     protected $table = 'branch_detail';
     protected $guarded = ['id'];
 

@@ -1,11 +1,13 @@
 <?php
 
+use App\Traits\BaseModelSoftDeleteDefault;
 use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
 return new class extends Migration
 {
+    use BaseModelSoftDeleteDefault;
     /**
      * Run the migrations.
      */
@@ -24,8 +26,7 @@ return new class extends Migration
             $table->json('koor_kominfo');
             $table->json('koor_rsdm');
             $table->json('koor_litbang');
-            $table->softDeletes();
-            $table->timestamps();
+            $this->base($table);
         });
     }
 
