@@ -20,17 +20,16 @@ class StatusesTable
             ->columns([
                 TextColumn::make('name')
                     ->searchable(),
+                TextColumn::make('description')
+                    ->searchable(),
                 IconColumn::make('active')
                     ->boolean(),
-                TextColumn::make('created_by')
-                    ->numeric()
-                    ->sortable(),
-                TextColumn::make('updated_by')
-                    ->numeric()
-                    ->sortable(),
-                TextColumn::make('deleted_by')
-                    ->numeric()
-                    ->sortable(),
+                TextColumn::make('createdBy.name')
+                    ->label('Created By'),
+                TextColumn::make('updatedBy.name')
+                    ->label("Updated by"),
+                TextColumn::make('deletedBy.name')
+                    ->label("Deleted by"),
                 TextColumn::make('created_at')
                     ->dateTime()
                     ->sortable()
