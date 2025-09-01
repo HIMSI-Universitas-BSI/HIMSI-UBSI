@@ -23,10 +23,23 @@ class BranchesTable
                     ->searchable(),
                 TextColumn::make('location')
                     ->searchable(),
+                TextColumn::make('sektor')
+                    ->searchable()
+                    ->formatStateUsing(fn ($state) => match ($state) {
+                        'sektor_barat' => 'Sektor Barat',
+                        'sektor_tengah' => 'Sektor Tengah',
+                        'sektor_timur' => 'Sektor Timur',
+                        default => $state,
+                    }),
+                TextColumn::make('instagram')
+                    ->url(fn ($record) => $record->instagram, true)
+                    ->badge('info')
+                    ->searchable(),
                 ImageColumn::make('poster')
                     ->disk('public'),
                 TextColumn::make('description')
-                    ->searchable(),
+                    ->searchable()
+                    ->limit(50),
                 IconColumn::make('active')
                     ->boolean(),
                 TextColumn::make('createdBy.name')
