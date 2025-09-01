@@ -20,7 +20,11 @@ class StatusResource extends Resource
 {
     protected static ?string $model = Status::class;
 
-    protected static string|BackedEnum|null $navigationIcon = Heroicon::OutlinedRectangleStack;
+    protected static string|BackedEnum|null $navigationIcon = Heroicon::CheckCircle;
+
+    protected static ?string $navigationLabel = 'Status';
+
+    protected static ?string $pluralModelLabel = 'Status';
 
     public static function form(Schema $schema): Schema
     {
