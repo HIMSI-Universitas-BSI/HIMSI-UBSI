@@ -20,6 +20,8 @@ return new class extends Migration
             $table->string('poster', 128);
             $table->string('grup_wa', 128)->nullable();
             $table->text('description')->nullable();
+            $table->enum('sektor', ['sektor_barat', 'sektor_tengah', 'sektor_timur']);
+            $table->string('instagram', 128)->nullable();
             $this->base($table);
         });
     }
