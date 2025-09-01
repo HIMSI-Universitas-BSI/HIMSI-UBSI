@@ -2,8 +2,11 @@
 
 namespace App\Filament\Resources\Users\Schemas;
 
-use Filament\Infolists\Components\TextEntry;
 use Filament\Schemas\Schema;
+use Filament\Support\Icons\Heroicon;
+use Filament\Schemas\Components\Grid;
+use Filament\Schemas\Components\Section;
+use Filament\Infolists\Components\TextEntry;
 
 class UserInfolist
 {
@@ -13,18 +16,24 @@ class UserInfolist
             ->components([
                 TextEntry::make('name'),
                 TextEntry::make('email')
-                    ->label('Email address'),
-                TextEntry::make('email_verified_at')
-                    ->dateTime(),
-                TextEntry::make('created_at')
-                    ->dateTime(),
-                TextEntry::make('updated_at')
-                    ->dateTime(),
-                TextEntry::make('deleted_at')
-                    ->dateTime(),
-                TextEntry::make('branch_id')
-                    ->numeric(),
-                TextEntry::make('position'),
+                    ->label('Email'),
+                TextEntry::make('branch.name')
+                    ->label('Branch'),
+                TextEntry::make('position')
+                    ->label('Position'),
+                Section::make('Timestamps')
+                    ->icon(Heroicon::Clock)
+                    ->schema([
+                        Grid::make(2)
+                            ->schema([
+                                TextEntry::make('created_at')
+                                    ->label('Created At')
+                                    ->dateTime('d/m/Y H:i'),
+                                TextEntry::make('updated_at')
+                                    ->label('Last Updated')
+                                    ->dateTime('d/m/Y H:i'),
+                            ]),
+                    ])->columnSpanFull()->collapsible(),
             ]);
     }
 }
