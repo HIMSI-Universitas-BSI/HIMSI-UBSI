@@ -19,20 +19,39 @@ class BranchDetailsTable
     {
         return $table
             ->columns([
-                TextColumn::make('branch_id')
-                    ->numeric()
-                    ->sortable(),
+                TextColumn::make('branch.name')
+                    ->searchable()
+                    ->label('Nama Cabang'),
+                TextColumn::make('branch.sektor')
+                    ->searchable()
+                    ->label('Sektor')
+                    ->formatStateUsing(fn ($state) => match ($state) {
+                        'sektor_barat' => 'Sektor Barat',
+                        'sektor_tengah' => 'Sektor Tengah',
+                        'sektor_timur' => 'Sektor Timur',
+                        default => $state,
+                    }),
+                TextColumn::make('branch.location')
+                    ->searchable()
+                    ->label('Lokasi'),
+                TextColumn::make('branch.instagram')
+                    ->searchable()
+                    ->label('Instagram')
+                    ->url(fn ($record) => $record->instagram, true)
+                    ->badge('info'),
+                TextColumn::make('ketua.name')
+                    ->searchable(),
+                TextColumn::make('wakil_ketua.name')
+                    ->searchable(),
                 IconColumn::make('active')
+                    ->label('Status')
                     ->boolean(),
-                TextColumn::make('created_by')
-                    ->numeric()
-                    ->sortable(),
-                TextColumn::make('updated_by')
-                    ->numeric()
-                    ->sortable(),
-                TextColumn::make('deleted_by')
-                    ->numeric()
-                    ->sortable(),
+                TextColumn::make('createdBy.name')
+                    ->label('Created By'),
+                TextColumn::make('updatedBy.name')
+                    ->label("Updated by"),
+                TextColumn::make('deletedBy.name')
+                    ->label("Deleted by"),
                 TextColumn::make('created_at')
                     ->dateTime()
                     ->sortable()
