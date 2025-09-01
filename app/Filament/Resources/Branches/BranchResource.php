@@ -15,6 +15,7 @@ use Filament\Support\Icons\Heroicon;
 use Filament\Tables\Table;
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\SoftDeletingScope;
+use UnitEnum;
 
 class BranchResource extends Resource
 {
@@ -22,9 +23,11 @@ class BranchResource extends Resource
 
     protected static string|BackedEnum|null $navigationIcon = Heroicon::BuildingLibrary;
 
-    protected static ?string $navigationLabel = 'Cabang';
+    protected static string | UnitEnum | null $navigationGroup = 'Data Cabang';
 
-    protected static ?string $pluralModelLabel = 'Cabang';
+    protected static ?string $navigationLabel = 'Cabang Master';
+
+    protected static ?string $pluralModelLabel = 'Cabang Master';
 
     public static function form(Schema $schema): Schema
     {

@@ -17,12 +17,19 @@ use Filament\Support\Icons\Heroicon;
 use Filament\Tables\Table;
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\SoftDeletingScope;
+use UnitEnum;
 
 class BranchDetailResource extends Resource
 {
     protected static ?string $model = BranchDetail::class;
 
-    protected static string|BackedEnum|null $navigationIcon = Heroicon::OutlinedRectangleStack;
+    protected static string|BackedEnum|null $navigationIcon = Heroicon::BuildingOffice2;
+
+    protected static string | UnitEnum | null $navigationGroup = 'Data Cabang';
+
+    protected static ?string $navigationLabel = 'List Cabang';
+
+    protected static ?string $pluralModelLabel = 'List Cabang';
 
     public static function form(Schema $schema): Schema
     {
