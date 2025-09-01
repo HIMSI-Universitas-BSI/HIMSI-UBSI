@@ -2,10 +2,11 @@
 
 namespace App\Filament\Resources\Users\Schemas;
 
-use Filament\Forms\Components\DateTimePicker;
+use App\Models\Branch;
+use Filament\Schemas\Schema;
 use Filament\Forms\Components\Select;
 use Filament\Forms\Components\TextInput;
-use Filament\Schemas\Schema;
+use Filament\Forms\Components\DateTimePicker;
 
 class UserForm
 {
@@ -16,17 +17,19 @@ class UserForm
                 TextInput::make('name')
                     ->required(),
                 TextInput::make('email')
-                    ->label('Email address')
+                    ->label('Email')
                     ->email()
                     ->required(),
-                DateTimePicker::make('email_verified_at'),
+                Select::make('branch_id')
+                    ->options(Branch::all()->pluck('name', 'id'))
+                    ->visible(auth()->id() === 1),
+                Select::make('position')
+                    ->options(['DPP' => 'DPP', 'DPC' => 'DPC'])
+                    ->visible(auth()->id() === 1),
                 TextInput::make('password')
                     ->password()
+                    ->revealable()
                     ->required(),
-                TextInput::make('branch_id')
-                    ->numeric(),
-                Select::make('position')
-                    ->options(['DPP' => 'D p p', 'DPC' => 'D p c']),
             ]);
     }
 }
