@@ -2,9 +2,11 @@
 
 namespace App\Filament\Resources\Recrutments\Pages;
 
-use App\Filament\Resources\Recrutments\RecrutmentResource;
 use Filament\Actions\CreateAction;
+use Filament\Actions\ExportAction;
 use Filament\Resources\Pages\ListRecords;
+use App\Filament\Exports\RecrutmentExporter;
+use App\Filament\Resources\Recrutments\RecrutmentResource;
 
 class ListRecrutments extends ListRecords
 {
@@ -14,6 +16,12 @@ class ListRecrutments extends ListRecords
     {
         return [
             CreateAction::make(),
+            ExportAction::make()
+                ->exporter(RecrutmentExporter::class)
+                ->label('Export Data')
+                ->icon('heroicon-m-document-chart-bar')
+                ->color('success')
+                ->fileDisk('public'),
         ];
     }
 }
