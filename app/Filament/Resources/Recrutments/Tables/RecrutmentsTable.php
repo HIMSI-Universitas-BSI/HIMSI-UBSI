@@ -2,15 +2,17 @@
 
 namespace App\Filament\Resources\Recrutments\Tables;
 
+use App\Models\Status;
+use Filament\Tables\Table;
+use Filament\Actions\EditAction;
+use Filament\Actions\ViewAction;
 use Filament\Actions\BulkActionGroup;
 use Filament\Actions\DeleteBulkAction;
-use Filament\Actions\EditAction;
-use Filament\Actions\ForceDeleteBulkAction;
 use Filament\Actions\RestoreBulkAction;
-use Filament\Actions\ViewAction;
 use Filament\Tables\Columns\TextColumn;
+use Filament\Tables\Columns\SelectColumn;
 use Filament\Tables\Filters\TrashedFilter;
-use Filament\Tables\Table;
+use Filament\Actions\ForceDeleteBulkAction;
 
 class RecrutmentsTable
 {
@@ -19,30 +21,30 @@ class RecrutmentsTable
         return $table
             ->columns([
                 TextColumn::make('nim')
+                    ->label('NIM')
                     ->searchable(),
                 TextColumn::make('name')
+                    ->label('Nama Lengkap')
                     ->searchable(),
                 TextColumn::make('semester')
-                    ->searchable(),
-                TextColumn::make('ektm')
+                    ->label('Semester')
                     ->searchable(),
                 TextColumn::make('email')
-                    ->label('Email address')
-                    ->searchable(),
-                TextColumn::make('instagram')
+                    ->label('Email')
                     ->searchable(),
                 TextColumn::make('no_wa')
+                    ->label('No WhatsApp')
+                    ->url(fn ($record) => 'https://wa.me/' . ltrim($record->no_wa, '0'), true)
+                    ->badge('info')
                     ->searchable(),
-                TextColumn::make('branch_id')
-                    ->numeric()
-                    ->sortable(),
-                TextColumn::make('follow_dpc')
+                TextColumn::make('branch.name')
+                    ->label('Cabang / DPC')
                     ->searchable(),
-                TextColumn::make('cv')
-                    ->searchable(),
-                TextColumn::make('status_id')
-                    ->numeric()
-                    ->sortable(),
+                SelectColumn::make('status_id')
+                    ->label('Status Recruitment')
+                    ->options(Status::all()->pluck('name', 'id')->toArray())
+                    ->searchable()
+                    ->disabled(fn () => auth()->id() !== 1),
                 TextColumn::make('deleted_at')
                     ->dateTime()
                     ->sortable()
