@@ -15,6 +15,7 @@ use Filament\Support\Icons\Heroicon;
 use Filament\Tables\Table;
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\SoftDeletingScope;
+use UnitEnum;
 
 class DivisionResource extends Resource
 {
@@ -22,9 +23,11 @@ class DivisionResource extends Resource
 
     protected static string|BackedEnum|null $navigationIcon = Heroicon::UserGroup;
 
-    protected static ?string $navigationLabel = 'Division';
+    protected static string | UnitEnum | null $navigationGroup = 'Data Website';
 
-    protected static ?string $pluralModelLabel = 'Division';
+    protected static ?string $navigationLabel = 'Divisi';
+
+    protected static ?string $pluralModelLabel = 'Divisi';
 
     public static function form(Schema $schema): Schema
     {

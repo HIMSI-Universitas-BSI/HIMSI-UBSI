@@ -15,12 +15,15 @@ use Filament\Support\Icons\Heroicon;
 use Filament\Tables\Table;
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\SoftDeletingScope;
+use UnitEnum;
 
 class CountResource extends Resource
 {
     protected static ?string $model = Count::class;
 
     protected static string|BackedEnum|null $navigationIcon = Heroicon::Plus;
+
+    protected static string | UnitEnum | null $navigationGroup = 'Data Website';
 
     protected static ?string $navigationLabel = 'Count';
 

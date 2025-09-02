@@ -15,12 +15,15 @@ use Filament\Support\Icons\Heroicon;
 use Filament\Tables\Table;
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\SoftDeletingScope;
+use UnitEnum;
 
 class AboutResource extends Resource
 {
     protected static ?string $model = About::class;
 
     protected static string|BackedEnum|null $navigationIcon = Heroicon::Sparkles;
+
+    protected static string | UnitEnum | null $navigationGroup = 'Data Website';
 
     protected static ?string $navigationLabel = 'About';
 
