@@ -92,7 +92,7 @@ class RecrutmentForm
                     ->default(Status::find(1)->id)
                     ->label('Status')
                     ->options(Status::all()->pluck('name', 'id'))
-                    ->visible(auth()->id() === 1),
+                    ->visible(fn () => auth()->user()?->position !== null),
             ]);
     }
 }

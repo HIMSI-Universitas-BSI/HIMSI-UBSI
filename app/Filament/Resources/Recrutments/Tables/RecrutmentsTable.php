@@ -49,7 +49,7 @@ class RecrutmentsTable
                     ->label('Status Recruitment')
                     ->options(Status::all()->pluck('name', 'id')->toArray())
                     ->searchable()
-                    ->disabled(fn () => auth()->id() !== 1)
+                    ->disabled(fn () => auth()->user()?->position === null)
                     ->sortable(),
                 TextColumn::make('deleted_at')
                     ->dateTime()
