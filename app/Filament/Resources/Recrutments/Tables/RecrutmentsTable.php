@@ -2,7 +2,9 @@
 
 namespace App\Filament\Resources\Recrutments\Tables;
 
+use App\Models\Branch;
 use App\Models\Status;
+use App\Models\Recrutment;
 use Filament\Tables\Table;
 use Filament\Actions\EditAction;
 use Filament\Actions\ViewAction;
@@ -11,6 +13,7 @@ use Filament\Actions\DeleteBulkAction;
 use Filament\Actions\RestoreBulkAction;
 use Filament\Tables\Columns\TextColumn;
 use Filament\Tables\Columns\SelectColumn;
+use Filament\Tables\Filters\SelectFilter;
 use Filament\Tables\Filters\TrashedFilter;
 use Filament\Actions\ForceDeleteBulkAction;
 
@@ -28,7 +31,8 @@ class RecrutmentsTable
                     ->searchable(),
                 TextColumn::make('semester')
                     ->label('Semester')
-                    ->searchable(),
+                    ->searchable()
+                    ->sortable(),
                 TextColumn::make('email')
                     ->label('Email')
                     ->searchable(),
@@ -39,12 +43,14 @@ class RecrutmentsTable
                     ->searchable(),
                 TextColumn::make('branch.name')
                     ->label('Cabang / DPC')
-                    ->searchable(),
+                    ->searchable()
+                    ->sortable(),
                 SelectColumn::make('status_id')
                     ->label('Status Recruitment')
                     ->options(Status::all()->pluck('name', 'id')->toArray())
                     ->searchable()
-                    ->disabled(fn () => auth()->id() !== 1),
+                    ->disabled(fn () => auth()->id() !== 1)
+                    ->sortable(),
                 TextColumn::make('deleted_at')
                     ->dateTime()
                     ->sortable()
@@ -60,6 +66,24 @@ class RecrutmentsTable
             ])
             ->filters([
                 TrashedFilter::make(),
+                SelectFilter::make('semester')
+                    ->label('Semester')
+                    ->options(
+                        fn () => Recrutment::query()
+                            ->distinct()
+                            ->pluck('semester', 'semester')
+                            ->toArray()
+                    ),
+                SelectFilter::make('branch_id')
+                    ->label('Cabang / DPC')
+                    ->options(
+                        fn () => Branch::pluck('name', 'id')->toArray()
+                    ),
+                SelectFilter::make('status_id')
+                    ->label('Status Recruitment')
+                    ->options(
+                        fn () => Status::pluck('name', 'id')->toArray()
+                    ),
             ])
             ->recordActions([
                 ViewAction::make(),
