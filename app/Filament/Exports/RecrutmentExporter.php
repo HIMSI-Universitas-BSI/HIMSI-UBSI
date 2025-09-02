@@ -15,23 +15,34 @@ class RecrutmentExporter extends Exporter
     public static function getColumns(): array
     {
         return [
-            ExportColumn::make('id')
-                ->label('ID'),
-            ExportColumn::make('nim'),
-            ExportColumn::make('name'),
-            ExportColumn::make('semester'),
-            ExportColumn::make('ektm'),
-            ExportColumn::make('email'),
-            ExportColumn::make('instagram'),
-            ExportColumn::make('no_wa'),
-            ExportColumn::make('description'),
-            ExportColumn::make('branch_id'),
-            ExportColumn::make('follow_dpc'),
-            ExportColumn::make('cv'),
-            ExportColumn::make('status_id'),
-            ExportColumn::make('deleted_at'),
-            ExportColumn::make('created_at'),
-            ExportColumn::make('updated_at'),
+            ExportColumn::make('nim')
+                ->label('NIM'),
+            ExportColumn::make('name')
+                ->label('Nama'),
+            ExportColumn::make('semester')
+                ->label('Semester'),
+            ExportColumn::make('ektm')
+                ->label('EKTM')
+                ->formatStateUsing(fn ($state) => $state ? asset('storage/' . $state) : null),
+            ExportColumn::make('email')
+                ->label('Email'),
+            ExportColumn::make('instagram')
+                ->label('Instagram'),
+            ExportColumn::make('no_wa')
+                ->label('No WhatsApp'),
+            ExportColumn::make('description')
+                ->label('Motivasi Bergabung'),
+            ExportColumn::make('branch.name')
+                ->label('Cabang / DPC'),
+            ExportColumn::make('follow_dpc')
+                ->label('Follow DPC')
+                ->formatStateUsing(fn ($state) => $state ? asset('storage/' . $state) : null),
+            ExportColumn::make('cv')
+                ->label('CV'),
+            ExportColumn::make('status.name')
+                ->label('Status'),
+            ExportColumn::make('created_at')
+                ->label('Di Buat Pada'),
         ];
     }
 
