@@ -29,7 +29,8 @@ class UserForm
                 Select::make('roles')
                     ->label('Role')
                     ->relationship('roles', 'name')
-                    ->visible(auth()->id() === 1),
+                    ->visible(auth()->id() === 1)
+                    ->default(3),
                 TextInput::make('password')
                     ->password()
                     ->revealable(),
