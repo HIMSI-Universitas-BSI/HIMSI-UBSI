@@ -33,7 +33,7 @@ class AdminPanelProvider extends PanelProvider
                 'primary' => Color::Sky,
             ])
             ->favicon(asset('images/himsi.png'))
-            //->databaseNotifications()
+            ->databaseNotifications()
             ->brandName('HIMSI UBSI')
             ->brandLogo($this->getBrandLogo())
             ->brandLogoHeight('6rem')
