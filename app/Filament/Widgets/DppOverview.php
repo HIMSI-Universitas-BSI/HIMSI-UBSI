@@ -10,12 +10,14 @@ class DppOverview extends StatsOverviewWidget
 {
     protected function getStats(): array
     {
+        $userCount = User::count();
+
         return [
-            Stat::make('Unique views', '192.1k')
-                ->description('32k increase')
-                ->descriptionIcon('heroicon-m-arrow-trending-up')
-                ->chart([7, 2, 10, 3, 15, 4, 17])
-                ->color('success'),
+            Stat::make('Jumlah Pengguna', $userCount)
+                ->description('Pengguna')
+                ->descriptionIcon('heroicon-m-user')
+                ->chart([7, 2, 10, 3, 15, 20, 32])
+                ->color('info'),
             Stat::make('Bounce rate', '21%')
                 ->description('7% increase')
                 ->descriptionIcon('heroicon-m-arrow-trending-down')
