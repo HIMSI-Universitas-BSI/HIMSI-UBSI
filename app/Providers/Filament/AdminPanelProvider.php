@@ -33,9 +33,10 @@ class AdminPanelProvider extends PanelProvider
                 'primary' => Color::Sky,
             ])
             ->favicon(asset('images/himsi.png'))
+            //->databaseNotifications()
             ->brandName('HIMSI UBSI')
             ->brandLogo($this->getBrandLogo())
-            ->brandLogoHeight('5rem')
+            ->brandLogoHeight('6rem')
             ->discoverResources(in: app_path('Filament/Resources'), for: 'App\Filament\Resources')
             ->discoverPages(in: app_path('Filament/Pages'), for: 'App\Filament\Pages')
             ->pages([
