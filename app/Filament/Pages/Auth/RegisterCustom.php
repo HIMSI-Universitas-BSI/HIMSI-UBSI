@@ -3,6 +3,7 @@
 namespace App\Filament\Pages\Auth;
 
 use Filament\Schemas\Schema;
+use Spatie\Permission\Models\Role;
 use Filament\Forms\Components\Hidden;
 use Filament\Schemas\Components\Component;
 use Filament\Pages\Concerns\HasSubNavigation;
@@ -25,8 +26,6 @@ class RegisterCustom extends CustomRegister
     protected function getRolesFormComponent(): Component
     {
         return Hidden::make('roles')
-            ->label(__('Roles'))
-            ->default(3)
-            ->autofocus();
+            ->default(3);
     }
 }
