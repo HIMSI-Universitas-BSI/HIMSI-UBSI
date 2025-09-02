@@ -20,11 +20,11 @@ class RecrutmentFactory extends Factory
     public function definition(): array
     {
         return [
-            'nim'        => $this->faker->unique()->numerify('########'),
+            'nim'        => $this->faker->unique()->numerify('1925####'),
             'name'       => $this->faker->name(),
             'semester'   => $this->faker->randomElement(['Semester 1', 'Semester 2', 'Semester 3', 'Semester 4']),
             'ektm'       => 'default.png', 
-            'email'      => $this->faker->unique()->safeEmail(),
+            'email'      => $this->faker->unique()->userName() . '@gmail.com',
             'instagram'  => $this->faker->userName(),
             'no_wa'      => '62' . $this->faker->numerify('8##########'),
             'description'=> $this->faker->sentence(15),
