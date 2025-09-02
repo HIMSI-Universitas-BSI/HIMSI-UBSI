@@ -65,11 +65,27 @@ class RecrutmentResource extends Resource
         ];
     }
 
-    public static function getRecordRouteBindingEloquentQuery(): Builder
+    public static function getEloquentQuery(): Builder
     {
-        return parent::getRecordRouteBindingEloquentQuery()
+        $query = parent::getEloquentQuery()
             ->withoutGlobalScopes([
                 SoftDeletingScope::class,
             ]);
+
+        $user = auth()->user();
+
+        if ($user->position === 'DPP') {
+            return $query; // semua data
+        }
+
+        if ($user->position === 'DPC') {
+            return $query->where('branch_id', $user->branch_id); // filter branch
+        }
+
+        if (is_null($user->position)) {
+            return $query->where('created_by', $user->id); // hanya data yang dibuat sendiri
+        }
+
+        return $query;
     }
 }
