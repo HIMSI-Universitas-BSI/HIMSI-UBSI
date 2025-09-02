@@ -4,6 +4,7 @@ namespace App\Filament\Widgets;
 
 use App\Models\User;
 use App\Models\Branch;
+use App\Models\Recrutment;
 use Filament\Widgets\StatsOverviewWidget;
 use Filament\Widgets\StatsOverviewWidget\Stat;
 
@@ -13,6 +14,7 @@ class DppOverview extends StatsOverviewWidget
     {
         $userCount = User::count();
         $branchCount = Branch::count();
+        $recruitmentCount = Recrutment::count();
 
         return [
             Stat::make('Jumlah Pengguna', $userCount)
@@ -25,9 +27,9 @@ class DppOverview extends StatsOverviewWidget
                 ->descriptionIcon('heroicon-m-building-office')
                 ->chart([7, 2, 10, 3, 15, 4, 17])
                 ->color('danger'),
-            Stat::make('Average time on page', '3:12')
-                ->description('3% increase')
-                ->descriptionIcon('heroicon-m-arrow-trending-up')
+            Stat::make('Jumlah Recruitment Anggota', $recruitmentCount)
+                ->description('Anggota')
+                ->descriptionIcon('heroicon-m-user-plus')
                 ->chart([7, 2, 10, 3, 15, 4, 17])
                 ->color('success'),
         ];
