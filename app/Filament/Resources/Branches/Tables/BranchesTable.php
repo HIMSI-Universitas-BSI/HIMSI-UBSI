@@ -37,6 +37,7 @@ class BranchesTable
                     ->searchable(),
                 TextColumn::make('grup_wa')
                     ->url(fn ($record) => $record->grup_wa, true)
+                    ->visible(fn () => auth()->user()?->position !== null)
                     ->badge('info')
                     ->limit(50)
                     ->searchable(),
