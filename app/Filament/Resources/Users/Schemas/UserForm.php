@@ -26,10 +26,13 @@ class UserForm
                 Select::make('position')
                     ->options(['DPP' => 'DPP', 'DPC' => 'DPC'])
                     ->visible(auth()->id() === 1),
+                Select::make('roles')
+                    ->label('Role')
+                    ->relationship('roles', 'name')
+                    ->visible(auth()->id() === 1),
                 TextInput::make('password')
                     ->password()
-                    ->revealable()
-                    ->required(),
+                    ->revealable(),
             ]);
     }
 }

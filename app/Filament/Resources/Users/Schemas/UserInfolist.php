@@ -21,6 +21,8 @@ class UserInfolist
                     ->label('Branch'),
                 TextEntry::make('position')
                     ->label('Position'),
+                TextEntry::make('roles.name')
+                    ->label('Role'),
                 Section::make('Timestamps')
                     ->icon(Heroicon::Clock)
                     ->schema([
