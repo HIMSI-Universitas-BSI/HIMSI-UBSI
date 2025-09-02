@@ -41,17 +41,20 @@ class RecrutmentInfolist
                             ->label('E-KTM')
                             ->disk('public')
                             ->columnSpanFull(),
-                        TextEntry::make('status.name')
-                            ->label('Status Recruitment'),
-                        TextEntry::make('cv')
-                            ->label('Curriculum Vitae / CV')
-                            ->url(fn ($record) => $record->cv, true)
-                            ->badge('info'),
+                        TextEntry::make('description')
+                            ->label('Motivasi Bergabung Dengan HIMSI')
+                            ->columnSpanFull(),
                         TextEntry::make('branch.name')
                             ->label('Cabang / DPC'),
                         ImageEntry::make('follow_dpc')
                             ->label('Follow DPC')
                             ->disk('public'),
+                        TextEntry::make('cv')
+                            ->label('Curriculum Vitae / CV')
+                            ->url(fn ($record) => $record->cv, true)
+                            ->badge('info'),
+                        TextEntry::make('status.name')
+                            ->label('Status Recruitment'),
                     ])->columns(2)->columnSpanFull(),
                 
                 Section::make('Timestamps')
