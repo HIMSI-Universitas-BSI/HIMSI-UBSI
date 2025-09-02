@@ -27,7 +27,6 @@ class User extends Authenticatable
         'branch_id',
         'position',
         'password',
-        'roles',
     ];
 
     /**
