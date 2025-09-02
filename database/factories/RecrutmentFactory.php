@@ -32,6 +32,7 @@ class RecrutmentFactory extends Factory
             'follow_dpc' => 'default.png',
             'cv'         => null,
             'status_id'  => 1,
+            'created_by' => 1,
         ];
     }
 }
