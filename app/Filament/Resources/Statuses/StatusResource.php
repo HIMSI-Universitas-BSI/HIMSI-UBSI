@@ -15,12 +15,15 @@ use Filament\Support\Icons\Heroicon;
 use Filament\Tables\Table;
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\SoftDeletingScope;
+use UnitEnum;
 
 class StatusResource extends Resource
 {
     protected static ?string $model = Status::class;
 
     protected static string|BackedEnum|null $navigationIcon = Heroicon::CheckCircle;
+
+    protected static string | UnitEnum | null $navigationGroup = 'Data Recruitment';
 
     protected static ?string $navigationLabel = 'Status';
 
