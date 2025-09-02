@@ -28,6 +28,9 @@ class BranchForm
                     ->required(),
                 TextInput::make('instagram')
                     ->required(),
+                TextInput::make('grup_wa')
+                    ->required()
+                    ->columnSpanFull(),
                 FileUpload::make('poster')
                     ->image()
                     ->disk('public')
