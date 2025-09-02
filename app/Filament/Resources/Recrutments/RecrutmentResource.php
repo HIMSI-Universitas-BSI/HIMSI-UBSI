@@ -17,12 +17,19 @@ use Filament\Support\Icons\Heroicon;
 use Filament\Tables\Table;
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\SoftDeletingScope;
+use UnitEnum;
 
 class RecrutmentResource extends Resource
 {
     protected static ?string $model = Recrutment::class;
 
-    protected static string|BackedEnum|null $navigationIcon = Heroicon::OutlinedRectangleStack;
+    protected static string|BackedEnum|null $navigationIcon = Heroicon::UserPlus;
+
+    protected static string | UnitEnum | null $navigationGroup = 'Data Recruitment';
+
+    protected static ?string $navigationLabel = 'Data Recruitment';
+
+    protected static ?string $pluralModelLabel = 'List Data Recruitment';
 
     protected static ?string $recordTitleAttribute = 'Recrutment';
 
