@@ -10,7 +10,7 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 
 class Recrutment extends Model
 {
-    use HasFactory, Notifiable, SoftDeletes;
+    use HasFactory, Notifiable, SoftDeletes, AuditedBySoftDelete;
     protected $table = 'recrutment';
     protected $guarded = ['id'];
 

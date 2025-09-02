@@ -1,11 +1,14 @@
 <?php
 
+use App\Traits\BaseModelSoftDeleteDefault;
 use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
+use PragmaRX\Google2FA\Support\Base32;
 
 return new class extends Migration
 {
+    use BaseModelSoftDeleteDefault;
     /**
      * Run the migrations.
      */
@@ -25,8 +28,7 @@ return new class extends Migration
             $table->string('follow_dpc', 128);
             $table->string('cv', 128)->nullable();
             $table->foreignId('status_id')->constrained('status')->default(1);
-            $table->softDeletes();
-            $table->timestamps();
+            $this->base($table);
         });
     }
 
