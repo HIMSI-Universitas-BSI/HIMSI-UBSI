@@ -35,6 +35,11 @@ class BranchesTable
                     ->url(fn ($record) => $record->instagram, true)
                     ->badge('info')
                     ->searchable(),
+                TextColumn::make('grup_wa')
+                    ->url(fn ($record) => $record->grup_wa, true)
+                    ->badge('info')
+                    ->limit(50)
+                    ->searchable(),
                 ImageColumn::make('poster')
                     ->disk('public'),
                 TextColumn::make('description')
