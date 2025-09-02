@@ -21,8 +21,7 @@ class RecrutmentInfolist
                     ->icon(Heroicon::UserCircle)
                     ->schema([
                         TextEntry::make('nim')
-                            ->label('NIM')
-                            ->numeric(),
+                            ->label('NIM'),
                         TextEntry::make('name')
                             ->label('Nama Lengkap'),
                         TextEntry::make('semester')
