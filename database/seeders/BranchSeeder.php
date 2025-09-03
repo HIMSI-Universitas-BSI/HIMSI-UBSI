@@ -2,8 +2,12 @@
 
 namespace Database\Seeders;
 
+use App\Models\User;
+use Illuminate\Support\Str;
 use Illuminate\Database\Seeder;
 use Illuminate\Support\Facades\DB;
+use Spatie\Permission\Models\Role;
+use Illuminate\Support\Facades\Hash;
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 
 class BranchSeeder extends Seeder
@@ -28,11 +32,33 @@ class BranchSeeder extends Seeder
             ['name' => 'DPC Jatiwaringin', 'location' => 'Pondok Gede, Jakarta Timur', 'grup_wa' => 'https://chat.whatsapp.com/FHQ0SDXBGXj1qS30AeXh43?mode=ems_copy_c', 'sektor' => 'sektor_timur'],
         ];
 
-        foreach ($data as &$row) {
+        $data = array_map(function ($row) use ($defaultPoster) {
             $row['poster'] = $defaultPoster;
             $row['description'] = null;
-        }
+            return $row;
+        }, $data);
 
         DB::table('branch')->insert($data);
+
+        // ambil role id 2
+        $role = Role::find(2);
+
+        // buat user untuk setiap branch
+        foreach ($data as $row) {
+            $password = Str::random(16);
+
+            $user = User::create([
+                'name'     => 'Admin ' . ($row['name']),
+                'email'    => Str::slug($row['name'], '') . '@gmail.com',
+                'position' => 'DPC',
+                'password' => Hash::make($password),
+            ]);
+
+            if ($role) {
+                $user->assignRole($role->name);
+            }
+
+            $this->command->info("Akun telah di buat: User {$user->email} dibuat, password: {$password}");
+        }
     }
 }
