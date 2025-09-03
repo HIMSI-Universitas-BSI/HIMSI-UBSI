@@ -41,8 +41,6 @@ class BranchSeeder extends Seeder
             return $row;
         }, $data);
 
-        DB::table('branch')->insert($data);
-
         // ambil role id 2
         $role = Role::find(2);
 
