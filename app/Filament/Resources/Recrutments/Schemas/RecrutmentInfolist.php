@@ -48,6 +48,9 @@ class RecrutmentInfolist
                         ImageEntry::make('follow_dpc')
                             ->label('Follow DPC')
                             ->disk('public'),
+                        ImageEntry::make('follow_dpp')
+                            ->label('Follow DPP')
+                            ->disk('public'),
                         TextEntry::make('cv')
                             ->label('Curriculum Vitae / CV')
                             ->url(fn ($record) => $record->cv, true)

@@ -57,6 +57,12 @@ class RecrutmentForm
                     ->label('Alasan ingin bergabung dengan HIMSI')
                     ->required()
                     ->columnSpanFull(),
+                FileUpload::make('follow_dpp')
+                    ->label('Bukti Follow Instagram DPP HIMSI')
+                    ->disk('public')
+                    ->directory('follow_dpp')
+                    ->columnSpanFull()
+                    ->helperText('Screenshot halaman bukti follow DPP HIMSI'),
 
                 Section::make('Cabang Himsi')
                     ->description('Data Dewan Pimpinan Cabang (DPC) HIMSI UBSI')
@@ -78,7 +84,6 @@ class RecrutmentForm
                         TextInput::make('instagram'),
                         FileUpload::make('follow_dpc')
                             ->label('Bukti Follow Instagram DPC HIMSI')
-                            ->required()
                             ->disk('public')
                             ->directory('follow_dpc'),
                     ])->columnSpanFull(),
