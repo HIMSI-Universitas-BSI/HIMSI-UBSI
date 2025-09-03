@@ -46,7 +46,6 @@ class RecrutmentForm
                     ->helperText('Masukkan No WhatsApp aktif, di awali dengan 62')
                     ->required(),
                 FileUpload::make('ektm')
-                    ->required()
                     ->label('EKTM')
                     ->image()
                     ->disk('public')
@@ -60,6 +59,8 @@ class RecrutmentForm
                 FileUpload::make('follow_dpp')
                     ->label('Bukti Follow Instagram DPP HIMSI')
                     ->disk('public')
+                    ->image()
+                    ->required()
                     ->directory('follow_dpp')
                     ->columnSpanFull()
                     ->helperText('Screenshot halaman bukti follow DPP HIMSI'),
@@ -76,16 +77,18 @@ class RecrutmentForm
                             ->afterStateUpdated(function ($state, callable $set) {
                                 if ($state) {
                                     $branch = \App\Models\Branch::find($state);
-                                    $set('instagram', $branch?->instagram); 
+                                    $set('instagram dpc', $branch?->instagram);
                                 } else {
-                                    $set('instagram', null);
+                                    $set('instagram dpc', null);
                                 }
                             }),
-                        TextInput::make('instagram'),
+                        TextInput::make('instagram dpc'),
                         FileUpload::make('follow_dpc')
                             ->label('Bukti Follow Instagram DPC HIMSI')
                             ->disk('public')
-                            ->directory('follow_dpc'),
+                            ->image()
+                            ->directory('follow_dpc')
+                            ->helperText('Screenshot halaman bukti follow DPC HIMSI'),
                     ])->columnSpanFull(),
 
                 TextInput::make('cv')
