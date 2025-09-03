@@ -9,7 +9,7 @@
     <meta name="keywords"
         content="Tailwind CSS, business, corporate, creative, gulp, marketing, minimal, modern, multipurpose, one page, responsive, saas, sass, seo, startup, html5 template, site template">
     <meta name="author" content="elemis">
-    @vite('resources/css/app.css')
+    @vite(['resources/css/app.css', 'resources/js/app.js'])
     <title>{{ $title ?? 'HIMSI' }}</title>
     <link rel="icon" type="image/png" href="{{ asset('images/himsi.png') }}">
     {{-- <link rel="icon" href="images/2.png" type="image/png" sizes="16x16"> --}}
