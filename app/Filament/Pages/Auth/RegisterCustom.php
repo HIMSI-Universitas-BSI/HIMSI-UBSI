@@ -2,8 +2,10 @@
 
 namespace App\Filament\Pages\Auth;
 
+use App\Models\User;
 use Filament\Schemas\Schema;
 use Spatie\Permission\Models\Role;
+use Illuminate\Support\Facades\Hash;
 use Filament\Forms\Components\Hidden;
 use Filament\Schemas\Components\Component;
 use Filament\Pages\Concerns\HasSubNavigation;
@@ -19,13 +21,24 @@ class RegisterCustom extends CustomRegister
                 $this->getEmailFormComponent(),
                 $this->getPasswordFormComponent(),
                 $this->getPasswordConfirmationFormComponent(),
-                $this->getRolesFormComponent(),
             ]);
     }
     
-    protected function getRolesFormComponent(): Component
+    protected function handleRegistration(array $data): User
     {
-        return Hidden::make('roles')
-            ->default(3);
+        // Buat user baru
+        $user = User::create([
+            'name'     => $data['name'],
+            'email'    => $data['email'],
+            'password' => Hash::make($data['password']),
+        ]);
+
+        // Ambil role berdasarkan ID (default 3)
+        $role = Role::find(3);
+        if ($role) {
+            $user->assignRole($role->name);
+        }
+
+        return $user;
     }
 }
