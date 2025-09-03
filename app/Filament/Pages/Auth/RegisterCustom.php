@@ -24,6 +24,7 @@ class RegisterCustom extends CustomRegister
             ]);
     }
     
+    // Method untuk buat roles default dari spatie
     protected function handleRegistration(array $data): User
     {
         // Buat user baru

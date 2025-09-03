@@ -22,9 +22,11 @@ class UserForm
                     ->required(),
                 Select::make('branch_id')
                     ->options(Branch::all()->pluck('name', 'id'))
+                    ->label('Cabang / DPC')
                     ->visible(auth()->id() === 1),
                 Select::make('position')
                     ->options(['DPP' => 'DPP', 'DPC' => 'DPC'])
+                    ->label('Posisi')
                     ->visible(auth()->id() === 1),
                 Select::make('roles')
                     ->label('Role')

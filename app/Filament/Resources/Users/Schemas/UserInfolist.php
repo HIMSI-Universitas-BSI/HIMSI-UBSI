@@ -18,9 +18,11 @@ class UserInfolist
                 TextEntry::make('email')
                     ->label('Email'),
                 TextEntry::make('branch.name')
-                    ->label('Branch'),
+                    ->label('Cabang / DPC')
+                    ->default('-'),
                 TextEntry::make('position')
-                    ->label('Position'),
+                    ->label('Posisi')
+                    ->default('-'),
                 TextEntry::make('roles.name')
                     ->label('Role'),
                 Section::make('Timestamps')
@@ -30,10 +32,10 @@ class UserInfolist
                             ->schema([
                                 TextEntry::make('created_at')
                                     ->label('Created At')
-                                    ->dateTime('d/m/Y H:i'),
+                                    ->dateTime('d/F/Y H:i'),
                                 TextEntry::make('updated_at')
                                     ->label('Last Updated')
-                                    ->dateTime('d/m/Y H:i'),
+                                    ->dateTime('d/F/Y H:i'),
                             ]),
                     ])->columnSpanFull()->collapsible(),
             ]);

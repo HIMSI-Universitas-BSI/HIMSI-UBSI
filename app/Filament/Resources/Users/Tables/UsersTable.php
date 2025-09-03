@@ -24,10 +24,13 @@ class UsersTable
                     ->label('Email address')
                     ->searchable(),
                 TextColumn::make('branch.name')
-                    ->label('Branch')
-                    ->searchable(),
+                    ->label('Cabang / DPC')
+                    ->searchable()
+                    ->default('-'),
                 TextColumn::make('position')
-                    ->searchable(),
+                    ->label('Posisi')
+                    ->searchable()
+                    ->default('-'),
                 TextColumn::make('created_at')
                     ->dateTime()
                     ->sortable()
