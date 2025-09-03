@@ -7,9 +7,12 @@ use App\Models\Branch;
 use App\Models\Recrutment;
 use Filament\Widgets\StatsOverviewWidget;
 use Filament\Widgets\StatsOverviewWidget\Stat;
+use BezhanSalleh\FilamentShield\Traits\HasWidgetShield;
 
 class DppOverview extends StatsOverviewWidget
 {
+    use HasWidgetShield;
+    
     protected function getStats(): array
     {
         $userCount = User::count();
