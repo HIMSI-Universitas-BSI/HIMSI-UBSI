@@ -19,13 +19,14 @@ return new class extends Migration
             $table->string('nim', 10);
             $table->string('name', 128);
             $table->string('semester', 16);
-            $table->string('ektm', 128);
+            $table->string('ektm', 128)->nullable();
             $table->string('email', 128);
             $table->string('instagram', 128);
             $table->string('no_wa', 16);
             $table->text('description');
+            $table->string('follow_dpp', 128);
             $table->foreignId('branch_id')->constrained('branch');
-            $table->string('follow_dpc', 128);
+            $table->string('follow_dpc', 128)->nullable();
             $table->string('cv', 128)->nullable();
             $table->foreignId('status_id')->constrained('status')->default(1);
             $this->base($table);

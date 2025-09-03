@@ -28,6 +28,7 @@ class RecrutmentFactory extends Factory
             'instagram'  => $this->faker->userName(),
             'no_wa'      => '62' . $this->faker->numerify('8##########'),
             'description'=> $this->faker->sentence(15),
+            'follow_dpp' => 'default.png',
             'branch_id'  => $this->faker->numberBetween(1, 10),
             'follow_dpc' => 'default.png',
             'cv'         => null,
