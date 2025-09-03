@@ -3,6 +3,7 @@
 namespace Database\Seeders;
 
 use App\Models\User;
+use App\Models\Branch;
 use Illuminate\Support\Str;
 use Illuminate\Database\Seeder;
 use Illuminate\Support\Facades\DB;
@@ -19,6 +20,7 @@ class BranchSeeder extends Seeder
     {
         $defaultPoster = 'default-poster.jpg';
 
+        // Buat data Cabang 
         $data = [
             ['name' => 'DPC BSD', 'location' => 'BSD, Tangerang Selatan', 'grup_wa' => 'https://chat.whatsapp.com/DD7fue3sDAf6Zv6bRoQQs5?mode=ems_wa_t', 'sektor' => 'sektor_barat'],
             ['name' => 'DPC Cengkareng', 'location' => 'Cengkareng, Jakarta Barat', 'grup_wa' => 'https://chat.whatsapp.com/KFGx00FPeZF89qk8scg6Od?mode=ems_copy_t', 'sektor' => 'sektor_barat'],
@@ -32,6 +34,7 @@ class BranchSeeder extends Seeder
             ['name' => 'DPC Jatiwaringin', 'location' => 'Pondok Gede, Jakarta Timur', 'grup_wa' => 'https://chat.whatsapp.com/FHQ0SDXBGXj1qS30AeXh43?mode=ems_copy_c', 'sektor' => 'sektor_timur'],
         ];
 
+        // Mapping data Cabang
         $data = array_map(function ($row) use ($defaultPoster) {
             $row['poster'] = $defaultPoster;
             $row['description'] = null;
@@ -43,22 +46,34 @@ class BranchSeeder extends Seeder
         // ambil role id 2
         $role = Role::find(2);
 
-        // buat user untuk setiap branch
         foreach ($data as $row) {
-            $password = Str::random(16);
+            // insert branch dan ambil ID
+            $branch = Branch::create([
+                'name' => $row['name'],
+                'location' => $row['location'],
+                'grup_wa' => $row['grup_wa'],
+                'sektor' => $row['sektor'],
+                'poster' => $defaultPoster,
+                'description' => null,
+                'created_by' => 1,
+            ]);
 
+            // buat user untuk Cabang
+            $password = Str::random(16);
             $user = User::create([
-                'name'     => 'Admin ' . ($row['name']),
-                'email'    => Str::slug($row['name'], '') . '@gmail.com',
+                'name' => 'Admin ' . $row['name'],
+                'email' => Str::slug($row['name'], '') . '@gmail.com',
+                'branch_id' => $branch->id,
                 'position' => 'DPC',
                 'password' => Hash::make($password),
             ]);
 
+            // get data role spatie
             if ($role) {
                 $user->assignRole($role->name);
             }
 
-            $this->command->info("Akun telah di buat: User {$user->email} dibuat, password: {$password}");
+            $this->command->info("Akun telah dibuat: User {$user->email}, password: {$password}");
         }
     }
 }
