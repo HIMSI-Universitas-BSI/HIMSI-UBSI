@@ -61,7 +61,7 @@ class BranchSeeder extends Seeder
             // buat user untuk Cabang
             $password = Str::random(16);
             $user = User::create([
-                'name' => 'Admin ' . $row['name'],
+                'name' => 'KOOR RSDM ' . $row['name'],
                 'email' => Str::slug($row['name'], '') . '@gmail.com',
                 'branch_id' => $branch->id,
                 'position' => 'DPC',
