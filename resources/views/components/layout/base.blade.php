@@ -9,16 +9,21 @@
     <meta name="keywords"
         content="Tailwind CSS, business, corporate, creative, gulp, marketing, minimal, modern, multipurpose, one page, responsive, saas, sass, seo, startup, html5 template, site template">
     <meta name="author" content="elemis">
+
+    {{-- Vite untuk Tailwind + custom app.js --}}
     @vite(['resources/css/app.css', 'resources/js/app.js'])
+
     <title>{{ $title ?? 'HIMSI' }}</title>
+    {{-- Favicon --}}
     <link rel="icon" type="image/png" href="{{ asset('images/himsi.png') }}">
-    {{-- <link rel="icon" href="images/2.png" type="image/png" sizes="16x16"> --}}
-    {{-- <link rel="shortcut icon" href="{{ asset('assets/img/icon_web.ico') }}"> --}}
-    <link rel="stylesheet" type="text/css" href="{{ asset('assets') }}/fonts/unicons/unicons.css">
-    <link rel="stylesheet" href="{{ asset('assets') }}/css/plugins.css">
-    <link rel="stylesheet" href="{{ asset('assets') }}/style.css">
-    <link rel="stylesheet" href="{{ asset('assets') }}/css/colors/grape.css">
-    <link rel="preload" href="{{ asset('assets') }}/css/fonts/space.css" as="style" onload="this.rel='stylesheet'">
+    {{-- Vendor CSS --}}
+    <link rel="stylesheet" type="text/css" href="{{ asset('assets/fonts/unicons/unicons.css') }}">
+    <link rel="stylesheet" href="{{ asset('assets/css/plugins.css') }}">
+    <link rel="stylesheet" href="{{ asset('assets/style.css') }}">
+    <link rel="stylesheet" href="{{ asset('assets/css/colors/grape.css') }}">
+    <link rel="preload" href="{{ asset('assets/css/fonts/space.css') }}" as="style" onload="this.rel='stylesheet'">
+
+    {{-- Custom inline style --}}
     <style>
         .swiper-container.nav-color .swiper-button,
         .swiper-container.nav-color .swiper-slide figure .item-link {
@@ -39,11 +44,12 @@
     </style>
 </head>
 
-<body class="!bg-[#f0f0f8]">
+<body class="!bg-[#ffffff]">
     {{ $slot }}
-    <script src="{{ asset('assets') }}/js/plugins.js"></script>
-    <script src="{{ asset('assets') }}/js/theme.js"></script>
-    <script src="{{ asset('js/navbar.js') }}"></script>
+
+    {{-- Vendor JS --}}
+    <script src="{{ asset('assets/js/plugins.js') }}"></script>
+    <script src="{{ asset('assets/js/theme.js') }}"></script>
 </body>
 
 </html>
