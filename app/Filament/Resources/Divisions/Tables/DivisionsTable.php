@@ -28,8 +28,9 @@ class DivisionsTable
                     ->disk('public'),
                 TextColumn::make('description')
                     ->searchable()
-                    ->limit(100),
-                TextColumn::make('job_description'),
+                    ->limit(80),
+                TextColumn::make('job_description')
+                    ->limit(80),
                 IconColumn::make('active')
                     ->boolean(),
                 TextColumn::make('createdBy.name')
