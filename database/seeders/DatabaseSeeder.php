@@ -18,6 +18,7 @@ class DatabaseSeeder extends Seeder
             BranchSeeder::class,
             StatusSeeder::class,
             RecrutmentSeeder::class,
+            DivisionSeeder::class,
         ]);
     }
 }
