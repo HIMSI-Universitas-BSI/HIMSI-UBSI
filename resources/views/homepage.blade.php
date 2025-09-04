@@ -9,7 +9,7 @@
 
         <x-home.count-section :counts="$counts" />
 
-        <x-home.division-section />
+        <x-home.division-section :divisi="$divisi" />
 
         <x-home.branch-section :branches="$branches" />
 
