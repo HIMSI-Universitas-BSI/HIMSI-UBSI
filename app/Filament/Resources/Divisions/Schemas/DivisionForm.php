@@ -38,7 +38,8 @@ class DivisionForm
                         TextInput::make('job')->required(),
                     ])
                     ->required()
-                    ->columnSpanFull(),
+                    ->columnSpanFull()
+                    ->default([]),
                 Toggle::make('active')
                     ->required(),
             ]);
