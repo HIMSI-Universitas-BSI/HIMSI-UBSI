@@ -1,4 +1,4 @@
-<x-layout.base title="{{ $blog->id }}">
+<x-layout.base title="{{ $blog->title }}">
     <div class="bg-white grow shrink-0">
 
         <x-layout.navbar1 />
