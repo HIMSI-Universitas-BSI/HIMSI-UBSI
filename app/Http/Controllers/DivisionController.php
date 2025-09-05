@@ -2,22 +2,22 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Blog;
+use App\Models\Division;
 use Illuminate\Http\Request;
 use App\Helpers\SettingHelper;
 
-class BlogController extends Controller
+class DivisionController extends Controller
 {
-    // method untuk menampilkan detail blog
-    public function showBlog($id)
+    // method untuk menampilkan detail divisi
+    public function showDivision($id)
     {
-        $blog = Blog::findOrFail($id);
+        $divisi = Division::findOrFail($id);
         
         $instagram = SettingHelper::getSetting('instagram');
         $youtube = SettingHelper::getSetting('youtube');
         $tiktok = SettingHelper::getSetting('tiktok');
         $linkedin = SettingHelper::getSetting('linkedin');
-        
-        return view('blogshow', compact('blog', 'instagram', 'youtube', 'tiktok', 'linkedin'));
+
+        return view('divisi-show', compact('divisi', 'instagram', 'youtube', 'tiktok', 'linkedin'));
     }
 }
