@@ -18,6 +18,6 @@ class DivisionController extends Controller
         $tiktok = SettingHelper::getSetting('tiktok');
         $linkedin = SettingHelper::getSetting('linkedin');
 
-        return view('divisi-show', compact('divisi', 'instagram', 'youtube', 'tiktok', 'linkedin'));
+        return view('pages.divisi-show', compact('divisi', 'instagram', 'youtube', 'tiktok', 'linkedin'));
     }
 }

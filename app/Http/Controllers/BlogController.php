@@ -17,7 +17,7 @@ class BlogController extends Controller
         $youtube = SettingHelper::getSetting('youtube');
         $tiktok = SettingHelper::getSetting('tiktok');
         $linkedin = SettingHelper::getSetting('linkedin');
-        
-        return view('blogshow', compact('blog', 'instagram', 'youtube', 'tiktok', 'linkedin'));
+
+        return view('pages.blogshow', compact('blog', 'instagram', 'youtube', 'tiktok', 'linkedin'));
     }
 }
