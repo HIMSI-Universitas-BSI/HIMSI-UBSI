@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Blog;
 use Illuminate\Http\Request;
+use App\Helpers\SettingHelper;
 
 class BlogController extends Controller
 {
@@ -11,6 +12,11 @@ class BlogController extends Controller
     {
         $blog = Blog::findOrFail($id);
         
-        return view('blogshow', compact('blog'));
+        $instagram = SettingHelper::getSetting('instagram');
+        $youtube = SettingHelper::getSetting('youtube');
+        $tiktok = SettingHelper::getSetting('tiktok');
+        $linkedin = SettingHelper::getSetting('linkedin');
+        
+        return view('blogshow', compact('blog', 'instagram', 'youtube', 'tiktok', 'linkedin'));
     }
 }

@@ -19,7 +19,7 @@
 
         <x-home.faq-section :faqs="$faqs" :faqTitle="$faqTitle" />
 
-        <x-layout.footer :instagram="$instagram" :youtube="$youtube" :linkedin="$linkedin" :tiktok="$tiktok" />
+        <x-layout.footer />
     </div>
 
     <!-- Progress Wrapper -->

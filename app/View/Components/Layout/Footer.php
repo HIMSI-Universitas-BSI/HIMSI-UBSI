@@ -3,21 +3,23 @@
 namespace App\View\Components\Layout;
 
 use Closure;
-use Illuminate\Contracts\View\View;
+use App\Helpers\SettingHelper;
 use Illuminate\View\Component;
+use Illuminate\Contracts\View\View;
 
 class Footer extends Component
 {
+    public string $instagram;
+    public string $youtube;
+    public string $tiktok;
+    public string $linkedin;
 
-
-    public function __construct(
-        public string $instagram,
-        public string $youtube,
-        public string $tiktok,
-        public string $linkedin
-    )
+    public function __construct()
     {
-        //
+        $this->instagram = SettingHelper::getSetting('instagram') ?? '';
+        $this->youtube   = SettingHelper::getSetting('youtube') ?? '';
+        $this->tiktok    = SettingHelper::getSetting('tiktok') ?? '';
+        $this->linkedin  = SettingHelper::getSetting('linkedin') ?? '';
     }
 
     /**
