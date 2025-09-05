@@ -19,7 +19,7 @@
                                 <img src="{{ asset('storage/' . $d->logo) }}" class="svg-inject icon-svg icon-svg-md !w-[5.6rem] !h-[5.6rem] !text-[#fab758] text-yellow !mb-3 m-[0_auto]" alt="{{ $d->name }}">
                                 <h4>{{ $d->name }}</h4>
                                 <p class="!mb-2">{{ \Illuminate\Support\Str::limit($d->description, 80) }}</p>
-                                <a href="#" class="more hover !text-[#fab758] focus:!text-[#fab758] hover:!text-[#fab758]">Selengkapnya</a>
+                                <a href="{{ route('division.show', ['id' => $d->id]) }}" class="more hover !text-[#fab758] focus:!text-[#fab758] hover:!text-[#fab758]">Selengkapnya</a>
                             </div>
                             <!--/.card-body -->
                         </div>
