@@ -20,6 +20,7 @@ class DatabaseSeeder extends Seeder
             RecrutmentSeeder::class,
             DivisionSeeder::class,
             FaqSeeder::class,
+            CountSeeder::class,
         ]);
     }
 }
