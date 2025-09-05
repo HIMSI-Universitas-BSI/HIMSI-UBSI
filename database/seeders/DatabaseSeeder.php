@@ -19,6 +19,7 @@ class DatabaseSeeder extends Seeder
             StatusSeeder::class,
             RecrutmentSeeder::class,
             DivisionSeeder::class,
+            FaqSeeder::class,
         ]);
     }
 }
