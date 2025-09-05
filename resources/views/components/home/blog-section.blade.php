@@ -3,7 +3,7 @@
     <div class="flex flex-wrap mx-[-15px]">
         <div class="lg:w-9/12 xl:w-8/12 xxl:w-7/12 w-full flex-[0_0_auto] !px-[15px] max-w-full !mx-auto">
         <h2 class="!text-[.75rem] !leading-[1.35] uppercase !text-[#3f78e0]  !text-center">Kegiatan Kami</h2>
-        <h3 class="!text-[calc(1.305rem_+_0.66vw)] font-bold xl:!text-[1.8rem] !leading-[1.3] !mb-6 !text-center">Here are the latest company news from our blog that got the most attention.</h3>
+        <h3 class="!text-[calc(1.305rem_+_0.66vw)] font-bold xl:!text-[1.8rem] !leading-[1.3] !mb-6 !text-center">Berikut adalah kegiatan terbaru HIMSI UBSI yang telah kami selenggarakan.</h3>
         </div>
         <!-- /column -->
     </div>
