@@ -23,6 +23,15 @@ class HomeController extends Controller
         $data['faqs'] = Faq::where('active', true)->limit(6)->get();
         $data['branches'] = Branch::where('active', true)->with('blogs')->get();
         $data['blogs'] = Blog::where('active', true)->get();
+        // gat data galery asc
+        $data['branchesAsc'] = Branch::with(['blogs' => function($q) {
+            $q->orderBy('created_at', 'asc'); // lama
+        }])->get();
+
+        // gat data galery desc
+        $data['branchesDesc'] = Branch::with(['blogs' => function($q) {
+            $q->orderBy('created_at', 'desc'); // baru
+        }])->get();
 
         // Get Setting Helpers Hero Section
         $data['heroTitle'] = SettingHelper::getSetting('title_hero');

@@ -11,15 +11,18 @@ class GalerySection extends Component
     /**
      * Create a new component instance.
      */
-    public $branches;
+    public $branchesDesc;
+    public $branchesAsc;
 
     public function __construct(
-        $branches,
+        $branchesDesc,
+        $branchesAsc,
         public string $galeryTitle,
         public string $galeryText,
     )
     {
-        $this->branches = $branches;
+        $this->branchesDesc = $branchesDesc;
+        $this->branchesAsc = $branchesAsc;
     }
 
     /**

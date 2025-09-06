@@ -22,7 +22,7 @@
         <div class="swiper overflow-visible pointer-events-none">
             <div class="swiper-wrapper ticker">
 
-                @foreach ($branches as $branch)
+                @foreach ($branchesAsc as $branch)
                     @foreach ($branch->blogs as $blog)
                         @php
                             $images = is_array($blog->image) ? $blog->image : json_decode($blog->image, true);
@@ -59,7 +59,7 @@
         <div class="swiper overflow-visible pointer-events-none" dir="rtl">
             <div class="swiper-wrapper ticker">
                 
-                @foreach ($branches as $branch)
+                @foreach ($branchesDesc as $branch)
                     @foreach ($branch->blogs as $blog)
                         @php
                             $images = is_array($blog->image) ? $blog->image : json_decode($blog->image, true);
