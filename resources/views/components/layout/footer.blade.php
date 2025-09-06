@@ -53,30 +53,34 @@
                 </div>
                 <!-- /column -->
 
+                <div class="mt-6">
+                    <h1 class="h2 !mb-3 !text-white !leading-[1.35]">Thanks To :</h1>
+
+                    <div class="flex gap-3 mt-3">
+                        <a href="https://wahyutomo.jasanyatech.id/" target="_blank">
+                            <div class="rounded-2xl overflow-hidden shadow p-2 bg-sky-400 transform transition duration-300 hover:-translate-y-1">
+                                <img src="{{ asset('images/wahyu.png') }}" alt="Wahyu" class="h-8 max-h-full">
+                            </div>
+                        </a>
+
+                        <a href="https://jasanyatech.id/" target="_blank">
+                            <div class="rounded-2xl overflow-hidden shadow p-2 bg-sky-400 transform transition duration-300 hover:-translate-y-1">
+                                <img src="{{ asset('images/image.png') }}" alt="JasanyaTech" class="h-8 max-h-full">
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <!-- /column -->
+
             </div>
             <!--/.row -->
 
             <hr class="!mt-13 xl:!mt-20 lg:!mt-20 md:!mt-20 !mb-7">
             <div class="xl:!flex lg:!flex md:!flex items-center justify-between">
-                <p class="!mb-2 xl:!mb-0 lg:!mb-0">© 2025 Himsi UBSI. All rights reserved.</p>
+                <p class="!mb-2 xl:!mb-0 lg:!mb-0">© 2025 HIMSI UBSI. All rights reserved.</p>
                 <p class="!mb-2 xl:!mb-0 lg:!mb-0">Divisi Pendidikan | Kabinet Trivolte</p>
             </div>
 
-            <h1 class="h2 !mt-6 !text-white !leading-[1.35]">Thanks To :</h1>
-
-            <div class="flex items-center gap-3">
-                <a href="https://wahyutomo.jasanyatech.id/" target="_blank">
-                    <div class="rounded-xl overflow-hidden shadow p-2 bg-emerald-400 !mt-2 transform transition duration-300 hover:-translate-y-1">
-                        <img src="{{ asset('images/wahyu.png') }}" alt="Wahyu" class="h-8 max-h-full">
-                    </div>
-                </a>
-
-                <a href="https://jasanyatech.id/" target="_blank">
-                    <div class="rounded-xl overflow-hidden shadow p-2 bg-emerald-400 !mt-2 transform transition duration-300 hover:-translate-y-1">
-                        <img src="{{ asset('images/image.png') }}" alt="JasanyaTech" class="h-8 max-h-full">
-                    </div>
-                </a>
-            </div>
             <!-- /.container -->
         </footer>
         </div>
