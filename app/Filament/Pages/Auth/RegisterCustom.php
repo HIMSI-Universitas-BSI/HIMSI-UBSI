@@ -34,8 +34,8 @@ class RegisterCustom extends CustomRegister
             'password' => Hash::make($data['password']),
         ]);
 
-        // Ambil role berdasarkan ID (default 3)
-        $role = Role::find(3);
+        // Ambil role berdasarkan ID (default 3 / Anggota Muda)
+        $role = Role::where('name', 'Anggota Muda')->first();
         if ($role) {
             $user->assignRole($role->name);
         }
