@@ -23,15 +23,15 @@ class UserForm
                 Select::make('branch_id')
                     ->options(Branch::all()->pluck('name', 'id'))
                     ->label('Cabang / DPC')
-                    ->visible(auth()->id() === 1),
+                    ->visible(in_array(auth()->user()->roles->first()->id ?? null, [1, 4])),
                 Select::make('position')
                     ->options(['DPP' => 'DPP', 'DPC' => 'DPC'])
                     ->label('Posisi')
-                    ->visible(auth()->id() === 1),
+                    ->visible(in_array(auth()->user()->roles->first()->id ?? null, [1, 4])),
                 Select::make('roles')
                     ->label('Role')
                     ->relationship('roles', 'name')
-                    ->visible(auth()->id() === 1)
+                    ->visible(in_array(auth()->user()->roles->first()->id ?? null, [1, 4]))
                     ->default(3),
                 TextInput::make('password')
                     ->password()
