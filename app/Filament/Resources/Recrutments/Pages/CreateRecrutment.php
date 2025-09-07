@@ -2,8 +2,9 @@
 
 namespace App\Filament\Resources\Recrutments\Pages;
 
-use App\Filament\Resources\Recrutments\RecrutmentResource;
+use Illuminate\Support\Facades\Auth;
 use Filament\Resources\Pages\CreateRecord;
+use App\Filament\Resources\Recrutments\RecrutmentResource;
 
 class CreateRecrutment extends CreateRecord
 {
@@ -17,5 +18,15 @@ class CreateRecrutment extends CreateRecord
         }
 
         return $this->getResource()::getUrl('index');
+    }
+
+    protected function mutateFormDataBeforeCreate(array $data): array
+    {
+
+        if (Auth::user()?->position === null) {
+            $data['status_id'] = 1;
+        }
+
+        return $data;
     }
 }

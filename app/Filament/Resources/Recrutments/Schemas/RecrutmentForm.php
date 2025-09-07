@@ -100,10 +100,10 @@ class RecrutmentForm
                     ->helperText('Mohon Masukan Link Drive Yang Berisi CV Anda'),
                 
                 Select::make('status_id')
-                    ->default(Status::find(1)->id)
+                    ->default(1)
                     ->label('Status')
                     ->options(Status::all()->pluck('name', 'id'))
-                    ->visible(fn () => auth()->user()?->position !== null),
+                    ->visible(fn () => Auth::user()?->position !== null),
             ]);
     }
 }
