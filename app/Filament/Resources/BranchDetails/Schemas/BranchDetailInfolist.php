@@ -53,11 +53,12 @@ class BranchDetailInfolist
                             ->disk('public')
                             ->imageHeight(140)
                             ->circular()
-                            ->default(asset('images/pp.jpg')),
+                            ->default(asset('images/user.png')),
                         TextEntry::make('ketua.name')
                             ->label('Nama'),
                         TextEntry::make('ketua.no_wa')
                             ->label('No WhatsApp')
+                            ->default('-')
                             ->url(fn ($record) => 'https://wa.me/' . ltrim($record->no_wa, '0'), true)
                             ->badge('info'),
                     ])->columns(2),
@@ -71,11 +72,12 @@ class BranchDetailInfolist
                             ->disk('public')
                             ->imageHeight(140)
                             ->circular()
-                            ->default(asset('images/pp.jpg')),
+                            ->default(asset('images/user.png')),
                         TextEntry::make('wakil_ketua.name')
                             ->label('Nama'),
                         TextEntry::make('wakil_ketua.no_wa')
                             ->label('No WhatsApp')
+                            ->default('-')
                             ->url(fn ($record) => 'https://wa.me/' . ltrim($record->no_wa, '0'), true)
                             ->badge('info'),
                     ])->columns(2),
@@ -89,11 +91,12 @@ class BranchDetailInfolist
                             ->disk('public')
                             ->imageHeight(140)
                             ->circular()
-                            ->default(asset('images/pp.jpg')),
+                            ->default(asset('images/user.png')),
                         TextEntry::make('sekertaris_1.name')
                             ->label('Nama'),
                         TextEntry::make('sekertaris_1.no_wa')
                             ->label('No WhatsApp')
+                            ->default('-')
                             ->url(fn ($record) => 'https://wa.me/' . ltrim($record->no_wa, '0'), true)
                             ->badge('info'),
                     ])->columns(2),
@@ -107,11 +110,12 @@ class BranchDetailInfolist
                             ->disk('public')
                             ->imageHeight(140)
                             ->circular()
-                            ->default(asset('images/pp.jpg')),
+                            ->default(asset('images/user.png')),
                         TextEntry::make('sekertaris_2.name')
                             ->label('Nama'),
                         TextEntry::make('sekertaris_2.no_wa')
                             ->label('No WhatsApp')
+                            ->default('-')
                             ->url(fn ($record) => 'https://wa.me/' . ltrim($record->no_wa, '0'), true)
                             ->badge('info'),
                     ])->columns(2),
@@ -125,11 +129,12 @@ class BranchDetailInfolist
                             ->disk('public')
                             ->imageHeight(140)
                             ->circular()
-                            ->default(asset('images/pp.jpg')),
+                            ->default(asset('images/user.png')),
                         TextEntry::make('bendahara_1.name')
                             ->label('Nama'),
                         TextEntry::make('bendahara_1.no_wa')
                             ->label('No WhatsApp')
+                            ->default('-')
                             ->url(fn ($record) => 'https://wa.me/' . ltrim($record->no_wa, '0'), true)
                             ->badge('info'),
                     ])->columns(2),
@@ -143,11 +148,12 @@ class BranchDetailInfolist
                             ->disk('public')
                             ->imageHeight(140)
                             ->circular()
-                            ->default(asset('images/pp.jpg')),
+                            ->default(asset('images/user.png')),
                         TextEntry::make('bendahara_2.name')
                             ->label('Nama'),
                         TextEntry::make('bendahara_2.no_wa')
                             ->label('No WhatsApp')
+                            ->default('-')
                             ->url(fn ($record) => 'https://wa.me/' . ltrim($record->no_wa, '0'), true)
                             ->badge('info'),
                     ])->columns(2),
@@ -161,11 +167,12 @@ class BranchDetailInfolist
                             ->disk('public')
                             ->imageHeight(140)
                             ->circular()
-                            ->default(asset('images/pp.jpg')),
+                            ->default(asset('images/user.png')),
                         TextEntry::make('koor_pendidikan.name')
                             ->label('Nama'),
                         TextEntry::make('koor_pendidikan.no_wa')
                             ->label('No WhatsApp')
+                            ->default('-')
                             ->url(fn ($record) => 'https://wa.me/' . ltrim($record->no_wa, '0'), true)
                             ->badge('info'),
                     ])->columns(2),
@@ -179,11 +186,12 @@ class BranchDetailInfolist
                             ->disk('public')
                             ->imageHeight(140)
                             ->circular()
-                            ->default(asset('images/pp.jpg')),
+                            ->default(asset('images/user.png')),
                         TextEntry::make('koor_kominfo.name')
                             ->label('Nama'),
                         TextEntry::make('koor_kominfo.no_wa')
                             ->label('No WhatsApp')
+                            ->default('-')
                             ->url(fn ($record) => 'https://wa.me/' . ltrim($record->no_wa, '0'), true)
                             ->badge('info'),
                     ])->columns(2),
@@ -197,11 +205,12 @@ class BranchDetailInfolist
                             ->disk('public')
                             ->imageHeight(140)
                             ->circular()
-                            ->default(asset('images/pp.jpg')),
+                            ->default(asset('images/user.png')),
                         TextEntry::make('koor_rsdm.name')
                             ->label('Nama'),
                         TextEntry::make('koor_rsdm.no_wa')
                             ->label('No WhatsApp')
+                            ->default('-')
                             ->url(fn ($record) => 'https://wa.me/' . ltrim($record->no_wa, '0'), true)
                             ->badge('info'),
                     ])->columns(2),
@@ -215,11 +224,12 @@ class BranchDetailInfolist
                             ->disk('public')
                             ->imageHeight(140)
                             ->circular()
-                            ->default(asset('images/pp.jpg')),
+                            ->default(asset('images/user.png')),
                         TextEntry::make('koor_litbang.name')
                             ->label('Nama'),
                         TextEntry::make('koor_litbang.no_wa')
                             ->label('No WhatsApp')
+                            ->default('-')
                             ->url(fn ($record) => 'https://wa.me/' . ltrim($record->no_wa, '0'), true)
                             ->badge('info'),
                     ])->columns(2),
