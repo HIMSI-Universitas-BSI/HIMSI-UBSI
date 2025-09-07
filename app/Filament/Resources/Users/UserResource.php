@@ -84,6 +84,12 @@ class UserResource extends Resource
 
     public static function getNavigationBadge(): ?string
     {
-        return static::getModel()::count();
+        $user = Auth::user();
+
+        if ($user->position === 'DPP') {
+            return static::getModel()::count();
+        }
+
+        return null;
     }
 }
