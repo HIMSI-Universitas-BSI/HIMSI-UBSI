@@ -32,8 +32,9 @@ class MabaOverview extends StatsOverviewWidget
         // Data status recruitment
         $statusRecruitment = Recrutment::where('created_by', $userId)
             ->with('status')
-            ->get()
-            ->pluck('status.name');
+            ->first()
+            ?->status
+            ?->name;
 
         return [
             Stat::make('Hari ini', $today)
