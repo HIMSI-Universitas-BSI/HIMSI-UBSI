@@ -4,6 +4,7 @@ namespace App\Filament\Widgets;
 
 use App\Models\Recrutment;
 use Illuminate\Support\Carbon;
+use Illuminate\Support\Facades\Auth;
 use Filament\Widgets\StatsOverviewWidget;
 use Filament\Widgets\StatsOverviewWidget\Stat;
 use BezhanSalleh\FilamentShield\Traits\HasWidgetShield;
@@ -14,14 +15,19 @@ class MabaOverview extends StatsOverviewWidget
     
     protected function getStats(): array
     {
-        $user = auth()->user();
+        $user = Auth::user();
         $userId = $user ? $user->id : null;
 
         //Data tanggal
         $today = Carbon::now('Asia/Jakarta')->translatedFormat('d F Y');
 
         // Data recrutment get by auth id 
-        $createdAtRecruitment = Recrutment::where('created_by', $userId)->pluck('created_at');
+        $createdAtRecruitment = Recrutment::where('created_by', $userId)
+            ->value('created_at');
+
+        if ($createdAtRecruitment) {
+            $createdAtRecruitment = \Carbon\Carbon::parse($createdAtRecruitment)->translatedFormat('d F Y');
+        };
 
         // Data status recruitment
         $statusRecruitment = Recrutment::where('created_by', $userId)
@@ -31,11 +37,11 @@ class MabaOverview extends StatsOverviewWidget
 
         return [
             Stat::make('Hari ini', $today)
-            ->description('Semoga Harimu Menyenangkan')
-            ->descriptionIcon('heroicon-m-calendar')
+                ->description('Semoga Harimu Menyenangkan')
+                ->descriptionIcon('heroicon-m-calendar')
 
-            ->chart([7, 2, 10, 3, 15, 4, 17])
-            ->color('success'),
+                ->chart([7, 2, 10, 3, 15, 4, 17])
+                ->color('success'),
 
             Stat::make('Tanggal Daftar', $createdAtRecruitment)
                 ->description('Semangat 🔥')
