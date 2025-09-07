@@ -2,10 +2,12 @@
 
 namespace App\Filament\Resources\Recrutments\Schemas;
 
+use App\Models\User;
 use App\Models\Branch;
 use App\Models\Status;
 use Filament\Schemas\Schema;
 use Filament\Support\Icons\Heroicon;
+use Illuminate\Support\Facades\Auth;
 use Filament\Forms\Components\Select;
 use Filament\Forms\Components\Textarea;
 use Filament\Forms\Components\TextInput;
@@ -38,7 +40,8 @@ class RecrutmentForm
                 TextInput::make('email')
                     ->label('Email')
                     ->email()
-                    ->required(),
+                    ->required()
+                    ->default(fn () => User::find(Auth::id())?->email),
                 TextInput::make('instagram')
                     ->required(),
                 TextInput::make('no_wa')
