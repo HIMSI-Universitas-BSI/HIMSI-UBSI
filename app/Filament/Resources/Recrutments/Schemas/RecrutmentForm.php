@@ -43,7 +43,8 @@ class RecrutmentForm
                     ->required()
                     ->default(fn () => User::find(Auth::id())?->email),
                 TextInput::make('instagram')
-                    ->required(),
+                    ->required()
+                    ->helperText('Masukkan URL Instagram Anda contoh "https://www.instagram.com/himsi.ubsi/"'),
                 TextInput::make('no_wa')
                     ->label('No WhatsApp')
                     ->numeric()
