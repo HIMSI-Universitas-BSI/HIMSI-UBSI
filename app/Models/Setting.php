@@ -3,6 +3,7 @@
 namespace App\Models;
 
 use App\Traits\AuditedBySoftDelete;
+use Illuminate\Support\Facades\Cache;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Notifications\Notifiable;
 use Illuminate\Database\Eloquent\SoftDeletes;
@@ -30,5 +31,24 @@ class Setting extends Model
             default:
                 return $value;
         }
+    }
+
+    protected static function booted()
+    {
+        static::saved(function ($setting) {
+            Cache::forget("setting_{$setting->key}");
+        });
+
+        static::created(function ($setting) {
+            Cache::forget("setting_{$setting->key}");
+        });
+
+        static::updated(function ($setting) {
+            Cache::forget("setting_{$setting->key}");
+        });
+
+        static::deleted(function ($setting) {
+            Cache::forget("setting_{$setting->key}");
+        });
     }
 }
