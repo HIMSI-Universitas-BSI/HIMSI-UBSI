@@ -3,6 +3,7 @@
 namespace App\Helpers;
 
 use App\Models\Benner;
+use Illuminate\Support\Facades\Cache;
 
 class BennerHelper
 {
@@ -14,14 +15,18 @@ class BennerHelper
      */
     public static function getBennerImageUrl(string $name): string
     {
-        $Benner = Benner::where('name', $name)
-            ->where('active', true)
-            ->first();
+        $cacheKey = "benner_image_{$name}";
 
-        if ($Benner && $Benner->image) {
-            return asset('storage/' . $Benner->image);
+        $benner = Cache::remember($cacheKey, now()->addMinutes(5), function () use ($name) {
+            return Benner::where('name', $name)
+                ->where('active', true)
+                ->first();
+        });
+
+        if ($benner && $benner->image) {
+            return asset('storage/' . $benner->image);
         }
 
-        return asset('images/default-benner.jpg'); // Ganti dengan path default banner jika tidak ditemukan
+        return asset('images/default-benner.jpg'); // fallback jika tidak ada
     }
 }
