@@ -35,6 +35,8 @@ class RecrutmentForm
                         'Semester 2' => 'Semester 2',
                         'Semester 3' => 'Semester 3',
                         'Semester 4' => 'Semester 4',
+                        'Semester 5' => 'Semester 5',
+                        'Semester 6' => 'Semester 6',
                     ])
                     ->required(),
                 TextInput::make('email')
