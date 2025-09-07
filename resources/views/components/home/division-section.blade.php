@@ -1,4 +1,4 @@
-<section class="wrapper !bg-[#ffffff] ">
+<section id="divisi" class="wrapper !bg-[#ffffff] ">
     <div class="container py-10 lg:py-15 !text-center">
         <div class="flex flex-wrap mx-[-15px]">
             <div class="md:w-10/12 xl:w-8/12 lg:w-8/12 w-full flex-[0_0_auto] !px-[15px] max-w-full xl:!ml-[16.66666667%] lg:!ml-[16.66666667%] md:!ml-[8.33333333%]">

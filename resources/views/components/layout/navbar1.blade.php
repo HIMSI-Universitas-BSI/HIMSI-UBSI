@@ -16,20 +16,20 @@
                 <div class="offcanvas-body xl:!ml-auto lg:!ml-auto flex  flex-col !h-full">
                     <ul class="navbar-nav">
                         <li class="nav-item"><a class="nav-link" href="/">Home</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#">Tentang Kami</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#about">Tentang Kami</a></li>
                         
-                        <li class="nav-item dropdown"><a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">Divisi</a>
+                        <li class="nav-item dropdown"><a class="nav-link dropdown-toggle" href="#divisi" data-bs-toggle="dropdown">Divisi</a>
                             <ul class="dropdown-menu">
                                 
-                                <li class="nav-item"><a class="dropdown-item" href="#">Pendidikan</a></li>
-                                <li class="nav-item"><a class="dropdown-item" href="#">Kominfo</a></li>
-                                <li class="nav-item"><a class="dropdown-item" href="#">RSDM</a></li>
-                                <li class="nav-item"><a class="dropdown-item" href="#">Litbang</a></li>
+                                <li class="nav-item"><a class="dropdown-item" href="#divisi">Pendidikan</a></li>
+                                <li class="nav-item"><a class="dropdown-item" href="#divisi">Kominfo</a></li>
+                                <li class="nav-item"><a class="dropdown-item" href="#divisi">RSDM</a></li>
+                                <li class="nav-item"><a class="dropdown-item" href="#divisi">Litbang</a></li>
                                 
                             </ul>
                         </li>
 
-                        <li class="nav-item"><a class="nav-link" href="#">Galeri</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#dpc">Cabang</a></li>
                         
                         <div class="offcanvas-footer xl:!hidden lg:!hidden">
                         </div>

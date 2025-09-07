@@ -1,4 +1,4 @@
-<div id="snippet-1" class="flex flex-wrap py-4 lg:py-8 justify-center items-center bg-white">
+<div id="about" class="flex flex-wrap py-4 lg:py-8 justify-center items-center bg-white">
     <div class="md:w-8/12 lg:w-6/12 xl:w-6/12 w-full flex-[0_0_auto] !px-[15px] xl:!px-[35px] lg:!px-[20px] !mt-[50px] max-w-full !relative">
         <div class="shape !bg-[#eff7fa] !rounded-[50%] rellax !w-[10rem] !h-[10rem] !absolute z-[1]" data-rellax-speed="1" style="top: -2rem; left: -1.9rem;"></div>
             <figure class="rounded-[0.4rem] relative z-[2]">
