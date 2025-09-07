@@ -24477,11 +24477,8 @@ function polyfill() {
                 const s = r(t.map((e) => e.split(" ")));
                 return (
                     0 <
-                    o(
-                        this,
-                        (t) =>
-                            0 < s.filter((e) => t.classList.contains(e)).length
-                    ).length
+                    o(this, (t) => s.some((e) => t?.classList?.contains(e)))
+                        .length
                 );
             },
             toggleClass: function () {
@@ -28379,12 +28376,10 @@ function polyfill() {
         }
         function P(e, t) {
             return e.transformEl
-                ? t
-                      .find(e.transformEl)
-                      .css({
-                          "backface-visibility": "hidden",
-                          "-webkit-backface-visibility": "hidden",
-                      })
+                ? t.find(e.transformEl).css({
+                      "backface-visibility": "hidden",
+                      "-webkit-backface-visibility": "hidden",
+                  })
                 : t;
         }
         function $(e) {
