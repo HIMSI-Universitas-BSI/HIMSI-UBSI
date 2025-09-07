@@ -13,7 +13,7 @@
                     </div>
                     <!-- /.post-category -->
                     <h1 class="!text-[calc(1.365rem_+_1.38vw)] font-bold !leading-[1.2] xl:!text-[2.4rem] !mb-3">{{ $divisi->name }}</h1>
-                    <p class="lead !leading-[1.65] text-[.9rem] font-medium md:!px-14 lg:!px-14 xl:!px-20 xxl:!px-32">Integer posuere erat a ante venenatis dapibus posuere. Maecenas faucibus mollis interdum.</p>
+                    <p class="lead !leading-[1.65] text-[.9rem] font-medium md:!px-14 lg:!px-14 xl:!px-20 xxl:!px-32">Sinergi dan Berkembang.</p>
                 </div>
                 <!-- /.post-header -->
                 </div>
