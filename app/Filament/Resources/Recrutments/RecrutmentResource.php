@@ -2,22 +2,23 @@
 
 namespace App\Filament\Resources\Recrutments;
 
-use App\Filament\Resources\Recrutments\Pages\CreateRecrutment;
-use App\Filament\Resources\Recrutments\Pages\EditRecrutment;
-use App\Filament\Resources\Recrutments\Pages\ListRecrutments;
-use App\Filament\Resources\Recrutments\Pages\ViewRecrutment;
-use App\Filament\Resources\Recrutments\Schemas\RecrutmentForm;
-use App\Filament\Resources\Recrutments\Schemas\RecrutmentInfolist;
-use App\Filament\Resources\Recrutments\Tables\RecrutmentsTable;
-use App\Models\Recrutment;
+use UnitEnum;
 use BackedEnum;
-use Filament\Resources\Resource;
-use Filament\Schemas\Schema;
-use Filament\Support\Icons\Heroicon;
+use App\Models\Recrutment;
 use Filament\Tables\Table;
+use Filament\Schemas\Schema;
+use Filament\Resources\Resource;
+use Filament\Support\Icons\Heroicon;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\SoftDeletingScope;
-use UnitEnum;
+use App\Filament\Resources\Recrutments\Pages\EditRecrutment;
+use App\Filament\Resources\Recrutments\Pages\ViewRecrutment;
+use App\Filament\Resources\Recrutments\Pages\ListRecrutments;
+use App\Filament\Resources\Recrutments\Pages\CreateRecrutment;
+use App\Filament\Resources\Recrutments\Schemas\RecrutmentForm;
+use App\Filament\Resources\Recrutments\Tables\RecrutmentsTable;
+use App\Filament\Resources\Recrutments\Schemas\RecrutmentInfolist;
 
 class RecrutmentResource extends Resource
 {
@@ -72,18 +73,18 @@ class RecrutmentResource extends Resource
                 SoftDeletingScope::class,
             ]);
 
-        $user = auth()->user();
+        $user = Auth::user();
 
         if ($user->position === 'DPP') {
-            return $query; // semua data
+            return $query;
         }
 
         if ($user->position === 'DPC') {
-            return $query->where('branch_id', $user->branch_id); // filter branch
+            return $query->where('branch_id', $user->branch_id);
         }
 
         if (is_null($user->position)) {
-            return $query->where('created_by', $user->id); // hanya data yang dibuat sendiri
+            return $query->where('created_by', $user->id);
         }
 
         return $query;
@@ -91,6 +92,24 @@ class RecrutmentResource extends Resource
 
     public static function getNavigationBadge(): ?string
     {
-        return static::getModel()::count();
+        $user = Auth::user();
+
+        // Kalau DPP -> hitung semua data
+        if ($user->position === 'DPP') {
+            return static::getModel()::count();
+        }
+
+        // Kalau DPC -> hanya hitung sesuai branch_id
+        if ($user->position === 'DPC') {
+            return static::getModel()::where('branch_id', $user->branch_id)->count();
+        }
+
+        // Buat anggota muda -> count by created by
+        if (is_null($user->position)) {
+            return static::getModel()::where('created_by', $user->id)->count();
+        }
+        
+        // Default: tidak ada badge
+        return null;
     }
 }
