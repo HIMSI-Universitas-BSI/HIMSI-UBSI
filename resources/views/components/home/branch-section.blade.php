@@ -34,7 +34,7 @@
                     </figure>
                     <div class="project-details flex justify-center flex-col">
                         <div class="post-header">
-                        <h2 class="post-title h3"><a href="../../single-project.html" class="!text-[#343f52] hover:!text-[#3f78e0]">{{ $b->name }}</a></h2>
+                        <h2 class="post-title h3"><a href="/" class="!text-[#343f52] hover:!text-[#3f78e0]">{{ $b->name }}</a></h2>
                         <div class="uppercase !tracking-[0.02rem] text-[0.7rem] font-bold !mb-[0.4rem] !text-[#9499a3]">{{ $b->location }}</div>
                         </div>
                         <!-- /.post-header -->
