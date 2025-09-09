@@ -9,7 +9,7 @@
         <!--/column -->
         <div class="xl:w-6/12 lg:w-6/12 w-full flex-[0_0_auto] xl:!px-[35px] lg:!px-[20px] !px-[15px] max-w-full !mt-[50px]">
             <h2 class="xl:!text-[2rem] !text-[calc(1.325rem_+_0.9vw)] !leading-[1.2] !font-DMSerif !font-normal !tracking-normal !mb-3 [word-spacing:normal!important]">Apa Itu Himsi ?</h2>
-            <p class="lead !text-[1.05rem] !leading-[1.6] font-medium">{{ $aboutTextA }}<span class="relative z-[2] whitespace-nowrap after:content-[''] after:block after:absolute after:w-[102.5%] after:h-[30%] after:left-[-1.5%] after:z-[-1] after:transition-all after:duration-[0.2s] after:ease-in-out after:!mt-0 after:rounded-[5rem] after:bottom-[9%] motion-reduce:after:transition-none after:bg-[rgba(84,168,199,.12)]">creative strategy</span> and along with great design.</p>
+            <p class="lead !text-[1.05rem] !leading-[1.6] font-medium">{{ $aboutTextA }}<span class="relative z-[2] whitespace-nowrap after:content-[''] after:block after:absolute after:w-[102.5%] after:h-[30%] after:left-[-1.5%] after:z-[-1] after:transition-all after:duration-[0.2s] after:ease-in-out after:!mt-0 after:rounded-[5rem] after:bottom-[9%] motion-reduce:after:transition-none after:bg-[rgba(84,168,199,.12)]"></span></p>
             <p class="!mb-6">{{ $aboutTextB }}</p>
             <div class="flex flex-wrap mx-[-15px] xl:mx-[-25px] !mt-[-30px]">
                 
