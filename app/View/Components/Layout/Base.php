@@ -3,8 +3,9 @@
 namespace App\View\Components\Layout;
 
 use Closure;
-use Illuminate\Contracts\View\View;
+use App\Helpers\SettingHelper;
 use Illuminate\View\Component;
+use Illuminate\Contracts\View\View;
 
 class Base extends Component
 {
@@ -14,10 +15,10 @@ class Base extends Component
     /**
      * Create a new component instance.
      */
-    public function __construct($title = 'JASANTATECH', $whatsapp)
+    public function __construct($title = 'JASANTATECH', $whatsapp = null)
     {
         $this->title = $title;
-        $this->whatsapp = $whatsapp;
+        $this->whatsapp = $whatsapp ?? SettingHelper::getSetting('whatsapp');
     }
 
     /**

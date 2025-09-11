@@ -1,4 +1,4 @@
-<x-layout.base title="Home">
+<x-layout.base title="Home" :whatsapp="$whatsapp">
     <div class="bg-white grow shrink-0">
         <!-- Header -->
         <x-layout.navbar1 />
