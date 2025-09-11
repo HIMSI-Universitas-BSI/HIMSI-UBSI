@@ -38,7 +38,7 @@ class RecrutmentsTable
                     ->searchable(),
                 TextColumn::make('no_wa')
                     ->label('No WhatsApp')
-                    ->url(fn ($record) => 'https://wa.me/' . ltrim($record->no_wa, '0'), true)
+                    ->url(fn ($record) => 'https://wa.me/62' . ltrim($record->no_wa, '0'), true)
                     ->badge('info')
                     ->searchable(),
                 TextColumn::make('branch.name')

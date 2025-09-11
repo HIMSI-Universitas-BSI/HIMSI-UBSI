@@ -34,7 +34,7 @@ class RecrutmentInfolist
                             ->badge('info'),
                         TextEntry::make('no_wa')
                             ->label('No WhatsApp')
-                            ->url(fn ($record) => 'https://wa.me/' . ltrim($record->no_wa, '0'), true)
+                            ->url(fn ($record) => 'https://wa.me/62' . ltrim($record->no_wa, '0'), true)
                             ->badge('success'),
                         ImageEntry::make('ektm')
                             ->label('E-KTM')

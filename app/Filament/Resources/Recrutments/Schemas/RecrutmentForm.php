@@ -51,7 +51,7 @@ class RecrutmentForm
                     ->label('No WhatsApp')
                     ->numeric()
                     ->maxLength(16)
-                    ->helperText('Masukkan No WhatsApp aktif, di awali dengan 62')
+                    ->helperText('Masukkan No WhatsApp aktif')
                     ->required(),
                 FileUpload::make('ektm')
                     ->label('EKTM')
