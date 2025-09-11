@@ -64,6 +64,7 @@ class HomeController extends Controller
         $data['youtube'] = SettingHelper::getSetting('youtube');
         $data['tiktok'] = SettingHelper::getSetting('tiktok');
         $data['linkedin'] = SettingHelper::getSetting('linkedin');
+        $data['whatsapp'] = SettingHelper::getSetting('whatsapp');
 
         return view('pages.homepage', $data);
     }

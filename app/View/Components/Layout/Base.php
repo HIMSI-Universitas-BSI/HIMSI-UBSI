@@ -9,13 +9,15 @@ use Illuminate\View\Component;
 class Base extends Component
 {
     public $title;
+    public $whatsapp;
     
     /**
      * Create a new component instance.
      */
-    public function __construct($title = 'JASANTATECH')
+    public function __construct($title = 'JASANTATECH', $whatsapp)
     {
         $this->title = $title;
+        $this->whatsapp = $whatsapp;
     }
 
     /**
@@ -25,6 +27,7 @@ class Base extends Component
     {
         return view('components.layout.base', [
             'title' => $this->title,
+            'whatsapp' => $this->whatsapp,
         ]);
     }
 }

@@ -36,7 +36,7 @@
         </div>
 
         <!-- Button 2 (WhatsApp) -->
-        <a href="#" target="_blank">
+        <a href="https://wa.me/{{ $whatsapp }}" target="_blank">
             <div
                 class="progress-wrap relative w-[2.3rem] h-[2.3rem] cursor-pointer flex items-center justify-center shadow-[inset_0_0_0_0.1rem_rgba(128,130,134,0.25)] opacity-100 translate-y-0 transition-all duration-300 ease-in-out rounded-full hover:scale-110 hover:shadow-lg hover:shadow-green-300">
                 <!-- SVG WhatsApp Icon -->
