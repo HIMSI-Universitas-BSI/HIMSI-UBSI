@@ -36,7 +36,7 @@ class BranchDetailForm
                             ->label('Nama'),
                         TextInput::make('ketua.no_wa')
                             ->label('No WhatsApp')
-                            ->helperText('Masukkan No WhatsApp aktif, di awali dengan 62'),
+                            ->helperText('Masukkan No WhatsApp aktif'),
                     ]),
 
                 Section::make('Wakil Ketua')
@@ -52,7 +52,7 @@ class BranchDetailForm
                             ->label('Nama'),
                         TextInput::make('wakil_ketua.no_wa')
                             ->label('No WhatsApp')
-                            ->helperText('Masukkan No WhatsApp aktif, di awali dengan 62'),
+                            ->helperText('Masukkan No WhatsApp aktif'),
                     ]),
 
                 Section::make('Sekertaris 1')
@@ -68,7 +68,7 @@ class BranchDetailForm
                             ->label('Nama'),
                         TextInput::make('sekertaris_1.no_wa')
                             ->label('No WhatsApp')
-                            ->helperText('Masukkan No WhatsApp aktif, di awali dengan 62'),
+                            ->helperText('Masukkan No WhatsApp aktif'),
                     ]),
 
                 Section::make('Sekertaris 2')
@@ -84,7 +84,7 @@ class BranchDetailForm
                             ->label('Nama'),
                         TextInput::make('sekertaris_2.no_wa')
                             ->label('No WhatsApp')
-                            ->helperText('Masukkan No WhatsApp aktif, di awali dengan 62'),
+                            ->helperText('Masukkan No WhatsApp aktif'),
                     ]),
 
                 Section::make('Bendahara 1')
@@ -100,7 +100,7 @@ class BranchDetailForm
                             ->label('Nama'),
                         TextInput::make('bendahara_1.no_wa')
                             ->label('No WhatsApp')
-                            ->helperText('Masukkan No WhatsApp aktif, di awali dengan 62'),
+                            ->helperText('Masukkan No WhatsApp aktif'),
                     ]),
 
                 Section::make('Bendahara 2')
@@ -116,7 +116,7 @@ class BranchDetailForm
                             ->label('Nama'),
                         TextInput::make('bendahara_2.no_wa')
                             ->label('No WhatsApp')
-                            ->helperText('Masukkan No WhatsApp aktif, di awali dengan 62'),
+                            ->helperText('Masukkan No WhatsApp aktif'),
                     ]),
 
                 Section::make('KOOR PENDIDIKAN')
@@ -132,7 +132,7 @@ class BranchDetailForm
                             ->label('Nama'),
                         TextInput::make('koor_pendidikan.no_wa')
                             ->label('No WhatsApp')
-                            ->helperText('Masukkan No WhatsApp aktif, di awali dengan 62'),
+                            ->helperText('Masukkan No WhatsApp aktif'),
                     ]),
 
                 Section::make('KOOR KOMINFO')
@@ -148,7 +148,7 @@ class BranchDetailForm
                             ->label('Nama'),
                         TextInput::make('koor_kominfo.no_wa')
                             ->label('No WhatsApp')
-                            ->helperText('Masukkan No WhatsApp aktif, di awali dengan 62'),
+                            ->helperText('Masukkan No WhatsApp aktif'),
                     ]),
 
                 Section::make('KOOR RSDM')
@@ -164,7 +164,7 @@ class BranchDetailForm
                             ->label('Nama'),
                         TextInput::make('koor_rsdm.no_wa')
                             ->label('No WhatsApp')
-                            ->helperText('Masukkan No WhatsApp aktif, di awali dengan 62'),
+                            ->helperText('Masukkan No WhatsApp aktif'),
                     ]),
 
                 Section::make('KOOR LITBANG')
@@ -180,7 +180,7 @@ class BranchDetailForm
                             ->label('Nama'),
                         TextInput::make('koor_litbang.no_wa')
                             ->label('No WhatsApp')
-                            ->helperText('Masukkan No WhatsApp aktif, di awali dengan 62'),
+                            ->helperText('Masukkan No WhatsApp aktif'),
                     ]),
 
                 Toggle::make('active')

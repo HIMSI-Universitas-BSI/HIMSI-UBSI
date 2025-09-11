@@ -59,7 +59,9 @@ class BranchDetailInfolist
                         TextEntry::make('ketua.no_wa')
                             ->label('No WhatsApp')
                             ->default('-')
-                            ->url(fn ($record) => 'https://wa.me/' . ltrim($record->no_wa, '0'), true)
+                            ->url(fn ($record) => isset($record->ketua['no_wa'])
+                                ? 'https://wa.me/62' . ltrim($record->ketua['no_wa'], '0')
+                                : null, true)
                             ->badge('info'),
                     ])->columns(2),
                 
@@ -78,7 +80,9 @@ class BranchDetailInfolist
                         TextEntry::make('wakil_ketua.no_wa')
                             ->label('No WhatsApp')
                             ->default('-')
-                            ->url(fn ($record) => 'https://wa.me/' . ltrim($record->no_wa, '0'), true)
+                            ->url(fn ($record) => isset($record->wakil_ketua['no_wa'])
+                                ? 'https://wa.me/62' . ltrim($record->wakil_ketua['no_wa'], '0')
+                                : null, true)                          
                             ->badge('info'),
                     ])->columns(2),
 
@@ -97,7 +101,9 @@ class BranchDetailInfolist
                         TextEntry::make('sekertaris_1.no_wa')
                             ->label('No WhatsApp')
                             ->default('-')
-                            ->url(fn ($record) => 'https://wa.me/' . ltrim($record->no_wa, '0'), true)
+                            ->url(fn ($record) => isset($record->sekertaris_1['no_wa'])
+                                ? 'https://wa.me/62' . ltrim($record->sekertaris_1['no_wa'], '0')
+                                : null, true)                           
                             ->badge('info'),
                     ])->columns(2),
 
@@ -116,7 +122,9 @@ class BranchDetailInfolist
                         TextEntry::make('sekertaris_2.no_wa')
                             ->label('No WhatsApp')
                             ->default('-')
-                            ->url(fn ($record) => 'https://wa.me/' . ltrim($record->no_wa, '0'), true)
+                            ->url(fn ($record) => isset($record->sekertaris_2['no_wa'])
+                                ? 'https://wa.me/62' . ltrim($record->sekertaris_2['no_wa'], '0')
+                                : null, true)
                             ->badge('info'),
                     ])->columns(2),
 
@@ -135,7 +143,9 @@ class BranchDetailInfolist
                         TextEntry::make('bendahara_1.no_wa')
                             ->label('No WhatsApp')
                             ->default('-')
-                            ->url(fn ($record) => 'https://wa.me/' . ltrim($record->no_wa, '0'), true)
+                            ->url(fn ($record) => isset($record->bendahara_1['no_wa'])
+                                ? 'https://wa.me/62' . ltrim($record->bendahara_1['no_wa'], '0')
+                                : null, true)
                             ->badge('info'),
                     ])->columns(2),
 
@@ -154,7 +164,9 @@ class BranchDetailInfolist
                         TextEntry::make('bendahara_2.no_wa')
                             ->label('No WhatsApp')
                             ->default('-')
-                            ->url(fn ($record) => 'https://wa.me/' . ltrim($record->no_wa, '0'), true)
+                            ->url(fn ($record) => isset($record->bendahara_2['no_wa'])
+                                ? 'https://wa.me/62' . ltrim($record->bendahara_2['no_wa'], '0')
+                                : null, true)
                             ->badge('info'),
                     ])->columns(2),
 
@@ -173,7 +185,9 @@ class BranchDetailInfolist
                         TextEntry::make('koor_pendidikan.no_wa')
                             ->label('No WhatsApp')
                             ->default('-')
-                            ->url(fn ($record) => 'https://wa.me/' . ltrim($record->no_wa, '0'), true)
+                            ->url(fn ($record) => isset($record->koor_pendidikan['no_wa'])
+                                ? 'https://wa.me/62' . ltrim($record->koor_pendidikan['no_wa'], '0')
+                                : null, true)   
                             ->badge('info'),
                     ])->columns(2),
 
@@ -192,7 +206,9 @@ class BranchDetailInfolist
                         TextEntry::make('koor_kominfo.no_wa')
                             ->label('No WhatsApp')
                             ->default('-')
-                            ->url(fn ($record) => 'https://wa.me/' . ltrim($record->no_wa, '0'), true)
+                            ->url(fn ($record) => isset($record->koor_kominfo['no_wa'])
+                                ? 'https://wa.me/62' . ltrim($record->koor_kominfo['no_wa'], '0')
+                                : null, true) 
                             ->badge('info'),
                     ])->columns(2),
 
@@ -211,7 +227,9 @@ class BranchDetailInfolist
                         TextEntry::make('koor_rsdm.no_wa')
                             ->label('No WhatsApp')
                             ->default('-')
-                            ->url(fn ($record) => 'https://wa.me/' . ltrim($record->no_wa, '0'), true)
+                            ->url(fn ($record) => isset($record->koor_rsdm['no_wa'])
+                                ? 'https://wa.me/62' . ltrim($record->koor_rsdm['no_wa'], '0')
+                                : null, true)
                             ->badge('info'),
                     ])->columns(2),
 
@@ -230,7 +248,9 @@ class BranchDetailInfolist
                         TextEntry::make('koor_litbang.no_wa')
                             ->label('No WhatsApp')
                             ->default('-')
-                            ->url(fn ($record) => 'https://wa.me/' . ltrim($record->no_wa, '0'), true)
+                            ->url(fn ($record) => isset($record->koor_litbang['no_wa'])
+                                ? 'https://wa.me/62' . ltrim($record->koor_litbang['no_wa'], '0')
+                                : null, true)
                             ->badge('info'),
                     ])->columns(2),
 
