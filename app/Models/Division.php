@@ -3,6 +3,7 @@
 namespace App\Models;
 
 use App\Traits\AuditedBySoftDelete;
+use Illuminate\Support\Facades\Cache;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Notifications\Notifiable;
 use Illuminate\Database\Eloquent\SoftDeletes;
@@ -17,4 +18,15 @@ class Division extends Model
     protected $casts = [
         'job_description' => 'array',
     ];
+
+    protected static function booted()
+    {
+        static::saved(function ($division) {
+            Cache::forget('home_data');
+        });
+
+        static::deleted(function ($division) {
+            Cache::forget('home_data');
+        });
+    }
 }

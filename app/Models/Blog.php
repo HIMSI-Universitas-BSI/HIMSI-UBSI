@@ -3,6 +3,7 @@
 namespace App\Models;
 
 use App\Traits\AuditedBySoftDelete;
+use Illuminate\Support\Facades\Cache;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Notifications\Notifiable;
 use Illuminate\Database\Eloquent\SoftDeletes;
@@ -21,5 +22,16 @@ class Blog extends Model
     public function branch()
     {
         return $this->belongsTo(Branch::class, 'branch_id');
+    }
+
+    protected static function booted()
+    {
+        static::saved(function ($blog) {
+            Cache::forget('home_data');
+        });
+
+        static::deleted(function ($blog) {
+            Cache::forget('home_data');
+        });
     }
 }
