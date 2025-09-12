@@ -3,6 +3,7 @@
 namespace App\Filament\Widgets;
 
 use App\Models\Recrutment;
+use Illuminate\Support\Facades\Auth;
 use Filament\Widgets\StatsOverviewWidget;
 use Filament\Widgets\StatsOverviewWidget\Stat;
 use BezhanSalleh\FilamentShield\Traits\HasWidgetShield;
@@ -13,7 +14,7 @@ class DpcOverview extends StatsOverviewWidget
     
     protected function getStats(): array
     {
-        $user = auth()->user();
+        $user = Auth::user();
 
         // Pastikan ada user
         $branchId = $user ? $user->branch_id : null;
@@ -23,7 +24,7 @@ class DpcOverview extends StatsOverviewWidget
             ? Recrutment::where('branch_id', $branchId)->count() 
             : 0;
         
-            // Recruitment dengan status_id = 1
+        // Recruitment dengan status_id = 1
         $status1Count = $branchId 
             ? Recrutment::where('branch_id', $branchId)
                         ->where('status_id', 1)
@@ -44,14 +45,14 @@ class DpcOverview extends StatsOverviewWidget
                 ->chart([7, 2, 10, 3, 15, 4, 17])
                 ->color('success'),
 
-            Stat::make('Recruitment Status 1', $status1Count)
-                ->description('Status 1')
+            Stat::make('Recruitment Belum Diverifikasi', $status1Count)
+                ->description('Recrutment')
                 ->descriptionIcon('heroicon-m-check-circle')
                 ->chart([5, 3, 8, 2, 7, 1, 4])
                 ->color('warning'),
 
-            Stat::make('Recruitment Status 2', $status2Count)
-                ->description('Status 2')
+            Stat::make('Recruitment Terverifikasi', $status2Count)
+                ->description('Recrutment')
                 ->descriptionIcon('heroicon-m-x-circle')
                 ->chart([2, 4, 1, 3, 5, 2, 6])
                 ->color('danger'),
