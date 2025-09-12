@@ -56,16 +56,28 @@
                 <div class="mt-6">
                     <h1 class="h2 !mb-3 !text-white !leading-[1.35]">Thanks To :</h1>
 
-                    <div class="flex gap-3 mt-3">
-                        <a href="https://wahyutomo.jasanyatech.id/" target="_blank">
-                            <div class="rounded-2xl overflow-hidden shadow p-2 bg-sky-400 transform transition duration-300 hover:-translate-y-1">
-                                <img src="{{ asset('images/wahyu.png') }}" alt="Wahyu" class="h-8 max-h-full">
+                    <div class="grid grid-cols-2 gap-3 mt-3 max-w-[420px]">
+                        <a href="https://wahyutomo.jasanyatech.id/" target="_blank" class="w-full">
+                            <div class="rounded-2xl overflow-hidden shadow p-4 bg-slate-200/50 flex items-center justify-center h-15 transform transition duration-300 hover:-translate-y-1">
+                                <img src="{{ asset('images/wahyu.png') }}" alt="Wahyu" class="max-h-10 max-w-full object-contain">
                             </div>
                         </a>
 
-                        <a href="https://jasanyatech.id/" target="_blank">
-                            <div class="rounded-2xl overflow-hidden shadow p-2 bg-sky-400 transform transition duration-300 hover:-translate-y-1">
-                                <img src="{{ asset('images/image.png') }}" alt="JasanyaTech" class="h-8 max-h-full">
+                        <a href="https://jasanyatech.id/" target="_blank" class="w-full">
+                            <div class="rounded-2xl overflow-hidden shadow p-4 bg-slate-200/50 flex items-center justify-center h-15 transform transition duration-300 hover:-translate-y-1">
+                                <img src="{{ asset('images/image.png') }}" alt="JasanyaTech" class="max-h-10 max-w-full object-contain">
+                            </div>
+                        </a>
+
+                        <a href="https://www.youtube.com/@NNN5pemuda" target="_blank" class="w-full">
+                            <div class="rounded-2xl overflow-hidden shadow p-4 bg-slate-200/50 flex items-center justify-center h-15 transform transition duration-300 hover:-translate-y-1">
+                                <img src="{{ asset('images/nnn.png') }}" alt="Wahyu" class="max-h-12 max-w-full object-contain">
+                            </div>
+                        </a>
+
+                        <a href="https://www.instagram.com/himsi.ubsi/" target="_blank" class="w-full">
+                            <div class="rounded-2xl overflow-hidden shadow p-4 bg-slate-200/50 flex items-center justify-center h-15 transform transition duration-300 hover:-translate-y-1">
+                                <img src="{{ asset('images/kabinet.png') }}" alt="JasanyaTech" class="max-h-15 max-w-full object-contain">
                             </div>
                         </a>
                     </div>
