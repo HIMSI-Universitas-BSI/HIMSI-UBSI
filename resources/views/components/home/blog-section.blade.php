@@ -17,7 +17,7 @@
                         <div class="swiper-slide">
                             <div class="item-inner">
                                 <article>
-                                    <div class="card min-h-[600px] max-h-[600px]">
+                                    <div class="card min-h-[620px] max-h-[620px]">
                                         
                                         <figure class="card-img-top overlay overlay-1 hover-scale group"><a href="{{ route('blog.show', ['id' => $b->id]) }}"> 
                                             <img class="!transition-all !duration-[0.35s] !ease-in-out group-hover:scale-105 max-h-[240px]" src="{{ asset('storage/blog/' . $b->banner) }}" alt="image"></a>
