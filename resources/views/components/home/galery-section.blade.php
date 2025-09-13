@@ -31,9 +31,9 @@
                         @if (!empty($images))
                             @foreach ($images as $img)
                                 <div class="swiper-slide">
-                                    <figure class="w-full max-w-[600px] sm:h-[320px] md:h-[360px] lg:h-[320px] overflow-hidden rounded-[0.8rem] mx-auto">
+                                    <figure class="w-full max-w-[600px] sm:h-max-[300px] md:h-max-[280px] lg:h-max-[300px] overflow-hidden rounded-[0.8rem] mx-auto">
                                         <img class="h-full w-full object-contain" 
-                                            src="{{ asset('storage/' . $img) }}" 
+                                            src="{{ asset('storage/blog/' . $img) }}" 
                                             alt="{{ $branch->name }}">
                                     </figure>
                                 </div>
@@ -68,9 +68,9 @@
                         @if (!empty($images))
                             @foreach ($images as $img)
                                 <div class="swiper-slide">
-                                    <figure class="w-full max-w-[600px] sm:h-[320px] md:h-[360px] lg:h-[320px] overflow-hidden rounded-[0.8rem] mx-auto">
+                                    <figure class="w-full max-w-[600px] sm:h-max-[300px] md:h-max-[280px] lg:h-max-[300px] overflow-hidden rounded-[0.8rem] mx-auto">
                                         <img class="h-full w-full object-contain" 
-                                            src="{{ asset('storage/' . $img) }}" 
+                                            src="{{ asset('storage/blog/' . $img) }}" 
                                             alt="{{ $branch->name }}">
                                     </figure>
                                 </div>
