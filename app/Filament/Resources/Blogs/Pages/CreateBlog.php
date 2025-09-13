@@ -13,12 +13,12 @@ class CreateBlog extends CreateRecord
     protected function mutateFormDataBeforeCreate(array $data): array
     {
         if (isset($data['banner'])) {
-            $data['banner'] = FileHelpers::convertWebp($data['banner'], "himsi");
+            $data['banner'] = FileHelpers::convertWebp($data['banner'], "blog");
         }
 
-        if (isset($data['gambar']) && is_array($data['gambar'])) {
-            foreach ($data['gambar'] as $index => $gambar) {
-                $data['gambar'][$index] = FileHelpers::convertWebp($gambar, "himsi");
+        if (isset($data['image']) && is_array($data['image'])) {
+            foreach ($data['image'] as $index => $image) {
+                $data['image'][$index] = FileHelpers::convertWebp($image, "blog");
             }
         }
         return $data;

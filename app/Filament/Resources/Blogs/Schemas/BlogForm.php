@@ -29,9 +29,8 @@ class BlogForm
                     ->columnSpanFull(),
                 FileUpload::make('banner')
                     ->required()
-                    ->disk('public')
+                    ->disk('blog')
                     ->image()
-                    ->directory('blog_banner')
                     ->columnSpanFull(),
                 RichEditor::make('content')
                     ->required()
@@ -41,10 +40,9 @@ class BlogForm
                     ->columnSpanFull(),
                 FileUpload::make('image')
                     ->image()
-                    ->disk('public')
+                    ->disk('blog')
                     ->image()
                     ->multiple()
-                    ->directory('blog_image')
                     ->required()
                     ->columnSpanFull(),
                 DatePicker::make('created_at')
