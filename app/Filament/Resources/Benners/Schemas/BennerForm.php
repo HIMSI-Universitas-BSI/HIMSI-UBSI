@@ -23,9 +23,8 @@ class BennerForm
                     ->maxLength(128),
                 FileUpload::make('image')
                     ->image()
-                    ->disk('public')
+                    ->disk('himsi')
                     ->columnSpanFull()
-                    ->directory('benner')
                     ->required(),
                 Toggle::make('active')
                     ->required(),
