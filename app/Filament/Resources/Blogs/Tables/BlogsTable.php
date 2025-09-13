@@ -29,7 +29,7 @@ class BlogsTable
                     ->date()
                     ->sortable(),
                 ImageColumn::make('banner')
-                    ->disk('public'),
+                    ->disk('blog'),
                 TextColumn::make('content')
                     ->formatStateUsing(fn ($state) => \Illuminate\Support\Str::limit(strip_tags($state), 100))
                     ->html(),
@@ -37,7 +37,7 @@ class BlogsTable
                     ->searchable()
                     ->limit(50),
                 ImageColumn::make('image')
-                    ->disk('public'),
+                    ->disk('blog'),
                 IconColumn::make('active')
                     ->boolean(),
                 TextColumn::make('createdBy.name')
