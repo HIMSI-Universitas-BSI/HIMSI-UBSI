@@ -29,7 +29,7 @@ class FileHelpers
         try {
             $manager = new ImageManager(new Driver());
             $image = $manager->read(Storage::disk($disk)->path($file));
-            $encoded = $image->toWebp(60);
+            $encoded = $image->toWebp(85);
             $imageName = pathinfo($file, PATHINFO_FILENAME) . '.webp';
             Storage::disk($disk)->put($imageName, $encoded);
             Storage::disk($disk)->delete($file);
