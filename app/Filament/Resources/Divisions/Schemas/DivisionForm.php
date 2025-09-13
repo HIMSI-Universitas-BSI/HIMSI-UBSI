@@ -21,13 +21,11 @@ class DivisionForm
                 FileUpload::make('logo')
                     ->required()
                     ->image()
-                    ->disk('public')
-                    ->directory('division_logo')
+                    ->disk('himsi')
                     ->columnSpanFull(),
                 FileUpload::make('image')
                     ->image()
-                    ->disk('public')
-                    ->directory('division_image')
+                    ->disk('himsi')
                     ->columnSpanFull()
                     ->required(),
                 Textarea::make('description')

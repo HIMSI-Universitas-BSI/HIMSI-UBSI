@@ -23,9 +23,9 @@ class DivisionsTable
                 TextColumn::make('name')
                     ->searchable(),
                 ImageColumn::make('logo')
-                    ->disk('public'),
+                    ->disk('himsi'),
                 ImageColumn::make('image')
-                    ->disk('public'),
+                    ->disk('himsi'),
                 TextColumn::make('description')
                     ->searchable()
                     ->limit(80),
