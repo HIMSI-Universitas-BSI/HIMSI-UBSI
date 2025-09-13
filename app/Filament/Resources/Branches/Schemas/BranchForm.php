@@ -33,8 +33,7 @@ class BranchForm
                     ->columnSpanFull(),
                 FileUpload::make('poster')
                     ->image()
-                    ->disk('public')
-                    ->directory('branch_poster')
+                    ->disk('himsi')
                     ->required()
                     ->columnSpanFull(),
                 Textarea::make('description')
