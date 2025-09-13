@@ -35,7 +35,7 @@
                 <div class="xl:w-10/12 lg:w-10/12 w-full flex-[0_0_auto] !px-[15px] max-w-full !mx-auto">
                     <div class="blog single !mt-[-7rem]">
                     <div class="card">
-                        <figure class="card-img-top"><img src="{{ asset('storage/' . $blog->banner) }}" alt="image"></figure>
+                        <figure class="card-img-top"><img src="{{ asset('storage/blog/' . $blog->banner) }}" alt="image"></figure>
                         <div class="card-body flex-[1_1_auto] p-[40px] xl:!p-[2.8rem_3rem_2.8rem] lg:!p-[2.8rem_3rem_2.8rem] md:!p-[2.8rem_3rem_2.8rem]">
                         <div class="classic-view">
                             <article class="post !mb-8">
@@ -52,8 +52,8 @@
                                     @foreach ($blog->image as $img )
                                         <div class="xl:w-6/12 lg:w-6/12 md:w-6/12 w-full flex-[0_0_auto] !px-[15px] max-w-full !mt-[30px]">
                                             <figure class="overflow-hidden translate-y-0 group rounded cursor-dark">
-                                                <a href="{{ asset('storage/' . $img) }}" data-glightbox="title: Heading; description: {{ $blog->title }}" data-gallery="post"> 
-                                                    <img src="{{ asset('storage/' . $img) }}" alt="image">
+                                                <a href="{{ asset('storage/blog/' . $img) }}" data-glightbox="title: Heading; description: {{ $blog->title }}" data-gallery="post"> 
+                                                    <img src="{{ asset('storage/blog/' . $img) }}" alt="image">
                                                 </a>
                                             </figure>
                                         </div>
