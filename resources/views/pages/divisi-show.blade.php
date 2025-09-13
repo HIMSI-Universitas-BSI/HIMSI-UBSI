@@ -9,7 +9,7 @@
                 <div class="md:w-10/12 lg:w-8/12 xl:w-7/12 w-full flex-[0_0_auto] !px-[15px] max-w-full !mx-auto">
                 <div class="post-header">
                     <div class="inline-flex !mb-[.4rem] uppercase !tracking-[0.02rem] text-[0.7rem] font-bold !text-[#aab0bc] relative align-top !pl-[1.4rem]">
-                        <img src="{{ asset('storage/' . $divisi->logo) }}" class="svg-inject icon-svg icon-svg-md !w-[7.6rem] !h-[7.6rem] !text-[#fab758] text-yellow !mb-3 m-[0_auto]" alt="{{ $divisi->name }}">
+                        <img src="{{ asset('storage/himsi/' . $divisi->logo) }}" class="svg-inject icon-svg icon-svg-md !w-[7.6rem] !h-[7.6rem] !text-[#fab758] text-yellow !mb-3 m-[0_auto]" alt="{{ $divisi->name }}">
                     </div>
                     <!-- /.post-category -->
                     <h1 class="!text-[calc(1.365rem_+_1.38vw)] font-bold !leading-[1.2] xl:!text-[2.4rem] !mb-3">{{ $divisi->name }}</h1>
@@ -31,7 +31,7 @@
                 <div class="w-full flex-[0_0_auto] !px-[15px] max-w-full">
                 <article class="!mt-[-12.5rem]">
                     <figure class="!rounded-[.4rem] !mb-8 xl:!mb-[3.5rem] lg:!mb-[3.5rem] md:!mb-[3.5rem]">
-                        <img class="!rounded-[.4rem]" src="{{ asset('storage/' . $divisi->image) }}" alt="{{ $divisi->name }}">
+                        <img class="!rounded-[.4rem]" src="{{ asset('storage/himsi/' . $divisi->image) }}" alt="{{ $divisi->name }}">
                     </figure>
                     <div class="flex flex-wrap mx-[-15px]">
                     <div class="xl:w-10/12 xl:!ml-[8.33333333%] lg:w-10/12 lg:!ml-[8.33333333%] w-full flex-[0_0_auto] !px-[15px] max-w-full">

@@ -16,7 +16,7 @@
                     <div class="md:w-6/12 lg:w-6/12 xl:w-3/12 w-full flex-[0_0_auto] !px-[15px] xl:!px-[12.5px] lg:!px-[12.5px] md:!px-[12.5px] max-w-full !mt-[25px] ">
                         <div class="card !shadow-[0_0.25rem_1.75rem_rgba(30,34,40,0.07)]">
                             <div class="card-body flex-[1_1_auto] p-[20px]">
-                                <img src="{{ asset('storage/' . $d->logo) }}" class="svg-inject icon-svg icon-svg-md !w-[5.6rem] !h-[5.6rem] !text-[#fab758] text-yellow !mb-3 m-[0_auto]" alt="{{ $d->name }}">
+                                <img src="{{ asset('storage/himsi/' . $d->logo) }}" class="svg-inject icon-svg icon-svg-md !w-[5.6rem] !h-[5.6rem] !text-[#fab758] text-yellow !mb-3 m-[0_auto]" alt="{{ $d->name }}">
                                 <h4>{{ $d->name }}</h4>
                                 <p class="!mb-2">{{ \Illuminate\Support\Str::limit($d->description, 80) }}</p>
                                 <a href="{{ route('division.show', ['id' => $d->id]) }}" class="more hover !text-[#fab758] focus:!text-[#fab758] hover:!text-[#fab758]">Selengkapnya</a>
