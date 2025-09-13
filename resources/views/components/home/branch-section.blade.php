@@ -17,7 +17,7 @@
                     <figure class="!rounded-[.4rem] !mb-6">
                         <img 
                             class="!rounded-[.4rem] h-[400px] w-[200px] object-cover" 
-                            src="{{ asset('storage/' . $b->poster) }}" 
+                            src="{{ asset('storage/himsi/' . $b->poster) }}" 
                             alt="image">
                             @foreach ($b->blogs as $blog)
                                 @foreach ($blog->image as $img)
