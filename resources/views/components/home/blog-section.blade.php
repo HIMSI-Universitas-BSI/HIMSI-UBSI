@@ -17,10 +17,10 @@
                         <div class="swiper-slide">
                             <div class="item-inner">
                                 <article>
-                                    <div class="card">
+                                    <div class="card min-h-[600px] max-h-[600px]">
                                         
                                         <figure class="card-img-top overlay overlay-1 hover-scale group"><a href="{{ route('blog.show', ['id' => $b->id]) }}"> 
-                                            <img class="!transition-all !duration-[0.35s] !ease-in-out group-hover:scale-105" src="{{ asset('storage/blog/' . $b->banner) }}" alt="image"></a>
+                                            <img class="!transition-all !duration-[0.35s] !ease-in-out group-hover:scale-105 max-h-[240px]" src="{{ asset('storage/blog/' . $b->banner) }}" alt="image"></a>
                                             <figcaption class="group-hover:opacity-100 absolute w-full h-full opacity-0 text-center px-4 py-3 inset-0 z-[5] pointer-events-none p-2">
                                                 <h5 class="from-top  !mb-0 absolute w-full translate-y-[-80%] p-[.75rem_1rem] left-0 top-2/4">Selengkapnya</h5>
                                             </figcaption>
