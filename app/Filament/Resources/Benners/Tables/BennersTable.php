@@ -24,7 +24,7 @@ class BennersTable
                 TextColumn::make('position')
                     ->searchable(),
                 ImageColumn::make('image')
-                    ->disk('public'),
+                    ->disk('himsi'),
                 IconColumn::make('active')
                     ->boolean(),
                 TextColumn::make('createdBy.name')

@@ -42,7 +42,7 @@ class BranchesTable
                     ->limit(50)
                     ->searchable(),
                 ImageColumn::make('poster')
-                    ->disk('public'),
+                    ->disk('himsi'),
                 TextColumn::make('description')
                     ->searchable()
                     ->limit(50),
