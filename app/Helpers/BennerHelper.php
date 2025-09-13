@@ -24,7 +24,7 @@ class BennerHelper
         });
 
         if ($benner && $benner->image) {
-            return asset('storage/' . $benner->image);
+            return asset('storage/himsi/' . $benner->image);
         }
 
         return asset('images/default-benner.jpg'); // fallback jika tidak ada
