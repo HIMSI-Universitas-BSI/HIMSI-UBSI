@@ -46,7 +46,7 @@
                 <div class="md:w-4/12 lg:w-2/12 xl:w-2/12 w-full flex-[0_0_auto] !px-[15px] max-w-full max-lg:!mt-[30px]">
                     <div class="widget">
                         <h4 class="widget-title !text-white !mb-3">Kontak</h4>
-                        <address class=" not-italic !leading-[inherit] !mb-4">Jl. Kramat Raya No.98, RT.2/RW.9, Kwitang, Kec. Senen, Kota Jakarta Pusat</address>
+                        <address class=" not-italic !leading-[inherit] !mb-4">Jl. Kamal Raya Ringroad No. 18,RT 06/ RW 03 Cengkareng, Jakarta Barat</address>
                         <a class="!text-[#cacaca] hover:!text-[#3f78e0]" href="mailto:first.last@email.com">himsi@bsi.ac.id</a><br> (021) 23231170
                     </div>
                 <!-- /.widget -->
